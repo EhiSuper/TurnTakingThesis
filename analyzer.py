@@ -1,7 +1,9 @@
+from os import error
 import torch
 import numpy as np
 from av import AudioResampler, AudioFifo
 from enum import Enum
+from websockets.sync.client import connect
 
 # Detection parameters
 SILENCE_THRESHOLD = 0.5  # s
@@ -12,6 +14,7 @@ CONVERSATION_NOT_STARTED_THRESHOLD = 5.0  # s
 
 RATE = 16000
 FRAME_DURATION = 0.05  # s
+URI = "ws://localhost:8765"
 
 class State(Enum):
     NOT_STARTED = 0
@@ -31,6 +34,7 @@ class Analyzer:
                                       model='silero_vad',
                                       force_reload=False,
                                       trust_repo=True)
+        self.websocket = connect(URI)
     
     def int2float(self, sound):
         abs_max = np.abs(sound).max()
@@ -57,13 +61,23 @@ class Analyzer:
                 if self.state == State.STARTED and self.cumulative_silence >= SILENCE_THRESHOLD:
                     self.state = State.POTENTIAL_TURN_CHANGE
                     print("Potential turn change")
+                    try:
+                        self.websocket.send("Potential turn change")
+                    except error:
+                        print(error.errno)
                     # queue.put("Potential turn change")
+                    
 
                 elif self.state == State.POTENTIAL_TURN_CHANGE and self.cumulative_silence >= CONFIRMED_SILENCE_THRESHOLD:
                     self.state = State.NOT_STARTED  # we need to go back to the NOT_STARTED state to initiate a new turn
                     print("Turn change confirmed")
                     print(" ")
+                    try:
+                        self.websocket.send("Turn change confirmed")
+                    except error:
+                        print(error.errno)
                     # queue.put("Turn change confirmed")
+                    
 
                 # if for more than CONVERSATION_NOT_STARTED_THRESHOLD there is silence
                 # the user may have not understood the response and we should repeat it
@@ -71,6 +85,10 @@ class Analyzer:
                     self.state = State.CONVERSATION_NOT_STARTED
                     print("Conversation not started")
                     print(" ")
+                    try:
+                        self.websocket.send("Conversation not started")
+                    except error:
+                        print(error.errno)
                     # queue.put("Conversation not started")
 
                 # if the user stay silent for more than START_CONVERSATION_THRESHOLD
@@ -80,6 +98,10 @@ class Analyzer:
                     self.state = State.NOT_STARTED
                     print("Start conversation")
                     print(" ")
+                    try:
+                        self.websocket.send("Start conversation")
+                    except error:
+                        print(error.errno)
                     # queue.put("Start conversation")
 
             else:
@@ -87,6 +109,10 @@ class Analyzer:
                 if self.state == State.NOT_STARTED or self.state == State.CONVERSATION_NOT_STARTED:
                     self.state = State.STARTED
                     print("Conversation started")
+                    try:
+                        self.websocket.send("Conversation started")
+                    except error:
+                        print(error.errno)
                     # queue.put("Conversation started")
 
                 elif self.state == State.POTENTIAL_TURN_CHANGE:
@@ -94,6 +120,10 @@ class Analyzer:
                     # interrupt the pipeline
                     self.state = State.STARTED
                     print("Potential turn change aborted")
+                    try:
+                        self.websocket.send("Potential turn change aborted")
+                    except error:
+                        print(error.errno)
                     # queue.put("Potential turn change aborted")
 
 
