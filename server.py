@@ -8,7 +8,7 @@ import uuid
 from aiohttp import web
 from aiortc import MediaStreamTrack, RTCPeerConnection, RTCSessionDescription
 from aiortc.contrib.media import MediaBlackhole, MediaRelay
-from analyzer import Analyzer
+from vad_analyzer import Analyzer
 
 ROOT = os.path.dirname(__file__)
 logger = logging.getLogger("pc")
