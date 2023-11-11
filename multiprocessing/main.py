@@ -1,7 +1,6 @@
 import multiprocessing
-from AudioAnalyzerMultiprocess import analyze
-from InformationSender import send_information
-from serverMultiprocess import main
+from vad_analyzer_multiprocessing import analyze
+from server_multiprocessing import main
 
 if __name__ == "__main__":
     queue = multiprocessing.Queue()

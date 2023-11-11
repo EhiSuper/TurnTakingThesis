@@ -13,7 +13,7 @@ from aiohttp import web
 from aiortc import MediaStreamTrack, RTCPeerConnection, RTCSessionDescription
 from aiortc.contrib.media import MediaBlackhole, MediaPlayer, MediaRecorder, MediaRelay
 from av import VideoFrame, AudioFrame, AudioResampler, AudioFifo
-from Analyzer import analyze
+from vad_analyzer_multiprocessing import analyze
 
 ROOT = os.path.dirname(__file__)
 
@@ -189,7 +189,7 @@ async def offer(request):
 
     # send answer
     answer = await pc.createAnswer()
-    await pc.setLocalDescription(answer)
+    await pc.setLocalDescription(answer) # type: ignore
 
     return web.Response(
         content_type="application/json",
