@@ -1,0 +1,10 @@
+{
+    "silence_threshold" : 0.5,
+    "confirmed_silence_threshold" : 2.0,
+    "confidence_threshold" : 0.5,
+    "start_conversation_threshold" : 10.0,
+    "conversation_not_started_threshold" : 5.0,
+    "sampling_rate" : 16000,
+    "frame_duration" : 0.05,
+    "uri" : "ws://localhost:8765" 
+}
