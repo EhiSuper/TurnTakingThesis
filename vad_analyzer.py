@@ -26,7 +26,6 @@ class Analyzer:
         with open("configuration.json", "r") as configuration:
             self.parameters = json.load(configuration)
 
-        print(self.parameters)
         self.websocket = connect(self.parameters["uri"])
         self.resampler = AudioResampler(format='s16', layout='mono', rate=self.parameters["sampling_rate"])
         self.audio_fifo = AudioFifo()
