@@ -132,7 +132,12 @@ function start() {
 }
 
 function stop() {
+    document.getElementById('start').style.display = 'inline-block';
     document.getElementById('stop').style.display = 'none';
+    iceConnectionLog.textContent = '';
+    iceGatheringLog.textContent = '';
+    signalingLog.textContent = '';
+    document.getElementById('audioSource').disabled = false;    
 
     // close transceivers
     if (pc.getTransceivers) {

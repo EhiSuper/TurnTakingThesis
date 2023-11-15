@@ -12,15 +12,15 @@ from vad_analyzer import Analyzer
 
 ROOT = os.path.dirname(__file__)
 logger = logging.getLogger("pc")
-pcs = set()
 relay_audio = MediaRelay()
+
 
 class AudioTrackProcessing(MediaStreamTrack):
     """
     Audio stream track that processess AudioFrames from tracks.
     """
 
-    def __init__(self, track:MediaStreamTrack, analyzer:Analyzer):
+    def __init__(self, track: MediaStreamTrack, analyzer: Analyzer):
         super().__init__()
         self.track = track
         self.analyzer = analyzer
@@ -30,6 +30,7 @@ class AudioTrackProcessing(MediaStreamTrack):
         self.analyzer.analyze(frame)
         return frame
 
+
 async def index(request):
     content = open(os.path.join(ROOT, "web/index.html"), "r").read()
     return web.Response(content_type="text/html", text=content)
@@ -38,6 +39,7 @@ async def index(request):
 async def javascript(request):
     content = open(os.path.join(ROOT, "web/client.js"), "r").read()
     return web.Response(content_type="application/javascript", text=content)
+
 
 async def style(request):
     content = open(os.path.join(ROOT, "web/main.css"), "r").read()
@@ -50,7 +52,6 @@ async def offer(request):
 
     pc = RTCPeerConnection()
     pc_id = "PeerConnection(%s)" % uuid.uuid4()
-    pcs.add(pc)
 
     def log_info(msg, *args):
         logger.info(pc_id + " " + msg, *args)
@@ -66,7 +67,6 @@ async def offer(request):
         log_info("Connection state is %s", pc.connectionState)
         if pc.connectionState == "failed":
             await pc.close()
-            pcs.discard(pc)
 
     @pc.on("track")
     def on_track(track):
@@ -76,7 +76,7 @@ async def offer(request):
             print("Started Listening")
             relayed_audio = relay_audio.subscribe(track)
             recorder.addTrack(AudioTrackProcessing(relayed_audio, analyzer))
-        
+
         @track.on("ended")
         async def on_ended():
             log_info("Track %s ended", track.kind)
@@ -88,7 +88,7 @@ async def offer(request):
 
     # send answer
     answer = await pc.createAnswer()
-    await pc.setLocalDescription(answer) # type: ignore
+    await pc.setLocalDescription(answer)  # type: ignore
 
     return web.Response(
         content_type="application/json",
@@ -96,13 +96,6 @@ async def offer(request):
             {"sdp": pc.localDescription.sdp, "type": pc.localDescription.type}
         ),
     )
-
-
-async def on_shutdown(app):
-    # close peer connections
-    coros = [pc.close() for pc in pcs]
-    await asyncio.gather(*coros)
-    pcs.clear()
 
 
 if __name__ == "__main__":
@@ -126,7 +119,7 @@ if __name__ == "__main__":
         ssl_context = None
 
     app = web.Application()
-    app.on_shutdown.append(on_shutdown)
+
     app.router.add_get("/", index)
     app.router.add_get("/client.js", javascript)
     app.router.add_get("/main.css", style)
