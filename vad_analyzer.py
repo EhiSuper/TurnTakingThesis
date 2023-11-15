@@ -41,7 +41,8 @@ class Analyzer:
     def analyze(self, frame):
         frame = self.resampler.resample(frame)[0]
         self.audio_fifo.write(frame)
-        frame = self.audio_fifo.read(800, False)
+        samples = self.parameters["frame_duration"] * self.parameters["sampling_rate"]
+        frame = self.audio_fifo.read(samples, False)
         if frame is not None:
             # get the confidences
             tensor = torch.from_numpy(self.int2float(frame.to_ndarray()))
