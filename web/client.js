@@ -111,7 +111,6 @@ function negotiate() {
 function start() {
     document.getElementById('start').style.display = 'none';
     document.getElementById('audioSource').disabled = true;
-    document.getElementById('audioCodec').disabled = true;
 
     pc = createPeerConnection();
 

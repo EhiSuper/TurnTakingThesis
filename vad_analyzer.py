@@ -26,8 +26,16 @@ class Analyzer:
         with open("configuration.json", "r") as configuration:
             self.parameters = json.load(configuration)
 
-        self.websocket = connect(self.parameters["uri"])
-        self.resampler = AudioResampler(format='s16', layout='mono', rate=self.parameters["sampling_rate"])
+        self.silence_threshold = self.parameters["silence_threshold"]
+        self.confirmed_silence_threshold = self.parameters["confirmed_silence_threshold"]
+        self.confidence_threshold = self.parameters["confidence_threshold"]
+        self.start_conversation_threshold = self.parameters["start_conversation_threshold"]
+        self.conversation_not_started_threshold = self.parameters["conversation_not_started_threshold"]
+        self.sampling_rate = self.parameters["sampling_rate"]
+        self.frame_duration = self.parameters["frame_duration"]
+        self.uri = self.parameters["uri"]
+        self.websocket = connect(self.uri)
+        self.resampler = AudioResampler(format='s16', layout='mono', rate=self.sampling_rate)
         self.audio_fifo = AudioFifo()
     
     def int2float(self, sound):
@@ -41,19 +49,19 @@ class Analyzer:
     def analyze(self, frame):
         frame = self.resampler.resample(frame)[0]
         self.audio_fifo.write(frame)
-        samples = self.parameters["frame_duration"] * self.parameters["sampling_rate"]
+        samples = self.frame_duration * self.sampling_rate
         frame = self.audio_fifo.read(samples, False)
         if frame is not None:
             # get the confidences
             tensor = torch.from_numpy(self.int2float(frame.to_ndarray()))
-            new_confidence = self.vad_model(tensor, self.parameters["sampling_rate"]).item()
+            new_confidence = self.vad_model(tensor, self.sampling_rate).item()
             self.set_state(new_confidence)
     
     def set_state(self, speaking_probability):
         # check if the new frame has voice
-            if speaking_probability <= self.parameters["confidence_threshold"]:
-                self.cumulative_silence += self.parameters["frame_duration"]
-                if self.state == State.STARTED and self.cumulative_silence >= self.parameters["silence_threshold"]:
+            if speaking_probability <= self.confidence_threshold:
+                self.cumulative_silence += self.frame_duration
+                if self.state == State.STARTED and self.cumulative_silence >= self.silence_threshold:
                     self.state = State.POTENTIAL_TURN_CHANGE
                     print("Potential turn change")
                     try:
@@ -63,7 +71,7 @@ class Analyzer:
                     # queue.put("Potential turn change")
                     
 
-                elif self.state == State.POTENTIAL_TURN_CHANGE and self.cumulative_silence >= self.parameters["confirmed_silence_threshold"]:
+                elif self.state == State.POTENTIAL_TURN_CHANGE and self.cumulative_silence >= self.confirmed_silence_threshold:
                     self.state = State.NOT_STARTED  # we need to go back to the NOT_STARTED state to initiate a new turn
                     print("Turn change confirmed")
                     print(" ")
@@ -76,7 +84,7 @@ class Analyzer:
 
                 # if for more than CONVERSATION_NOT_STARTED_THRESHOLD there is silence
                 # the user may have not understood the response and we should repeat it
-                elif self.state == State.NOT_STARTED and (self.cumulative_silence >= self.parameters["conversation_not_started_threshold"]):
+                elif self.state == State.NOT_STARTED and (self.cumulative_silence >= self.conversation_not_started_threshold):
                     self.state = State.CONVERSATION_NOT_STARTED
                     print("Conversation not started")
                     print(" ")
@@ -88,7 +96,7 @@ class Analyzer:
 
                 # if the user stay silent for more than START_CONVERSATION_THRESHOLD
                 # the robot may want to start the conversation
-                elif self.state == State.CONVERSATION_NOT_STARTED and self.cumulative_silence >= self.parameters["start_conversation_threshold"]:
+                elif self.state == State.CONVERSATION_NOT_STARTED and self.cumulative_silence >= self.start_conversation_threshold:
                     self.cumulative_silence = 0
                     self.state = State.NOT_STARTED
                     print("Start conversation")
