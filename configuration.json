@@ -6,5 +6,5 @@
     "conversation_not_started_threshold" : 5.0,
     "sampling_rate" : 16000,
     "frame_duration" : 0.05,
-    "uri" : "ws://localhost:8765" 
+    "websocket_port" : 8765 
 }

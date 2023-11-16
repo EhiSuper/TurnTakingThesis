@@ -22,8 +22,6 @@ ARG UID=10001
 RUN adduser \
     --disabled-password \
     --gecos "" \
-    --home "/nonexistent" \
-    --shell "/sbin/nologin" \
     --uid "${UID}" \
     appuser
 
@@ -31,9 +29,8 @@ RUN adduser \
 # Leverage a cache mount to /root/.cache/pip to speed up subsequent builds.
 # Leverage a bind mount to requirements.txt to avoid having to copy them into
 # into this layer.
-RUN apt-get update \
-        && apt-get install libportaudio2 libportaudiocpp0 portaudio19-dev libsndfile1-dev gcc libc-dev alsa-utils -y \
-        && pip install pyaudio
+RUN apt-get update
+RUN apt-get -y install libgomp1
 
 RUN --mount=type=cache,target=/root/.cache/pip \
     --mount=type=bind,source=requirements.txt,target=requirements.txt \
@@ -46,7 +43,7 @@ USER appuser
 COPY . .
 
 # Expose the port that the application listens on.
-EXPOSE 8765
+EXPOSE 8080
 
 # Run the application.
-CMD python main.py
+CMD python server.py

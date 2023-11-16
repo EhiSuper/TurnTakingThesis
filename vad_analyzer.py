@@ -5,6 +5,7 @@ import numpy as np
 from av import AudioResampler, AudioFifo
 from enum import Enum
 from websockets.sync.client import connect
+import socket
 
 class State(Enum):
     NOT_STARTED = 0
@@ -33,8 +34,10 @@ class Analyzer:
         self.conversation_not_started_threshold = self.parameters["conversation_not_started_threshold"]
         self.sampling_rate = self.parameters["sampling_rate"]
         self.frame_duration = self.parameters["frame_duration"]
-        self.uri = self.parameters["uri"]
-        self.websocket = connect(self.uri)
+        self.websocket_port = self.parameters["websocket_port"]
+        host = socket.gethostbyname('host.docker.internal')
+        uri = f"ws://{host}:{self.websocket_port}"
+        self.websocket = connect(uri) 
         self.resampler = AudioResampler(format='s16', layout='mono', rate=self.sampling_rate)
         self.audio_fifo = AudioFifo()
     
