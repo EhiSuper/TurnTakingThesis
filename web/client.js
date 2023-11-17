@@ -4,16 +4,9 @@ var iceConnectionLog = document.getElementById('ice-connection-state'),
     signalingLog = document.getElementById('signaling-state');
 
 const audioInputSelect = document.querySelector('select#audioSource');
-const selectors = [audioInputSelect];
 
+//function to get the available devices for the input source select option
 function gotDevices(deviceInfos) {
-    // Handles being called several times to update labels. Preserve values.
-    const values = selectors.map(select => select.value);
-    selectors.forEach(select => {
-        while (select.firstChild) {
-            select.removeChild(select.firstChild);
-        }
-    });
     for (let i = 0; i !== deviceInfos.length; ++i) {
         const deviceInfo = deviceInfos[i];
         const option = document.createElement('option');
@@ -23,22 +16,20 @@ function gotDevices(deviceInfos) {
             audioInputSelect.appendChild(option);
         }
     }
-    selectors.forEach((select, selectorIndex) => {
-        if (Array.prototype.slice.call(select.childNodes).some(n => n.value === values[selectorIndex])) {
-            select.value = values[selectorIndex];
-        }
-    });
 }
 
+//function to hangle the getUserMedia errors
 function handleError(error) {
     console.log('navigator.MediaDevices.getUserMedia error: ', error.message, error.name);
 }
 
+//code to inizialize the audio input options for the selection
 navigator.mediaDevices.enumerateDevices().then(gotDevices).catch(handleError);
 
 // peer connection
 var pc = null;
 
+//function that creates the RTCPeerConnection
 function createPeerConnection() {
     var config = {
         sdpSemantics: 'unified-plan',
@@ -68,6 +59,7 @@ function createPeerConnection() {
     return pc;
 }
 
+//function that create the offer and proceds with the signaling to complete the connection
 function negotiate() {
     return pc.createOffer().then(function (offer) {
         return pc.setLocalDescription(offer);
@@ -88,7 +80,8 @@ function negotiate() {
         });
     }).then(function () {
         var offer = pc.localDescription;
-
+        
+        //send SDP offer to the server with http request 
         return fetch('/offer', {
             body: JSON.stringify({
                 sdp: offer.sdp,
@@ -108,6 +101,7 @@ function negotiate() {
     });
 }
 
+//function to start the connection
 function start() {
     document.getElementById('start').style.display = 'none';
     document.getElementById('audioSource').disabled = true;
@@ -119,6 +113,7 @@ function start() {
         video: false
     };
 
+    //get the audio stream and adds it to the connection
     navigator.mediaDevices.getUserMedia(constraints).then(function (stream) {
         stream.getTracks().forEach(function (track) {
             pc.addTrack(track, stream);
@@ -131,6 +126,7 @@ function start() {
     document.getElementById('stop').style.display = 'inline-block';
 }
 
+//function to stop the connection
 function stop() {
     document.getElementById('start').style.display = 'inline-block';
     document.getElementById('stop').style.display = 'none';
