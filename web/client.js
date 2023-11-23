@@ -1,7 +1,14 @@
 // get DOM elements
 var iceConnectionLog = document.getElementById('ice-connection-state'),
     iceGatheringLog = document.getElementById('ice-gathering-state'),
-    signalingLog = document.getElementById('signaling-state');
+    signalingLog = document.getElementById('signaling-state'),
+    roundTripTime = document.getElementById('round-trip-time'),
+    jitter = document.getElementById('jitter'),
+    packetsSent = document.getElementById('packets-sent'),
+    packetsLost = document.getElementById('packets-lost'),
+    packetSendDelay = document.getElementById('packet-send-delay');
+
+var statistics_interval;
 
 const audioInputSelect = document.querySelector('select#audioSource');
 
@@ -80,7 +87,7 @@ function negotiate() {
         });
     }).then(function () {
         var offer = pc.localDescription;
-        
+
         //send SDP offer to the server with http request 
         return fetch('/offer', {
             body: JSON.stringify({
@@ -124,16 +131,23 @@ function start() {
     });
 
     document.getElementById('stop').style.display = 'inline-block';
+    statistics_interval = setInterval(statistics, 1000)
 }
 
 //function to stop the connection
 function stop() {
     document.getElementById('start').style.display = 'inline-block';
     document.getElementById('stop').style.display = 'none';
+    clearInterval(statistics_interval)
     iceConnectionLog.textContent = '';
     iceGatheringLog.textContent = '';
     signalingLog.textContent = '';
-    document.getElementById('audioSource').disabled = false;    
+    roundTripTime.textContent = '';
+    jitter.textContent = '';
+    packetsSent.textContent = '';
+    packetsLost.textContent = '';
+    packetSendDelay = '';
+    document.getElementById('audioSource').disabled = false;
 
     // close transceivers
     if (pc.getTransceivers) {
@@ -153,4 +167,22 @@ function stop() {
     setTimeout(function () {
         pc.close();
     }, 500);
+}
+
+//function to collect connection statistics
+async function statistics() {
+    const stats = await pc.getStats();
+    stats.forEach((report) => {
+        if (report.type === "remote-inbound-rtp") {
+            console.log(report);
+            roundTripTime.textContent = report.roundTripTime.toFixed(6);
+            jitter.textContent = report.jitter.toFixed(6);
+            packetsLost.textContent = report.packetsLost;
+        }
+        if (report.type === "outbound-rtp"){
+            console.log(report);
+            packetsSent.textContent = report.packetsSent;
+            packetSendDelay.textContent = report.totalPacketSendDelay;
+        }
+    });
 }

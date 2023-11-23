@@ -18,7 +18,7 @@
     </div>
 
     <button class="button" id="start" onclick="start()"><span>Start </span></button>
-    <button class="button" id ="stop" style="display: none" onclick="stop()"><span>Stop </span></button>
+    <button class="button" id="stop" style="display: none" onclick="stop()"><span>Stop </span></button>
 
     <h2>Connection State</h2>
     <p>
@@ -30,6 +30,13 @@
     <p>
         Signaling state: <span id="signaling-state"></span>
     </p>
+
+    <h2>Connection statistics</h2>
+    <p>Round trip time: <span id="round-trip-time"></span></p>
+    <p>Jitter: <span id="jitter"></span></p>
+    <p>Packets sent: <span id="packets-sent"></span></p>
+    <p>Packets lost: <span id="packets-lost"></span></p>
+    <p>Packet send delay: <span id="packet-send-delay"></span></p>
 
     <script src="client.js"></script>
 </body>
