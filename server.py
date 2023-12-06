@@ -13,7 +13,6 @@ ROOT = os.path.dirname(__file__)
 logger = logging.getLogger("pc")
 relay_audio = MediaRelay()
 
-
 class AudioTrackProcessing(MediaStreamTrack):
     """
     Audio stream track that processess AudioFrames from tracks.
@@ -107,6 +106,12 @@ async def offer(request):
     recorder = MediaBlackhole()
     analyzer = Analyzer()
 
+    @pc.on("datachannel")
+    def on_datachannel(channel):
+        @channel.on("message")
+        def on_message(message):
+            analyzer.end_of_turn_timestamp = int(message)
+
     # pc connectionstatechange event handler
     @pc.on("connectionstatechange")
     async def on_connectionstatechange():
@@ -148,7 +153,7 @@ async def offer(request):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(
-        description="WebRTC audio / video / data-channels demo"
+        description="WebRTC audio"
     )
     parser.add_argument("--cert-file", help="SSL certificate file (for HTTPS)")
     parser.add_argument("--key-file", help="SSL key file (for HTTPS)")
@@ -165,7 +170,7 @@ if __name__ == "__main__":
         ssl_context.load_cert_chain(args.cert_file, args.key_file)
     else:
         ssl_context = None
-
+      
     # enable logging with level INFO
     logging.basicConfig(level=logging.INFO)
 

@@ -35,6 +35,8 @@ navigator.mediaDevices.enumerateDevices().then(gotDevices).catch(handleError);
 
 // peer connection
 var pc = null;
+// data channel
+var dc = null;
 
 //function that creates the RTCPeerConnection
 function createPeerConnection() {
@@ -114,6 +116,7 @@ function start() {
     document.getElementById('audioSource').disabled = true;
 
     pc = createPeerConnection();
+    dc = pc.createDataChannel("datachannel");
 
     var constraints = {
         audio: true,
@@ -149,6 +152,11 @@ function stop() {
     packetSendDelay = '';
     document.getElementById('audioSource').disabled = false;
 
+    //close data channel
+    if(dc){
+        dc.close();
+    }
+
     // close transceivers
     if (pc.getTransceivers) {
         pc.getTransceivers().forEach(function (transceiver) {
@@ -174,15 +182,23 @@ async function statistics() {
     const stats = await pc.getStats();
     stats.forEach((report) => {
         if (report.type === "remote-inbound-rtp") {
-            console.log(report);
             roundTripTime.textContent = report.roundTripTime.toFixed(6);
             jitter.textContent = report.jitter.toFixed(6);
             packetsLost.textContent = report.packetsLost;
         }
         if (report.type === "outbound-rtp"){
-            console.log(report);
             packetsSent.textContent = report.packetsSent;
             packetSendDelay.textContent = report.totalPacketSendDelay;
         }
     });
 }
+
+// Add an event listener to the document for the keydown event
+document.addEventListener('keydown', function(event) {
+    // Check if the pressed key is the space bar (key " ")
+    if (event.key === " ") {
+        end_of_turn = Date.now();
+        //send the time over the data streaming
+        dc.send(end_of_turn);
+    }
+});
