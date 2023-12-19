@@ -177,9 +177,9 @@ if __name__ == "__main__":
     female_sessions = create_clean_sessions(female_utterances)
     male_json = json.dumps(male_sessions, default=lambda obj: obj.__json__(), indent=2)
     female_json = json.dumps(female_sessions, default=lambda obj: obj.__json__(), indent=2)
-    with open("male_clean.json", "w") as outfile:
+    with open("datasets/libri_demand/male_clean.json", "w") as outfile:
         outfile.write(male_json)
-    with open("female_clean.json", "w") as outfile:
+    with open("datasets/libri_demand/female_clean.json", "w") as outfile:
         outfile.write(female_json)
     
     #noisy sessions
@@ -188,9 +188,9 @@ if __name__ == "__main__":
     female_noisy_sessions = create_noisy_sessions(female_sessions, noises)
     male_json = json.dumps(male_noisy_sessions, default=lambda obj: obj.__json__(), indent=2)
     female_json = json.dumps(female_noisy_sessions, default=lambda obj: obj.__json__(), indent=2)
-    with open("male_noisy.json", "w") as outfile:
+    with open("datasets/libri_demand/male_noisy.json", "w") as outfile:
         outfile.write(male_json)
-    with open("female_noisy.json", "w") as outfile:
+    with open("datasets/libri_demand/female_noisy.json", "w") as outfile:
         outfile.write(female_json)
 
     
