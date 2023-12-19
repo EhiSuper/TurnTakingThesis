@@ -1,8 +1,9 @@
 import torch
 from pprint import pprint
 import os 
+import json
 
-libri_speech_path = "dataset/datasets/LibriSpeech/test-clean"
+libri_speech_path = "datasets/LibriSpeech/test-clean"
 
 SAMPLING_RATE = 16000
 
@@ -50,5 +51,9 @@ for utterance in utterances:
             print(interval_ms)
             inter_speech_intervals.append(interval_ms)
 
+json_object = json.dumps(inter_speech_intervals)
+with open("inter_speech_intervals.json", "w") as outfile:
+    outfile.write(json_object)
+
 mean_inter_speech_interval = sum(inter_speech_intervals) / len(inter_speech_intervals)
-print(f'The mean inter speech interval is: {mean_inter_speech_interval}')
+print(f'The mean inter speech interval is: {mean_inter_speech_interval}') # 0.2646
