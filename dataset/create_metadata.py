@@ -11,21 +11,22 @@ SESSION_SAMPLES = SESSION_DURATION * SAMPLE_RATE
 SEED = 0
 MIN_SILENCE = 1.0
 MAX_SILENCE = 3.0
-snr_levels = [25, 20, 15, 10, 5, 0, -5, -10, -15, -20]
-libri_speech_path = "datasets/LibriSpeech"
-noise_path = "datasets/DEMAND"
+snr_levels = [20, 10, 0, -10, -20]
+libri_speech_path = "dataset/datasets/LibriSpeech"
+noise_path = "dataset/datasets/DEMAND"
 
 class Session:
 
     session_counter = 0
 
-    def __init__(self, utterances, speech, noise=None, snr=0) -> None:
+    def __init__(self, utterances, speech, noise=None, snr=0, clean_session=None) -> None:
         self.id = Session.session_counter
         Session.session_counter += 1
         self.utterances = utterances
         self.speech = speech
         self.noise = noise
-        self.snr = 0
+        self.snr = snr
+        self.clean_session = clean_session
 
 
     def __json__(self):
@@ -34,7 +35,8 @@ class Session:
             'utterances': self.utterances,
             'speech': self.speech,
             'noise': self.noise,
-            'snr' : self.snr
+            'snr' : self.snr,
+            'clean_session': self.clean_session
         }
 
 def get_speakers_ids(file):
@@ -97,16 +99,17 @@ def separate_utterances_by_gender(utterances, male_speakers, female_speakers):
     return male_utterances, female_utterances
 
 
-def create_clean_sessions(utterances):
+def create_clean_sessions(utterances, session_duration=SESSION_DURATION):
     sessions = []
     used_utterances = []
     pick = None
+    Session.session_counter = 0
     for i in range(N_SESSIONS):
         length = 0
         session_utterances = []
         speech = []
 
-        while length < SESSION_DURATION:
+        while length < session_duration:
             label = {}
             label['start'] = length
             while pick == None or pick in used_utterances:
@@ -157,10 +160,25 @@ def create_noisy_sessions(sessions, noises):
         picks.append(pick)
         session = sessions[pick]
         for noise in noises:
-            noisy_session = Session(session.utterances, session.speech, noise)
+            noisy_session = Session(session.utterances, session.speech, noise, clean_session=session.id)
             noisy_sessions.append(noisy_session)
         
     return noisy_sessions    
+
+
+def create_noisy_sessions_snr(male_utterances, female_utterances, noises):
+    utterances = male_utterances + female_utterances
+    duration = 300
+    sessions = create_clean_sessions(utterances, session_duration=duration)
+    session = sessions[0]
+    Session.session_counter = 0
+    noisy_sessions = []
+    for noise in noises:
+        for snr in snr_levels:
+            noisy_session = Session(session.utterances, session.speech, noise, snr=snr, clean_session=0)
+            noisy_sessions.append(noisy_session)
+
+    return noisy_sessions
 
 
 if __name__ == "__main__":
@@ -177,9 +195,9 @@ if __name__ == "__main__":
     female_sessions = create_clean_sessions(female_utterances)
     male_json = json.dumps(male_sessions, default=lambda obj: obj.__json__(), indent=2)
     female_json = json.dumps(female_sessions, default=lambda obj: obj.__json__(), indent=2)
-    with open("datasets/libri_demand/male_clean.json", "w") as outfile:
+    with open("dataset/datasets/libri_demand/male_clean.json", "w") as outfile:
         outfile.write(male_json)
-    with open("datasets/libri_demand/female_clean.json", "w") as outfile:
+    with open("dataset/datasets/libri_demand/female_clean.json", "w") as outfile:
         outfile.write(female_json)
     
     #noisy sessions
@@ -188,10 +206,16 @@ if __name__ == "__main__":
     female_noisy_sessions = create_noisy_sessions(female_sessions, noises)
     male_json = json.dumps(male_noisy_sessions, default=lambda obj: obj.__json__(), indent=2)
     female_json = json.dumps(female_noisy_sessions, default=lambda obj: obj.__json__(), indent=2)
-    with open("datasets/libri_demand/male_noisy.json", "w") as outfile:
+    with open("dataset/datasets/libri_demand/male_noisy.json", "w") as outfile:
         outfile.write(male_json)
-    with open("datasets/libri_demand/female_noisy.json", "w") as outfile:
+    with open("dataset/datasets/libri_demand/female_noisy.json", "w") as outfile:
         outfile.write(female_json)
+
+    #noisy sessions with different snr levels
+    noisy_sessions = create_noisy_sessions_snr(male_utterances, female_utterances, noises)
+    noisy_json = json.dumps(noisy_sessions, default=lambda obj: obj.__json__(), indent=2)
+    with open("dataset/datasets/libri_demand/noisy_sessions.json", "w") as outfile:
+        outfile.write(noisy_json)
 
     
     
