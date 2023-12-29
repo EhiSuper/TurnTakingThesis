@@ -1,6 +1,6 @@
 {
     "silence_threshold" : 0.5,
-    "confirmed_silence_threshold" : 0.7,
+    "confirmed_silence_threshold" : 2,
     "confidence_threshold" : 0.7,
     "start_conversation_threshold" : 10.0,
     "conversation_not_started_threshold" : 5.0,

@@ -113,20 +113,24 @@ if __name__ == '__main__':
         metadata = json.load(input)
     sessions = sessions_from_metadata(metadata)
     create_clean_dataset(male_dataset_clean_output_path, sessions)
+    print("Male clean done")
     with open(female_metadata_clean, "r") as input:
         metadata = json.load(input)
     sessions = sessions_from_metadata(metadata)
     create_clean_dataset(female_dataset_clean_output_path, sessions)
+    print("Female clean done")
 
     #noisy dataset
     with open(male_metadata_noisy, "r") as input:
         metadata = json.load(input)
     sessions = sessions_from_metadata(metadata)
     create_noisy_dataset(male_dataset_clean_output_path, male_dataset_noisy_output_path, sessions)
+    print("Male noisy done")
     with open(female_metadata_noisy, "r") as input:
         metadata = json.load(input)
     sessions = sessions_from_metadata(metadata)
     create_noisy_dataset(female_dataset_clean_output_path, female_dataset_noisy_output_path, sessions)
+    print("Female noisy done")
 
     #noisy dataset with different snr levels
     with open(noisy_sessions_metadata, "r") as input:
@@ -134,6 +138,7 @@ if __name__ == '__main__':
     sessions = sessions_from_metadata(metadata)
     create_clean_dataset(noisy_sessions_output_path_clean, [sessions[0]])
     create_noisy_dataset(noisy_sessions_output_path_clean, noisy_sessions_output_path_noise, sessions)
+    print("Noisy sessions done")
     
 
 
