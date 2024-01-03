@@ -19,7 +19,7 @@ class Analyzer:
         POTENTIAL_TURN_CHANGE = 2
         CONVERSATION_NOT_STARTED = 3
 
-    def __init__(self):
+    def __init__(self, confidence_threshold):
         """
         Constructor of the analyzer. It loads the model from PyTorch Hub and load the parameters from the
         configuration.json file.
@@ -41,7 +41,9 @@ class Analyzer:
         self.confirmed_silence_threshold = self.parameters[
             "confirmed_silence_threshold"
         ]
-        self.confidence_threshold = self.parameters["confidence_threshold"]
+        #self.confidence_threshold = self.parameters["confidence_threshold"]
+        self.confidence_threshold = float(confidence_threshold)
+        print(f'Confidence threshold: {confidence_threshold}')
         self.start_conversation_threshold = self.parameters[
             "start_conversation_threshold"
         ]
@@ -71,6 +73,13 @@ class Analyzer:
         #throughput
         self.old_end_analyze = 0
         self.analyze_gaps = []
+
+        #test
+        self.sessions = []
+        self.speech = []
+        self.speech_start = 0
+        self.speech_stop = 0
+        self.total_duration = 0
 
     def int2float(self, sound):
         """
@@ -137,6 +146,10 @@ class Analyzer:
         # check if the new frame has voice
         if speaking_probability <= self.confidence_threshold:
             self.cumulative_silence += self.frame_duration
+
+            if (self.state == Analyzer.State.STARTED and self.cumulative_silence == self.frame_duration):
+                self.speech_stop = self.total_duration
+
             # if there is silence for more than the specifiend threshold there could be a turn change
             if (
                 self.state == Analyzer.State.STARTED
@@ -174,6 +187,9 @@ class Analyzer:
                     self.websocket.send("Turn change confirmed")
                 except error:
                     print(error.errno)
+
+                speech_chunk = {'start': self.speech_start, 'stop': self.speech_stop}
+                self.speech.append(speech_chunk)
 
             # if for more than CONVERSATION_NOT_STARTED_THRESHOLD there is silence
             # the user may have not understood the response and we should repeat it
@@ -216,6 +232,8 @@ class Analyzer:
                     self.websocket.send("Conversation started")
                 except error:
                     print(error.errno)
+                
+                self.speech_start = self.total_duration
 
             elif self.state == Analyzer.State.POTENTIAL_TURN_CHANGE:
                 # if it was detected a potential turn change we need to send a message to
@@ -226,3 +244,25 @@ class Analyzer:
                     self.websocket.send("Potential turn change aborted")
                 except error:
                     print(error.errno)
+        
+        self.total_duration += self.frame_duration
+
+    def session_ended(self, type, file_name=""):
+        if self.state == Analyzer.State.STARTED:
+            self.speech_stop = self.total_duration + self.frame_duration # perchè la voce continua fino alla fine del frame
+            speech_chunk = {'start': self.speech_start, 'stop': self.speech_stop}
+            self.speech.append(speech_chunk)
+        self.sessions.append(self.speech)
+        self.state = Analyzer.State.NOT_STARTED
+        self.cumulative_silence = 0.0
+        self.speech = []
+        self.total_duration = 0
+        self.speech_start = 0
+        self.speech_stop = 0
+        if type == "dataset":
+            sessions_json = json.dumps(self.sessions)
+            with open("results/silero/" + str(self.confidence_threshold) + "/" + file_name, "w") as outfile:
+                outfile.write(sessions_json)
+            self.sessions = []
+                
+        

@@ -1,3 +1,14 @@
+// Create a Map
+const datasets = [
+    "../dataset/datasets/libri_demand/male_noisy/",
+    "../dataset/datasets/libri_demand/female_noisy/",
+    "../dataset/datasets/libri_demand/noisy_sessions/noise/"
+]
+const datasetsFiles = ["male_noisy_results.json", "female_noisy_results.json", "noisy_sessions_results.json"]
+const datasets_sizes = [51, 51, 85]
+var current_dataset = 0;
+var session = -1;
+
 // get DOM elements
 var iceConnectionLog = document.getElementById('ice-connection-state'),
     iceGatheringLog = document.getElementById('ice-gathering-state'),
@@ -6,9 +17,11 @@ var iceConnectionLog = document.getElementById('ice-connection-state'),
     jitter = document.getElementById('jitter'),
     packetsSent = document.getElementById('packets-sent'),
     packetsLost = document.getElementById('packets-lost'),
-    packetSendDelay = document.getElementById('packet-send-delay');
+    packetSendDelay = document.getElementById('packet-send-delay'),
+    audioElement = document.getElementById('audio');
 
 var statistics_interval;
+var negotiated = false;
 
 // peer connection
 var pc = null;
@@ -90,27 +103,88 @@ function negotiate() {
 //function to start the connection
 function start_test() {
     document.getElementById('start_test').disabled = true;
-    document.getElementById('audio_source').src = '/../dataset/Datasets/LibriParty/dataset/eval/session_0/session_0_mixture.wav';
+
+    audioContainer = document.getElementById('audioContainer');
+    audioElement = document.createElement("audio");
+    audio_path = getAudioPath();
+    // Set other attributes if needed
+    audioElement.id = "audio";
+    audioElement.src = audio_path;
+    audioElement.controls = true;  // Show player controls
+    audioElement.autoplay = true; // Autoplay is set to false, change if needed
+    audioContainer.appendChild(audioElement)
 
     pc = createPeerConnection();
     dc = pc.createDataChannel("datachannel");
+    dc.onmessage = function (evt) {
+        if (evt.data === "next_session") {
+            audio_path = getAudioPath();
+            if (audio_path === false) {
+                dc.send("test_finished")
+                return;
+            }
+            audioElement.src = audio_path;
+            audioElement.load();
+            audioElement.play();
+        }
+    }
 
     var constraints = {
         audio: true,
         video: false
     };
 
-    //get the audio stream and adds it to the connection
-    navigator.mediaDevices.getUserMedia(constraints).then(function (stream) {
-        stream.getTracks().forEach(function (track) {
-            pc.addTrack(track, stream);
-        });
-        return negotiate();
-    }, function (err) {
-        alert('Could not acquire media: ' + err);
-    });
+    audioElement.oncanplay = function () {
+        if (!negotiated) {
+            stream = audioElement.captureStream();
+
+            stream.getTracks().forEach(function (track) {
+                pc.addTrack(track, stream);
+            });
+            negotiated = true;
+            negotiate();
+        }
+        else {
+            pc.getSenders().forEach(function (sender) {
+                if (sender.track && sender.track.kind === 'audio') {
+                    sender.replaceTrack(getAudioTrack());
+                }
+            });
+        }
+    }
+
+    audioElement.onended = function () {
+        if (session < datasets_sizes[current_dataset] - 1){
+            dc.send('session_ended')
+        }
+        else{
+            dc.send('dataset_ended ' + datasetsFiles[current_dataset])
+        }
+    }
 
     statistics_interval = setInterval(statistics, 1000)
+}
+
+// Function to get the audio track from the updated audio source
+function getAudioTrack() {
+    var audioElement = document.getElementById('audio');
+    var audioStream = audioElement.captureStream();
+    return audioStream.getAudioTracks()[0];
+}
+
+function getAudioPath() {
+    session += 1;
+    if (session < datasets_sizes[current_dataset]) {
+        return datasets[current_dataset] + "session_" + session + ".wav";
+    }
+    else {
+        session = 0; 
+        current_dataset += 1;
+        if (current_dataset == datasets.length){
+            return false;
+        }
+        return datasets[current_dataset] + "session_" + session + ".wav"; 
+    }
 }
 
 //function to stop the connection
@@ -129,7 +203,7 @@ function stop() {
     document.getElementById('audioSource').disabled = false;
 
     //close data channel
-    if(dc){
+    if (dc) {
         dc.close();
     }
 
@@ -162,7 +236,7 @@ async function statistics() {
             jitter.textContent = report.jitter.toFixed(6);
             packetsLost.textContent = report.packetsLost;
         }
-        if (report.type === "outbound-rtp"){
+        if (report.type === "outbound-rtp") {
             packetsSent.textContent = report.packetsSent;
             packetSendDelay.textContent = report.totalPacketSendDelay;
         }

@@ -1,4 +1,5 @@
 import argparse
+from fileinput import filename
 import json
 import logging
 import os
@@ -12,6 +13,7 @@ from vad_analyzer_test import Analyzer
 ROOT = os.path.dirname(__file__)
 logger = logging.getLogger("pc")
 relay_audio = MediaRelay()
+args = None
 
 class AudioTrackProcessing(MediaStreamTrack):
     """
@@ -79,11 +81,6 @@ async def style(request):
     content = open(os.path.join(ROOT, "web_test/main_test.css"), "r").read()
     return web.Response(content_type="text/css", text=content)
 
-async def audio_source(request):
-    print(request)
-    content = open(os.path.join(ROOT, request.path), "r").read()
-    return web.Response(content_type="audio/wav", audio=content)
-
 
 async def offer(request):
     """
@@ -94,7 +91,7 @@ async def offer(request):
     Returns:
         Response: SDP answer in response to the SDP offer
     """
-
+    
     # get the SDP offer
     params = await request.json()
     offer = RTCSessionDescription(sdp=params["sdp"], type=params["type"])
@@ -109,13 +106,22 @@ async def offer(request):
 
     # prepare local media
     recorder = MediaBlackhole()
-    analyzer = Analyzer()
+    analyzer = Analyzer(args.confidence_threshold) # type: ignore
 
     @pc.on("datachannel")
     def on_datachannel(channel):
         @channel.on("message")
-        def on_message(message):
-            analyzer.end_of_turn_timestamp = int(message)
+        def on_message(message): 
+            text = message.split()
+            if text[0] == "test_finished":
+                print("Test finished")
+            elif text[0] == "session_ended":
+                analyzer.session_ended("session") 
+                channel.send("next_session")
+            elif text[0] == "dataset_ended":
+                file_name = text[1]
+                analyzer.session_ended("dataset", file_name)
+                channel.send("next_session")
 
     # pc connectionstatechange event handler
     @pc.on("connectionstatechange")
@@ -168,6 +174,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--port", type=int, default=8080, help="Port for HTTP server (default: 8080)"
     )
+    parser.add_argument("--confidence_threshold")
     args = parser.parse_args()
 
     if args.cert_file:
@@ -185,7 +192,7 @@ if __name__ == "__main__":
     app.router.add_get("/client.js", javascript)
     app.router.add_get("/main.css", style)
     app.router.add_post("/offer", offer)
-    app.router.add_get('/../dataset/Datasets/LibriParty/dataset/eval/session_0/session_0_mixture.wav', audio_source)
+    app.router.add_static('/dataset/', path='../dataset/', name='dataset', show_index=True)
     web.run_app(
         app, access_log=None, host=args.host, port=args.port, ssl_context=ssl_context
     )
