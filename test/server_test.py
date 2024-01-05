@@ -9,6 +9,7 @@ from aiohttp import web
 from aiortc import MediaStreamTrack, RTCPeerConnection, RTCSessionDescription
 from aiortc.contrib.media import MediaBlackhole, MediaRelay
 from vad_analyzer_test import Analyzer
+from vad_analyzer_test_webrtc_vad import AnalyzerWebRTC
 
 ROOT = os.path.dirname(__file__)
 logger = logging.getLogger("pc")
@@ -20,7 +21,7 @@ class AudioTrackProcessing(MediaStreamTrack):
     Audio stream track that processess AudioFrames from tracks.
     """
 
-    def __init__(self, track: MediaStreamTrack, analyzer: Analyzer):
+    def __init__(self, track: MediaStreamTrack, analyzer):
         """
         Costructor of the AudioTrackProcessing class.
 
@@ -106,7 +107,11 @@ async def offer(request):
 
     # prepare local media
     recorder = MediaBlackhole()
-    analyzer = Analyzer(args.confidence_threshold) # type: ignore
+    if args.model == "silero": # type: ignore
+        analyzer = Analyzer(args.confidence_threshold) # type: ignore
+    else:
+        analyzer = AnalyzerWebRTC(args.confidence_threshold) # type: ignore
+
 
     @pc.on("datachannel")
     def on_datachannel(channel):
@@ -174,7 +179,8 @@ if __name__ == "__main__":
     parser.add_argument(
         "--port", type=int, default=8080, help="Port for HTTP server (default: 8080)"
     )
-    parser.add_argument("--confidence_threshold")
+    parser.add_argument("--confidence_threshold", default=0.5)
+    parser.add_argument("--model", default="silero")
     args = parser.parse_args()
 
     if args.cert_file:
@@ -192,7 +198,7 @@ if __name__ == "__main__":
     app.router.add_get("/client.js", javascript)
     app.router.add_get("/main.css", style)
     app.router.add_post("/offer", offer)
-    app.router.add_static('/dataset/', path='../dataset/', name='dataset', show_index=True)
+    app.router.add_static('/dataset/', path='../dataset', name='dataset', show_index=True)
     web.run_app(
         app, access_log=None, host=args.host, port=args.port, ssl_context=ssl_context
     )
