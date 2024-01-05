@@ -1,0 +1,80 @@
+\documentclass[12pt]{article}
+\usepackage{graphicx} % Required for inserting images
+\graphicspath{images/}
+\usepackage{blindtext}
+\usepackage{parskip}
+\usepackage{setspace}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{xr}
+
+\lstdefinelanguage{JavaScript}{
+  keywords={break, case, catch, continue, debugger, default, delete, do, else, finally, for, function, if, in, instanceof, new, return, switch, this, throw, try, typeof, var, void, while, with},
+  morecomment=[l]{//},
+  morecomment=[s]{/*}{*/},
+  morestring=[b]',
+  morestring=[b]",
+  sensitive=true
+}
+
+%New colors defined below
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+%Code listing style named "python"
+\lstdefinestyle{python}{
+  backgroundcolor=\color{backcolour},   
+  commentstyle=\color{codegreen},
+  keywordstyle=\color{blue},
+  numberstyle=\tiny\color{codegray},
+  stringstyle=\color{red},
+  basicstyle=\ttfamily\footnotesize,
+  breakatwhitespace=false,         
+  breaklines=true,                 
+  captionpos=b,                    
+  keepspaces=true,                 
+  numbers=left,                    
+  numbersep=5pt,                  
+  showspaces=false,                
+  showstringspaces=false,
+  showtabs=false,                  
+  tabsize=2
+}
+
+%"mystyle" code listing set
+\lstset{style=python}
+
+\usepackage{biblatex}
+\addbibresource{bibliography.bib}
+\onehalfspacing
+\usepackage{hyperref}
+
+\usepackage{subfiles} % Best loaded last in the preamble
+
+\title{Turn-Taking Thesis}
+\author{Antonio Patimo}
+\date{October 2023}
+
+\begin{document}
+
+\maketitle
+\thispagestyle{empty}
+\newpage
+\tableofcontents
+\newpage
+\subfile{sections/Abstract}
+\newpage
+\subfile{sections/1.Introduction}
+\newpage
+\subfile{sections/2.Literature_review}
+\newpage
+\subfile{sections/3.Methods_and_methodology}
+\newpage
+\subfile{sections/4.Implementation}
+\newpage
+\subfile{sections/5.Experiments_and_results}
+\printbibliography[heading=bibintoc]
+
+\end{document}

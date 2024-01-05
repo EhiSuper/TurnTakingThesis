@@ -1,0 +1,36 @@
+def set_state(self, speaking_probability):
+    """
+    Function that handles the current status of the turn
+
+    Args:
+    speaking_probability (float): Probability detected that the input frame contains voice
+    """
+    # check if the new frame has voice
+    if speaking_probability <= self.confidence_threshold:
+        self.cumulative_silence += self.frame_duration
+        # if there is silence for more than the specifiend threshold there could be a turn change
+        if (
+            self.state == Analyzer.State.STARTED
+            and self.cumulative_silence >= self.silence_threshold
+        ):
+            self.state = Analyzer.State.POTENTIAL_TURN_CHANGE
+            print("Potential turn change")
+            try:
+                self.websocket.send("Potential turn change")
+            except error:
+                print(error.errno)
+
+        # if there is silence for more than the specified threshold there is an actual turn change
+        elif (
+            self.state == Analyzer.State.POTENTIAL_TURN_CHANGE
+            and self.cumulative_silence >= self.confirmed_silence_threshold
+        ):
+            self.state = Analyzer.State.NOT_STARTED
+            # we need to go back to the NOT_STARTED state to initiate a new turn
+            print("Turn change confirmed")
+            print(" ")
+            try:
+                self.websocket.send("Turn change confirmed")
+            except error:
+                print(error.errno)
+        ...

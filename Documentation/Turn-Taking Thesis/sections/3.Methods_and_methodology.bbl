@@ -1,0 +1,256 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global}
+    \entry{aiortc}{online}{}
+      \name{author}{1}{}{%
+        {{hash=99892723eedc0af1644305d41a65c163}{%
+           family={aiortc},
+           familyi={a\bibinitperiod}}}%
+      }
+      \strng{namehash}{99892723eedc0af1644305d41a65c163}
+      \strng{fullhash}{99892723eedc0af1644305d41a65c163}
+      \strng{bibnamehash}{99892723eedc0af1644305d41a65c163}
+      \strng{authorbibnamehash}{99892723eedc0af1644305d41a65c163}
+      \strng{authornamehash}{99892723eedc0af1644305d41a65c163}
+      \strng{authorfullhash}{99892723eedc0af1644305d41a65c163}
+      \field{sortinit}{a}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{aiortc}
+      \field{urlday}{8}
+      \field{urlmonth}{11}
+      \field{urlyear}{2023}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://github.com/aiortc/aiortc
+      \endverb
+      \verb{url}
+      \verb https://github.com/aiortc/aiortc
+      \endverb
+    \endentry
+    \entry{stft}{online}{}
+      \name{author}{1}{}{%
+        {{hash=53cba05fc33fb76b02fb6f05b9f7fb5e}{%
+           family={Collimator},
+           familyi={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{53cba05fc33fb76b02fb6f05b9f7fb5e}
+      \strng{fullhash}{53cba05fc33fb76b02fb6f05b9f7fb5e}
+      \strng{bibnamehash}{53cba05fc33fb76b02fb6f05b9f7fb5e}
+      \strng{authorbibnamehash}{53cba05fc33fb76b02fb6f05b9f7fb5e}
+      \strng{authornamehash}{53cba05fc33fb76b02fb6f05b9f7fb5e}
+      \strng{authorfullhash}{53cba05fc33fb76b02fb6f05b9f7fb5e}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{What is a Short-Time Fourier Transform?}
+      \field{urlday}{2}
+      \field{urlmonth}{11}
+      \field{urlyear}{2023}
+      \field{year}{2023}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.collimator.ai/reference-guides/what-is-a-short-time-fourier-transform
+      \endverb
+      \verb{url}
+      \verb https://www.collimator.ai/reference-guides/what-is-a-short-time-fourier-transform
+      \endverb
+    \endentry
+    \entry{STUN_TURN}{online}{}
+      \name{author}{1}{}{%
+        {{hash=c86224d62290af91bfa6823e51faab4c}{%
+           family={Dutton},
+           familyi={D\bibinitperiod},
+           given={Sam},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{c86224d62290af91bfa6823e51faab4c}
+      \strng{fullhash}{c86224d62290af91bfa6823e51faab4c}
+      \strng{bibnamehash}{c86224d62290af91bfa6823e51faab4c}
+      \strng{authorbibnamehash}{c86224d62290af91bfa6823e51faab4c}
+      \strng{authornamehash}{c86224d62290af91bfa6823e51faab4c}
+      \strng{authorfullhash}{c86224d62290af91bfa6823e51faab4c}
+      \field{extraname}{1}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Build the backend services needed for a WebRTC app}
+      \field{urlday}{8}
+      \field{urlmonth}{11}
+      \field{urlyear}{2023}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://web.dev/articles/webrtc-infrastructure
+      \endverb
+      \verb{url}
+      \verb https://web.dev/articles/webrtc-infrastructure
+      \endverb
+    \endentry
+    \entry{Get_started_with_WebRTC}{online}{}
+      \name{author}{1}{}{%
+        {{hash=c86224d62290af91bfa6823e51faab4c}{%
+           family={Dutton},
+           familyi={D\bibinitperiod},
+           given={Sam},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{c86224d62290af91bfa6823e51faab4c}
+      \strng{fullhash}{c86224d62290af91bfa6823e51faab4c}
+      \strng{bibnamehash}{c86224d62290af91bfa6823e51faab4c}
+      \strng{authorbibnamehash}{c86224d62290af91bfa6823e51faab4c}
+      \strng{authornamehash}{c86224d62290af91bfa6823e51faab4c}
+      \strng{authorfullhash}{c86224d62290af91bfa6823e51faab4c}
+      \field{extraname}{2}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Get started with WebRTC}
+      \field{urlday}{7}
+      \field{urlmonth}{11}
+      \field{urlyear}{2023}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://web.dev/articles/webrtc-basics
+      \endverb
+      \verb{url}
+      \verb https://web.dev/articles/webrtc-basics
+      \endverb
+    \endentry
+    \entry{WebRTC}{online}{}
+      \name{author}{1}{}{%
+        {{hash=d454a73879e63070e7910511a0d7fada}{%
+           family={team},
+           familyi={t\bibinitperiod},
+           given={Google\bibnamedelima WebRTC},
+           giveni={G\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+      }
+      \strng{namehash}{d454a73879e63070e7910511a0d7fada}
+      \strng{fullhash}{d454a73879e63070e7910511a0d7fada}
+      \strng{bibnamehash}{d454a73879e63070e7910511a0d7fada}
+      \strng{authorbibnamehash}{d454a73879e63070e7910511a0d7fada}
+      \strng{authornamehash}{d454a73879e63070e7910511a0d7fada}
+      \strng{authorfullhash}{d454a73879e63070e7910511a0d7fada}
+      \field{sortinit}{t}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Real-time communication for the web}
+      \field{urlday}{6}
+      \field{urlmonth}{11}
+      \field{urlyear}{2023}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://webrtc.org
+      \endverb
+      \verb{url}
+      \verb https://webrtc.org
+      \endverb
+    \endentry
+    \entry{SileroVAD}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=af4d9a6802d17727734a99e6cf159889}{%
+           family={Team},
+           familyi={T\bibinitperiod},
+           given={Silero},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {GitHub}%
+      }
+      \strng{namehash}{af4d9a6802d17727734a99e6cf159889}
+      \strng{fullhash}{af4d9a6802d17727734a99e6cf159889}
+      \strng{bibnamehash}{af4d9a6802d17727734a99e6cf159889}
+      \strng{authorbibnamehash}{af4d9a6802d17727734a99e6cf159889}
+      \strng{authornamehash}{af4d9a6802d17727734a99e6cf159889}
+      \strng{authorfullhash}{af4d9a6802d17727734a99e6cf159889}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://github.com/snakers4/silero-vad}}
+      \field{journaltitle}{GitHub repository}
+      \field{title}{Silero VAD: pre-trained enterprise-grade Voice Activity Detector (VAD), Number Detector and Language Classifier}
+      \field{year}{2021}
+    \endentry
+    \entry{veysov20202onevoice}{article}{}
+      \name{author}{2}{}{%
+        {{hash=c778388ea81f78e3910691bfa5e6576b}{%
+           family={Veysov},
+           familyi={V\bibinitperiod},
+           given={Alexander},
+           giveni={A\bibinitperiod}}}%
+        {{hash=4cd087f570ad327641ebecde355871ab}{%
+           family={Voronin},
+           familyi={V\bibinitperiod},
+           given={Dimitrii},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{301a97b9544af8efd10c864fca4aea02}
+      \strng{fullhash}{301a97b9544af8efd10c864fca4aea02}
+      \strng{bibnamehash}{301a97b9544af8efd10c864fca4aea02}
+      \strng{authorbibnamehash}{301a97b9544af8efd10c864fca4aea02}
+      \strng{authornamehash}{301a97b9544af8efd10c864fca4aea02}
+      \strng{authorfullhash}{301a97b9544af8efd10c864fca4aea02}
+      \field{sortinit}{V}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://thegradient.pub/one-voice-detector-to-rule-them-all/ }}
+      \field{journaltitle}{The Gradient}
+      \field{title}{One Voice Detector to Rule Them All}
+      \field{year}{2022}
+    \endentry
+    \entry{WebRTC_architecture}{online}{}
+      \name{author}{1}{}{%
+        {{hash=d8621144cbc61520339c3b10c61731f0}{%
+           family={WebRTC},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{d8621144cbc61520339c3b10c61731f0}
+      \strng{fullhash}{d8621144cbc61520339c3b10c61731f0}
+      \strng{bibnamehash}{d8621144cbc61520339c3b10c61731f0}
+      \strng{authorbibnamehash}{d8621144cbc61520339c3b10c61731f0}
+      \strng{authornamehash}{d8621144cbc61520339c3b10c61731f0}
+      \strng{authorfullhash}{d8621144cbc61520339c3b10c61731f0}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{WebRTC architecture}
+      \field{urlday}{8}
+      \field{urlmonth}{11}
+      \field{urlyear}{2023}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://webrtc.github.io/webrtc-org/architecture/
+      \endverb
+      \verb{url}
+      \verb https://webrtc.github.io/webrtc-org/architecture/
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

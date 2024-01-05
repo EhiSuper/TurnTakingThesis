@@ -1,0 +1,543 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global}
+    \entry{anderson1991hcrc}{article}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{10}{}{%
+        {{hash=b243f5e0446645765b04aa5ac77c1e5b}{%
+           family={Anderson},
+           familyi={A\bibinitperiod},
+           given={Anne\bibnamedelima H},
+           giveni={A\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=d20179164dddff667f66723247a7e637}{%
+           family={Bader},
+           familyi={B\bibinitperiod},
+           given={Miles},
+           giveni={M\bibinitperiod}}}%
+        {{hash=fb09ee643bf059cb7a80f59c95cd2c3f}{%
+           family={Bard},
+           familyi={B\bibinitperiod},
+           given={Ellen\bibnamedelima Gurman},
+           giveni={E\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+        {{hash=7d320f19a708b0c04460d855988c3dfe}{%
+           family={Boyle},
+           familyi={B\bibinitperiod},
+           given={Elizabeth},
+           giveni={E\bibinitperiod}}}%
+        {{hash=ce8864607354b32a364951150feadf9c}{%
+           family={Doherty},
+           familyi={D\bibinitperiod},
+           given={Gwyneth},
+           giveni={G\bibinitperiod}}}%
+        {{hash=cd278f1b20822e342f2f0e0356884f49}{%
+           family={Garrod},
+           familyi={G\bibinitperiod},
+           given={Simon},
+           giveni={S\bibinitperiod}}}%
+        {{hash=89d4577137758e5dd1e2f013e22c91b5}{%
+           family={Isard},
+           familyi={I\bibinitperiod},
+           given={Stephen},
+           giveni={S\bibinitperiod}}}%
+        {{hash=8e70dc09420ddfa7efe8fa92d6e45773}{%
+           family={Kowtko},
+           familyi={K\bibinitperiod},
+           given={Jacqueline},
+           giveni={J\bibinitperiod}}}%
+        {{hash=acb8aa86af04ac11dd4e7b5258a8ea6f}{%
+           family={McAllister},
+           familyi={M\bibinitperiod},
+           given={Jan},
+           giveni={J\bibinitperiod}}}%
+        {{hash=8dc2c6041ad70365ad056c083e2a2ed3}{%
+           family={Miller},
+           familyi={M\bibinitperiod},
+           given={Jim},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Sage Publications Sage UK: London, England}%
+      }
+      \strng{namehash}{368c5160cbe1cdfa34723c94b3275d85}
+      \strng{fullhash}{a4f4a9620174848c632399b045961934}
+      \strng{bibnamehash}{368c5160cbe1cdfa34723c94b3275d85}
+      \strng{authorbibnamehash}{368c5160cbe1cdfa34723c94b3275d85}
+      \strng{authornamehash}{368c5160cbe1cdfa34723c94b3275d85}
+      \strng{authorfullhash}{a4f4a9620174848c632399b045961934}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Language and speech}
+      \field{number}{4}
+      \field{title}{The HCRC map task corpus}
+      \field{volume}{34}
+      \field{year}{1991}
+      \field{pages}{351\bibrangedash 366}
+      \range{pages}{16}
+    \endentry
+    \entry{auer2018gaze}{article}{}
+      \name{author}{1}{}{%
+        {{hash=de2b1529f66914ba9967dda20bdb0644}{%
+           family={Auer},
+           familyi={A\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {John Benjamins Amsterdam}%
+      }
+      \strng{namehash}{de2b1529f66914ba9967dda20bdb0644}
+      \strng{fullhash}{de2b1529f66914ba9967dda20bdb0644}
+      \strng{bibnamehash}{de2b1529f66914ba9967dda20bdb0644}
+      \strng{authorbibnamehash}{de2b1529f66914ba9967dda20bdb0644}
+      \strng{authornamehash}{de2b1529f66914ba9967dda20bdb0644}
+      \strng{authorfullhash}{de2b1529f66914ba9967dda20bdb0644}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Eye-tracking in interaction: Studies on the role of eye gaze in dialogue}
+      \field{title}{Gaze, addressee selection and turn-taking in three-party interaction}
+      \field{year}{2018}
+      \field{pages}{197\bibrangedash 231}
+      \range{pages}{35}
+    \endentry
+    \entry{duncan1972some}{article}{}
+      \name{author}{1}{}{%
+        {{hash=37db82ca3f26c01345c8f1bb7f412176}{%
+           family={Duncan},
+           familyi={D\bibinitperiod},
+           given={Starkey},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Psychological Association}%
+      }
+      \strng{namehash}{37db82ca3f26c01345c8f1bb7f412176}
+      \strng{fullhash}{37db82ca3f26c01345c8f1bb7f412176}
+      \strng{bibnamehash}{37db82ca3f26c01345c8f1bb7f412176}
+      \strng{authorbibnamehash}{37db82ca3f26c01345c8f1bb7f412176}
+      \strng{authornamehash}{37db82ca3f26c01345c8f1bb7f412176}
+      \strng{authorfullhash}{37db82ca3f26c01345c8f1bb7f412176}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of personality and social psychology}
+      \field{number}{2}
+      \field{title}{Some signals and rules for taking speaking turns in conversations.}
+      \field{volume}{23}
+      \field{year}{1972}
+      \field{pages}{283}
+      \range{pages}{1}
+    \endentry
+    \entry{edlund2005exploring}{article}{}
+      \name{author}{2}{}{%
+        {{hash=6c7bbf711c7e8095cfb80398d7d0644a}{%
+           family={Edlund},
+           familyi={E\bibinitperiod},
+           given={Jens},
+           giveni={J\bibinitperiod}}}%
+        {{hash=cecd5b14b1fa3c101d77121d1fe52b02}{%
+           family={Heldner},
+           familyi={H\bibinitperiod},
+           given={Mattias},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {S. Karger AG}%
+      }
+      \strng{namehash}{ba0fc91d9861e8f499de37fd997b1c6b}
+      \strng{fullhash}{ba0fc91d9861e8f499de37fd997b1c6b}
+      \strng{bibnamehash}{ba0fc91d9861e8f499de37fd997b1c6b}
+      \strng{authorbibnamehash}{ba0fc91d9861e8f499de37fd997b1c6b}
+      \strng{authornamehash}{ba0fc91d9861e8f499de37fd997b1c6b}
+      \strng{authorfullhash}{ba0fc91d9861e8f499de37fd997b1c6b}
+      \field{sortinit}{E}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Phonetica}
+      \field{number}{2-4}
+      \field{title}{Exploring prosody in interaction control}
+      \field{volume}{62}
+      \field{year}{2005}
+      \field{pages}{215\bibrangedash 226}
+      \range{pages}{12}
+    \endentry
+    \entry{graf2015features}{article}{}
+      \name{author}{4}{}{%
+        {{hash=a440f8b53c484aefa6615f8bcbcd0777}{%
+           family={Graf},
+           familyi={G\bibinitperiod},
+           given={Simon},
+           giveni={S\bibinitperiod}}}%
+        {{hash=aff0936746a1111d564a91fa0c7e33cf}{%
+           family={Herbig},
+           familyi={H\bibinitperiod},
+           given={Tobias},
+           giveni={T\bibinitperiod}}}%
+        {{hash=365bdd37e05e7dab9a39ef25539c4c08}{%
+           family={Buck},
+           familyi={B\bibinitperiod},
+           given={Markus},
+           giveni={M\bibinitperiod}}}%
+        {{hash=310eda54aa8a79cd65e9388fa14b1596}{%
+           family={Schmidt},
+           familyi={S\bibinitperiod},
+           given={Gerhard},
+           giveni={G\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{c088144aecdca21d50c462a6febb4a57}
+      \strng{fullhash}{ed98b0054c5ec20a67c0ccd3ae929e63}
+      \strng{bibnamehash}{c088144aecdca21d50c462a6febb4a57}
+      \strng{authorbibnamehash}{c088144aecdca21d50c462a6febb4a57}
+      \strng{authornamehash}{c088144aecdca21d50c462a6febb4a57}
+      \strng{authorfullhash}{ed98b0054c5ec20a67c0ccd3ae929e63}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{EURASIP Journal on Advances in Signal Processing}
+      \field{title}{Features for voice activity detection: a comparative analysis}
+      \field{volume}{2015}
+      \field{year}{2015}
+      \field{pages}{1\bibrangedash 15}
+      \range{pages}{15}
+    \endentry
+    \entry{gravano2011turn}{article}{}
+      \name{author}{2}{}{%
+        {{hash=d4c8803896ffda0600fca4e497e5ab5e}{%
+           family={Gravano},
+           familyi={G\bibinitperiod},
+           given={Agustín},
+           giveni={A\bibinitperiod}}}%
+        {{hash=f5cb368011303fe22ab5c7141448c62d}{%
+           family={Hirschberg},
+           familyi={H\bibinitperiod},
+           given={Julia},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{9099c6cda24d2c5c56d9806ace2f2b06}
+      \strng{fullhash}{9099c6cda24d2c5c56d9806ace2f2b06}
+      \strng{bibnamehash}{9099c6cda24d2c5c56d9806ace2f2b06}
+      \strng{authorbibnamehash}{9099c6cda24d2c5c56d9806ace2f2b06}
+      \strng{authornamehash}{9099c6cda24d2c5c56d9806ace2f2b06}
+      \strng{authorfullhash}{9099c6cda24d2c5c56d9806ace2f2b06}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Computer Speech \& Language}
+      \field{number}{3}
+      \field{title}{Turn-taking cues in task-oriented dialogue}
+      \field{volume}{25}
+      \field{year}{2011}
+      \field{pages}{601\bibrangedash 634}
+      \range{pages}{34}
+    \endentry
+    \entry{holler2018processing}{article}{}
+      \name{author}{3}{}{%
+        {{hash=98d1be3cdd5e0783e14d39200613b629}{%
+           family={Holler},
+           familyi={H\bibinitperiod},
+           given={Judith},
+           giveni={J\bibinitperiod}}}%
+        {{hash=714bef1c8226613bccc05df4ae05c459}{%
+           family={Kendrick},
+           familyi={K\bibinitperiod},
+           given={Kobin\bibnamedelima H},
+           giveni={K\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=e8cabdf8db416e17d05ff9d4d9c41faf}{%
+           family={Levinson},
+           familyi={L\bibinitperiod},
+           given={Stephen\bibnamedelima C},
+           giveni={S\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{7e467507c905656167654c658c78c8c6}
+      \strng{fullhash}{7e467507c905656167654c658c78c8c6}
+      \strng{bibnamehash}{7e467507c905656167654c658c78c8c6}
+      \strng{authorbibnamehash}{7e467507c905656167654c658c78c8c6}
+      \strng{authornamehash}{7e467507c905656167654c658c78c8c6}
+      \strng{authorfullhash}{7e467507c905656167654c658c78c8c6}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Psychonomic bulletin \& review}
+      \field{title}{Processing language in face-to-face conversation: Questions with gestures get faster responses}
+      \field{volume}{25}
+      \field{year}{2018}
+      \field{pages}{1900\bibrangedash 1908}
+      \range{pages}{9}
+    \endentry
+    \entry{googleRNN}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=a7ef3006e9ca514e6c31aef4b62c8284}{%
+           family={Hughes},
+           familyi={H\bibinitperiod},
+           given={Thad},
+           giveni={T\bibinitperiod}}}%
+        {{hash=22b4bd8e91c829bb37417d2c8736820e}{%
+           family={Mierle},
+           familyi={M\bibinitperiod},
+           given={Keir},
+           giveni={K\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{6a0fd22ac4d90d2a1d1ed2676bde0150}
+      \strng{fullhash}{6a0fd22ac4d90d2a1d1ed2676bde0150}
+      \strng{bibnamehash}{6a0fd22ac4d90d2a1d1ed2676bde0150}
+      \strng{authorbibnamehash}{6a0fd22ac4d90d2a1d1ed2676bde0150}
+      \strng{authornamehash}{6a0fd22ac4d90d2a1d1ed2676bde0150}
+      \strng{authorfullhash}{6a0fd22ac4d90d2a1d1ed2676bde0150}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2013 IEEE International Conference on Acoustics, Speech and Signal Processing}
+      \field{title}{Recurrent neural networks for voice activity detection}
+      \field{year}{2013}
+      \field{pages}{7378\bibrangedash 7382}
+      \range{pages}{5}
+    \endentry
+    \entry{ishii2014analysis}{inproceedings}{}
+      \name{author}{4}{}{%
+        {{hash=265fea0ead6b367be4c0afdb42c64cdf}{%
+           family={Ishii},
+           familyi={I\bibinitperiod},
+           given={Ryo},
+           giveni={R\bibinitperiod}}}%
+        {{hash=89b7518545ee433367ac56b37627c2c0}{%
+           family={Otsuka},
+           familyi={O\bibinitperiod},
+           given={Kazuhiro},
+           giveni={K\bibinitperiod}}}%
+        {{hash=aa3cec46f12582104b296d11fce7b7b5}{%
+           family={Kumano},
+           familyi={K\bibinitperiod},
+           given={Shiro},
+           giveni={S\bibinitperiod}}}%
+        {{hash=31d860aa7128fe65fecee658cccfcd6c}{%
+           family={Yamato},
+           familyi={Y\bibinitperiod},
+           given={Junji},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{698923f6ca333d8dd977f80b96707145}
+      \strng{fullhash}{7de3214ed988f8e47837149b5e9f6c52}
+      \strng{bibnamehash}{698923f6ca333d8dd977f80b96707145}
+      \strng{authorbibnamehash}{698923f6ca333d8dd977f80b96707145}
+      \strng{authornamehash}{698923f6ca333d8dd977f80b96707145}
+      \strng{authorfullhash}{7de3214ed988f8e47837149b5e9f6c52}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the 16th international conference on multimodal interaction}
+      \field{title}{Analysis of respiration for prediction of" who will be next speaker and when?" in multi-party meetings}
+      \field{year}{2014}
+      \field{pages}{18\bibrangedash 25}
+      \range{pages}{8}
+    \endentry
+    \entry{kendon1967some}{article}{}
+      \name{author}{1}{}{%
+        {{hash=2512b39e214f27cb2b9e3dc6913f7f9a}{%
+           family={Kendon},
+           familyi={K\bibinitperiod},
+           given={Adam},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{2512b39e214f27cb2b9e3dc6913f7f9a}
+      \strng{fullhash}{2512b39e214f27cb2b9e3dc6913f7f9a}
+      \strng{bibnamehash}{2512b39e214f27cb2b9e3dc6913f7f9a}
+      \strng{authorbibnamehash}{2512b39e214f27cb2b9e3dc6913f7f9a}
+      \strng{authornamehash}{2512b39e214f27cb2b9e3dc6913f7f9a}
+      \strng{authorfullhash}{2512b39e214f27cb2b9e3dc6913f7f9a}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Acta psychologica}
+      \field{title}{Some functions of gaze-direction in social interaction}
+      \field{volume}{26}
+      \field{year}{1967}
+      \field{pages}{22\bibrangedash 63}
+      \range{pages}{42}
+    \endentry
+    \entry{koiso1998analysis}{article}{}
+      \name{author}{5}{}{%
+        {{hash=bacd91e2a5b0a2b47cafb9c9d34c8d3c}{%
+           family={Koiso},
+           familyi={K\bibinitperiod},
+           given={Hanae},
+           giveni={H\bibinitperiod}}}%
+        {{hash=c957b734781a821a934a8ffeeb089199}{%
+           family={Horiuchi},
+           familyi={H\bibinitperiod},
+           given={Yasuo},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=52da154e4f02b317381af19176960245}{%
+           family={Tutiya},
+           familyi={T\bibinitperiod},
+           given={Syun},
+           giveni={S\bibinitperiod}}}%
+        {{hash=acd8f54762f8c152a9b698639e928c14}{%
+           family={Ichikawa},
+           familyi={I\bibinitperiod},
+           given={Akira},
+           giveni={A\bibinitperiod}}}%
+        {{hash=0dd03c673481e5e7a838da79aef7d042}{%
+           family={Den},
+           familyi={D\bibinitperiod},
+           given={Yasuharu},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {SAGE Publications Sage UK: London, England}%
+      }
+      \strng{namehash}{690042ab7c6764c4eabae163753d99d6}
+      \strng{fullhash}{11a3057e061bc1fa448a844ace5049a8}
+      \strng{bibnamehash}{690042ab7c6764c4eabae163753d99d6}
+      \strng{authorbibnamehash}{690042ab7c6764c4eabae163753d99d6}
+      \strng{authornamehash}{690042ab7c6764c4eabae163753d99d6}
+      \strng{authorfullhash}{11a3057e061bc1fa448a844ace5049a8}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Language and speech}
+      \field{number}{3-4}
+      \field{title}{An analysis of turn-taking and backchannels based on prosodic and syntactic features in Japanese map task dialogs}
+      \field{volume}{41}
+      \field{year}{1998}
+      \field{pages}{295\bibrangedash 321}
+      \range{pages}{27}
+    \endentry
+    \entry{sacks1978simplest}{incollection}{}
+      \name{author}{3}{}{%
+        {{hash=a8da27aa0a164a6f21aa1480cceee482}{%
+           family={Sacks},
+           familyi={S\bibinitperiod},
+           given={Harvey},
+           giveni={H\bibinitperiod}}}%
+        {{hash=9c2009a4d580cba2c9f01398b7976143}{%
+           family={Schegloff},
+           familyi={S\bibinitperiod},
+           given={Emanuel\bibnamedelima A},
+           giveni={E\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=39b1fc36ba0ceba7432d4046ad7a5d28}{%
+           family={Jefferson},
+           familyi={J\bibinitperiod},
+           given={Gail},
+           giveni={G\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{3ba0f7e3a43d257e657df39623172f9f}
+      \strng{fullhash}{3ba0f7e3a43d257e657df39623172f9f}
+      \strng{bibnamehash}{3ba0f7e3a43d257e657df39623172f9f}
+      \strng{authorbibnamehash}{3ba0f7e3a43d257e657df39623172f9f}
+      \strng{authornamehash}{3ba0f7e3a43d257e657df39623172f9f}
+      \strng{authorfullhash}{3ba0f7e3a43d257e657df39623172f9f}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Studies in the organization of conversational interaction}
+      \field{title}{A simplest systematics for the organization of turn taking for conversation}
+      \field{year}{1978}
+      \field{pages}{7\bibrangedash 55}
+      \range{pages}{49}
+    \endentry
+    \entry{skantze2021turn}{article}{}
+      \name{author}{1}{}{%
+        {{hash=621719a4221b1270cab64350821dbbd7}{%
+           family={Skantze},
+           familyi={S\bibinitperiod},
+           given={Gabriel},
+           giveni={G\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{621719a4221b1270cab64350821dbbd7}
+      \strng{fullhash}{621719a4221b1270cab64350821dbbd7}
+      \strng{bibnamehash}{621719a4221b1270cab64350821dbbd7}
+      \strng{authorbibnamehash}{621719a4221b1270cab64350821dbbd7}
+      \strng{authornamehash}{621719a4221b1270cab64350821dbbd7}
+      \strng{authorfullhash}{621719a4221b1270cab64350821dbbd7}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Computer Speech \& Language}
+      \field{title}{Turn-taking in conversational systems and human-robot interaction: a review}
+      \field{volume}{67}
+      \field{year}{2021}
+      \field{pages}{101178}
+      \range{pages}{1}
+    \endentry
+    \entry{ward2019prosodic}{book}{}
+      \name{author}{1}{}{%
+        {{hash=7f6f1880dbbe6098c6ae8ad1e69354ff}{%
+           family={Ward},
+           familyi={W\bibinitperiod},
+           given={Nigel\bibnamedelima G},
+           giveni={N\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{7f6f1880dbbe6098c6ae8ad1e69354ff}
+      \strng{fullhash}{7f6f1880dbbe6098c6ae8ad1e69354ff}
+      \strng{bibnamehash}{7f6f1880dbbe6098c6ae8ad1e69354ff}
+      \strng{authorbibnamehash}{7f6f1880dbbe6098c6ae8ad1e69354ff}
+      \strng{authornamehash}{7f6f1880dbbe6098c6ae8ad1e69354ff}
+      \strng{authorfullhash}{7f6f1880dbbe6098c6ae8ad1e69354ff}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Prosodic patterns in English conversation}
+      \field{year}{2019}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

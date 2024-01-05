@@ -1,0 +1,9 @@
+new_end_analyze = time.time()
+gap = new_end_analyze - self.old_end_analyze
+if self.old_end_analyze != 0:
+    self.analyze_gaps.append(gap)
+    print(f'Analyze gap: {gap}')
+self.old_end_analyze = new_end_analyze
+if(len(self.analyze_gaps) > 0 and len(self.analyze_gaps) % 100 == 0):
+    average_analyze_gap = sum(self.analyze_gaps) / len(self.analyze_gaps)
+    print(f'Average analyze gap: {average_analyze_gap}')
