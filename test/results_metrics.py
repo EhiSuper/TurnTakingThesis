@@ -1,7 +1,7 @@
 import argparse
+from genericpath import isfile
 import json
-
-from matplotlib.rcsetup import non_interactive_bk
+import os
 
 class Session:
 
@@ -53,7 +53,9 @@ def obtain_confusion_matrix(metadata_sessions, results_sessions):
     true_negatives = {}
 
     for i in range(len(metadata_sessions)):
-        key = metadata_sessions[i].noise + " - " + str(metadata_sessions[i].snr)
+        path = metadata_sessions[i].noise.split('/')
+        name = path[-2]
+        key = name + " - " + str(metadata_sessions[i].snr)
         if key not in true_positives.keys():
             true_positives[key] = 0
             false_negatives[key] = 0
@@ -88,82 +90,101 @@ def obtain_confusion_matrix_from_speech(metadata_speech, results_speech):
     return true_positive, false_negative, false_positive, true_negative
 
 
+def get_results(results_path):
+    # get all the utterances
+    results = {}
+    models = os.scandir(results_path)
+    for model in models:
+        if model.is_file() or model.name == "metadata":
+            continue
+        results[model.name] = {}
+
+        thresholds = os.scandir(model)
+        for threshold in thresholds:
+            if threshold.is_file():
+                continue
+            results[model.name][threshold.name] = {}
+            
+            files = os.scandir(threshold)
+            for file in files:
+                with open(file.path, "r") as input:
+                    result = json.load(input)
+                results[model.name][threshold.name][file.name] = result        
+
+    return results
+
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--metadata')
     parser.add_argument('--results')
     args = parser.parse_args()
-    metadata_file = args.metadata
-    results_file = args.results
-    #metadata_file = "test/male_noisy.json"
-    #results_file = "test/male_noisy_results.json"
-    with open(metadata_file, "r") as input:
-        metadata = json.load(input)
-    metadata_sessions = sessions_from_metadata(metadata)
-    with open(results_file, "r") as input:
-        results = json.load(input)
+    metadata_path = args.metadata
+    results_path = args.results
 
-    true_positive, false_negative, false_positive, true_negative = obtain_confusion_matrix(metadata_sessions, results)
+    metadata = {}
+    male_metadata = metadata_path + "/male_noisy.json"
+    with open(male_metadata, "r") as input:
+        metadata_load = json.load(input)
+    metadata_sessions = sessions_from_metadata(metadata_load)
+    metadata['male'] = metadata_sessions
+
+    female_metadata = metadata_path + "/female_noisy.json"
+    with open(female_metadata, "r") as input:
+        metadata_load = json.load(input)
+    metadata_sessions = sessions_from_metadata(metadata_load)
+    metadata['female'] = metadata_sessions
+
+    noisy_metadata = metadata_path + "/noisy_sessions.json"
+    with open(noisy_metadata, "r") as input:
+        metadata_load = json.load(input)
+    metadata_sessions = sessions_from_metadata(metadata_load)
+    metadata['noisy'] = metadata_sessions
     
-    accuracy = {}
-    precision = {}
-    recall = {}
-    f1_score = {}
+    results = get_results(results_path)
+    metrics = {}
 
-    for noise in true_positive.keys():
-        total_milliseconds = true_positive[noise] + false_negative[noise] + false_positive[noise] + true_negative[noise]
-        try:
-            accuracy[noise] = (true_negative[noise] + true_positive[noise]) / (true_negative[noise] + true_positive[noise] + false_negative[noise] + false_positive[noise])
-            precision[noise] = true_positive[noise] / (true_positive[noise] + false_positive[noise])
-            recall[noise] = true_positive[noise] / (true_positive[noise] + false_negative[noise])
-            f1_score[noise] = (2 * precision[noise] * recall[noise]) / (precision[noise] + recall[noise])   
-            print(f'Noise: {noise}')
-            print(f'Total milliseconds: {total_milliseconds}')
-            print(f'True positives: {true_positive[noise]}')
-            print(f'False negatives: {false_negative[noise]}')
-            print(f'False positives: {false_positive[noise]}')
-            print(f'True negatives: {true_negative[noise]}')
-            print(f'Accuracy: {accuracy[noise]}')
-            print(f'Precision: {precision[noise]}')
-            print(f'Recall: {recall[noise]}')
-            print(f'F1 score: {f1_score[noise]}')
-            print('')
-        except:
-            print(f'Noise: {noise}')
-            print(f'Total milliseconds: {total_milliseconds}')
-            print(f'True positives: {true_positive[noise]}')
-            print(f'False negatives: {false_negative[noise]}')
-            print(f'False positives: {false_positive[noise]}')
-            print(f'True negatives: {true_negative[noise]}')
-            print('')
+    for model in results.keys():
+        metrics[model] = {}
+        for threshold in results[model]:
+            metrics[model][threshold] = {}
+            for dataset in results[model][threshold]:
+                metrics[model][threshold][dataset] = {}
+                sessions = results[model][threshold][dataset]
+                dataset_init = dataset.split("_")[0]
+                metadata_sessions = metadata[dataset_init]
+                true_positive, false_negative, false_positive, true_negative = obtain_confusion_matrix(metadata_sessions, sessions)
 
-    total_true_positive = 0
-    total_false_negative = 0
-    total_false_positive = 0
-    total_true_negative = 0
+                for noise in true_positive.keys():
+                    metrics[model][threshold][dataset][noise[0]] = {}
 
-    for noise in true_positive.keys():
-        total_true_positive += true_positive[noise]
-        total_false_negative += false_negative[noise]
-        total_false_positive += false_positive[noise]
-        total_true_negative += true_negative[noise]
+                for noise in true_positive.keys():
+                    metrics[model][threshold][dataset][noise[0]][noise] = {}
 
-    total_milliseconds = total_true_positive + total_false_negative + total_false_positive + total_false_negative
-    print(f'Total milliseconds: {total_milliseconds}')
-    print(f'Total true positives: {total_true_positive}')
-    print(f'Total false negatives: {total_false_negative}')
-    print(f'Total false positives: {total_false_positive}')
-    print(f'Total true negatives: {total_true_negative}')
+                    total_milliseconds = true_positive[noise] + false_negative[noise] + false_positive[noise] + true_negative[noise]
+                    try:
+                        accuracy = (true_negative[noise] + true_positive[noise]) / (true_negative[noise] + true_positive[noise] + false_negative[noise] + false_positive[noise])
+                        precision = true_positive[noise] / (true_positive[noise] + false_positive[noise])
+                        recall = true_positive[noise] / (true_positive[noise] + false_negative[noise])
+                        f1_score = (2 * precision * recall) / (precision + recall) 
+                        metrics[model][threshold][dataset][noise[0]][noise]['total_milliseconds'] = total_milliseconds
+                        metrics[model][threshold][dataset][noise[0]][noise]['true_positives'] = true_positive[noise]
+                        metrics[model][threshold][dataset][noise[0]][noise]['false_negatives'] = false_negative[noise]
+                        metrics[model][threshold][dataset][noise[0]][noise]['false_positives'] = false_positive[noise]
+                        metrics[model][threshold][dataset][noise[0]][noise]['true_negatives'] = true_negative[noise]  
+                        metrics[model][threshold][dataset][noise[0]][noise]['accuracy'] = accuracy
+                        metrics[model][threshold][dataset][noise[0]][noise]['precision'] = precision
+                        metrics[model][threshold][dataset][noise[0]][noise]['recall'] = recall
+                        metrics[model][threshold][dataset][noise[0]][noise]['f1_score'] = f1_score
+                    except:
+                        metrics[model][threshold][dataset][noise[0]][noise]['total_milliseconds'] = total_milliseconds
+                        metrics[model][threshold][dataset][noise[0]][noise]['true_positives'] = true_positive[noise]
+                        metrics[model][threshold][dataset][noise[0]][noise]['false_negatives'] = false_negative[noise]
+                        metrics[model][threshold][dataset][noise[0]][noise]['false_positives'] = false_positive[noise]
+                        metrics[model][threshold][dataset][noise[0]][noise]['true_negatives'] = true_negative[noise] 
 
-    total_accuracy = (total_true_negative + total_true_positive) / (total_true_negative + total_true_positive + total_false_negative + total_false_positive)
-    print(f'Total accuracy: {total_accuracy}')
 
-    total_precision = total_true_positive / (total_true_positive + total_false_positive)
-    print(f'Total precision: {total_precision}')
-
-    total_recall = total_true_positive / (total_true_positive + total_false_negative)
-    print(f'Total recall: {total_recall}')
-
-    total_f1_score = (2 * total_precision * total_recall) / (total_precision + total_recall)
-    print(f'Total F1 score: {total_f1_score}')
+    metrics_json = json.dumps(metrics)
+    results_file = results_path + "/processed.json"
+    with open(results_file, "w") as outfile:
+        outfile.write(metrics_json)
