@@ -1,0 +1,9 @@
+[0] Config.pm:307> INFO - This is Biber 2.19
+[0] Config.pm:310> INFO - Logfile is 'sections/6.Conclusion_and_future_works.blg'
+[37] biber-darwin:340> INFO - === Tue Jan 16, 2024, 16:45:16
+[45] Biber.pm:419> INFO - Reading 'sections/6.Conclusion_and_future_works.bcf'
+[91] Biber.pm:979> INFO - Found 0 citekeys in bib section 0
+[99] bbl.pm:660> INFO - Writing 'sections/6.Conclusion_and_future_works.bbl' with encoding 'UTF-8'
+[99] bbl.pm:763> INFO - Output to sections/6.Conclusion_and_future_works.bbl
+[99] Biber.pm:131> WARN - The file 'sections/6.Conclusion_and_future_works.bcf' does not contain any citations!
+[99] Biber.pm:133> INFO - WARNINGS: 1

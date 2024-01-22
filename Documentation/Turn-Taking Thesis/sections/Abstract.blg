@@ -1,0 +1,9 @@
+[0] Config.pm:307> INFO - This is Biber 2.19
+[0] Config.pm:310> INFO - Logfile is 'sections/Abstract.blg'
+[39] biber-darwin:340> INFO - === Wed Jan 17, 2024, 12:27:18
+[49] Biber.pm:419> INFO - Reading 'sections/Abstract.bcf'
+[99] Biber.pm:979> INFO - Found 0 citekeys in bib section 0
+[107] bbl.pm:660> INFO - Writing 'sections/Abstract.bbl' with encoding 'UTF-8'
+[107] bbl.pm:763> INFO - Output to sections/Abstract.bbl
+[107] Biber.pm:131> WARN - The file 'sections/Abstract.bcf' does not contain any citations!
+[107] Biber.pm:133> INFO - WARNINGS: 1

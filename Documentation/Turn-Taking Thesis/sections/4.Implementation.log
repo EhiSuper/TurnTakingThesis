@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.5)  5 JAN 2024 18:45
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.5)  18 JAN 2024 16:10
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -541,59 +541,54 @@ LaTeX Warning: Reference `webrtc' on page 3 undefined on input line 38.
 <images/Web interface.png, id=47, 942.52126pt x 630.355pt>
 File: images/Web interface.png Graphic file (type png)
 <use images/Web interface.png>
-Package pdftex.def Info: images/Web interface.png  used on input line 43.
+Package pdftex.def Info: images/Web interface.png  used on input line 42.
 (pdftex.def)             Requested size: 390.0pt x 260.83258pt.
 [3] [4 <./images/Software architecture.png>]
-Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 52.
- [5 <./images/Web interface.png>] [6] [7{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}] [8]
-Overfull \hbox (14.81915pt too wide) in paragraph at lines 130--131
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 51.
+ [5 <./images/Web interface.png>] [6] [7{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
+Overfull \hbox (14.81915pt too wide) in paragraph at lines 128--129
 \OT1/cmr/m/n/12 li-brary serv-ing a server was re-ally easy and we used the \OT1/cmr/m/it/12 aio-http.web.Application()
  []
 
 
-Overfull \hbox (12.75964pt too wide) in paragraph at lines 130--131
+Overfull \hbox (12.75964pt too wide) in paragraph at lines 128--129
 \OT1/cmr/m/n/12 der to han-dles the http re-quests and we served it us-ing the \OT1/cmr/m/it/12 aio-http.web.run[]app()
  []
 
-[9
-
-] (/usr/local/texlive/2023/texmf-dist/tex/latex/listings/lstlang1.sty
+[8] (/usr/local/texlive/2023/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2023/02/27 1.9 listings language file
-) [10] [11] [12] [13]
+) [9] [10] [11] [12] [13]
 <images/Audio preprocessing2.png, id=216, 3207.985pt x 1332.98pt>
 File: images/Audio preprocessing2.png Graphic file (type png)
 <use images/Audio preprocessing2.png>
-Package pdftex.def Info: images/Audio preprocessing2.png  used on input line 222.
+Package pdftex.def Info: images/Audio preprocessing2.png  used on input line 221.
 (pdftex.def)             Requested size: 390.0pt x 162.04567pt.
- [14] [15 <./images/Audio preprocessing2.png>] [16] [17]
+ [14 <./images/Audio preprocessing2.png>] [15] [16] [17]
 
-LaTeX Warning: Reference `turn-taking' on page 18 undefined on input line 279.
+LaTeX Warning: Reference `turn-taking' on page 18 undefined on input line 278.
 
-[18] [19] [20]
-<images/new system.png, id=278, 3444.87pt x 2782.395pt>
+[18] [19]
+<images/new system.png, id=274, 3444.87pt x 2782.395pt>
 File: images/new system.png Graphic file (type png)
 <use images/new system.png>
-Package pdftex.def Info: images/new system.png  used on input line 287.
+Package pdftex.def Info: images/new system.png  used on input line 286.
 (pdftex.def)             Requested size: 390.0pt x 314.98013pt.
- [21 <./images/new system.png>]
-Overfull \hbox (3.9809pt too wide) in paragraph at lines 310--311
+ [20] [21 <./images/new system.png>]
+Overfull \hbox (3.9809pt too wide) in paragraph at lines 309--310
 \OT1/cmr/m/n/12 thresh-old val-ues pre-sented be-fore. The sys-tem starts is the state \OT1/cmr/bx/n/12 Not started\OT1/cmr/m/n/12 .
  []
 
 
-Overfull \hbox (6.69333pt too wide) in paragraph at lines 310--311
+Overfull \hbox (6.69333pt too wide) in paragraph at lines 309--310
 \OT1/cmr/m/n/12 If si-lence is de-tected for more than the \OT1/cmr/bx/n/12 con-ver-sa-tion[]not[]started[]threshold
  []
 
-[22]
-<images/State diagram.png, id=290, 2509.375pt x 1521.685pt>
+<images/State diagram.png, id=286, 2509.375pt x 1521.685pt>
 File: images/State diagram.png Graphic file (type png)
 <use images/State diagram.png>
-Package pdftex.def Info: images/State diagram.png  used on input line 314.
+Package pdftex.def Info: images/State diagram.png  used on input line 313.
 (pdftex.def)             Requested size: 390.0pt x 236.48566pt.
- [23 <./images/State diagram.png>] [24] [25] [26] [27
-
-] [28] (sections/4.Implementation.aux)
+[22] [23 <./images/State diagram.png>] [24] [25] [26] [27] (sections/4.Implementation.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -604,21 +599,21 @@ Package logreq Info: Writing requests to '4.Implementation.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 18655 strings out of 476025
- 323470 string characters out of 5790018
- 2069388 words of memory out of 5000000
- 38701 multiletter control sequences out of 15000+600000
+ 18656 strings out of 476025
+ 323484 string characters out of 5790018
+ 2033388 words of memory out of 5000000
+ 38703 multiletter control sequences out of 15000+600000
  515425 words of font info for 43 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 83i,6n,92p,2435b,2052s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 83i,6n,92p,2430b,2128s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 pdfTeX warning (dest): name{cite.0@statistics} has been referenced but does not exist, replaced by a fixed one
 
 </usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on sections/4.Implementation.pdf (28 pages, 2201913 bytes).
+Output written on sections/4.Implementation.pdf (27 pages, 2202364 bytes).
 PDF statistics:
- 430 PDF objects out of 1000 (max. 8388607)
- 372 compressed objects within 4 object streams
- 211 named destinations out of 1000 (max. 500000)
+ 425 PDF objects out of 1000 (max. 8388607)
+ 368 compressed objects within 4 object streams
+ 210 named destinations out of 1000 (max. 500000)
  79 words of extra memory for PDF output out of 10000 (max. 10000000)
 

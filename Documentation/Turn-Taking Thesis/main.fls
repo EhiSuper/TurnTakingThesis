@@ -666,11 +666,37 @@ OUTPUT main.pdf
 INPUT ./main.out
 INPUT ./main.out
 OUTPUT main.out
+INPUT ./sections/Frontespizio.tex
+INPUT ./sections/Frontespizio.tex
+INPUT ./sections/Frontespizio.tex
+INPUT sections/Frontespizio.tex
+INPUT ./sections/Frontespizio.tex
+INPUT ./sections/Frontespizio.tex
+INPUT sections/Frontespizio.tex
+INPUT ./images/cherubinFrontespizio.eps
+INPUT ./images/cherubinFrontespizio.eps
+INPUT images/cherubinFrontespizio.eps
+INPUT ./images/cherubinFrontespizio.eps
+INPUT ./images/cherubinFrontespizio.eps
+INPUT ./images/cherubinFrontespizio-eps-converted-to.pdf
+INPUT ./images/cherubinFrontespizio-eps-converted-to.pdf
+INPUT ./images/cherubinFrontespizio.eps
+INPUT ./images/cherubinFrontespizio-eps-converted-to.pdf
+INPUT ./images/cherubinFrontespizio-eps-converted-to.pdf
+INPUT ./images/cherubinFrontespizio-eps-converted-to.pdf
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmr17.tfm
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
-INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm
-INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
+INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
 INPUT /usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map
+INPUT ./sections/Abstract.tex
+INPUT ./sections/Abstract.tex
+INPUT ./sections/Abstract.tex
+INPUT sections/Abstract.tex
+INPUT ./sections/Abstract.tex
+INPUT ./sections/Abstract.tex
+INPUT sections/Abstract.tex
+INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmr10.tfm
+INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmr17.tfm
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
 INPUT ./main.toc
@@ -686,15 +712,6 @@ INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmsy8.tfm
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmsy6.tfm
 OUTPUT main.toc
-INPUT ./sections/Abstract.tex
-INPUT ./sections/Abstract.tex
-INPUT ./sections/Abstract.tex
-INPUT sections/Abstract.tex
-INPUT ./sections/Abstract.tex
-INPUT ./sections/Abstract.tex
-INPUT sections/Abstract.tex
-INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmr10.tfm
-INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm
 INPUT ./sections/1.Introduction.tex
 INPUT sections/1.Introduction.tex
 INPUT ./sections/1.Introduction.tex
@@ -704,11 +721,11 @@ INPUT ./images/Abel.jpg
 INPUT images/Abel.jpg
 INPUT ./images/Abel.jpg
 INPUT ./images/Abel.jpg
+INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmtt12.tfm
 INPUT ./sections/2.Literature_review.tex
 INPUT sections/2.Literature_review.tex
 INPUT ./sections/2.Literature_review.tex
 INPUT sections/2.Literature_review.tex
-INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
 INPUT ./images/TPUs.png
 INPUT ./images/TPUs.png
 INPUT images/TPUs.png
@@ -744,7 +761,6 @@ INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/listings/lstlang1.sty
 INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/listings/lstlang1.sty
 INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/listings/lstlang1.sty
 INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/listings/lstlang1.sty
-INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmtt12.tfm
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmtt10.tfm
 INPUT ./images/WebRTC architecture.png
 INPUT ./images/WebRTC architecture.png
@@ -790,6 +806,55 @@ INPUT ./sections/5.Experiments_and_results.tex
 INPUT sections/5.Experiments_and_results.tex
 INPUT ./sections/5.Experiments_and_results.tex
 INPUT sections/5.Experiments_and_results.tex
+INPUT ./images/session_clean.png
+INPUT ./images/session_clean.png
+INPUT images/session_clean.png
+INPUT ./images/session_clean.png
+INPUT ./images/session_clean.png
+INPUT ./images/session_noisy.png
+INPUT ./images/session_noisy.png
+INPUT images/session_noisy.png
+INPUT ./images/session_noisy.png
+INPUT ./images/session_noisy.png
+INPUT ./images/test-result.png
+INPUT ./images/test-result.png
+INPUT images/test-result.png
+INPUT ./images/test-result.png
+INPUT ./images/test-result.png
+INPUT ./images/Metrics summary.png
+INPUT ./images/Metrics summary.png
+INPUT images/Metrics summary.png
+INPUT ./images/Metrics summary.png
+INPUT ./images/Metrics summary.png
+INPUT ./images/ROC curve for the male dataset.png
+INPUT ./images/ROC curve for the male dataset.png
+INPUT images/ROC curve for the male dataset.png
+INPUT ./images/ROC curve for the male dataset.png
+INPUT ./images/ROC curve for the male dataset.png
+INPUT ./images/ROC curve for the female dataset.png
+INPUT ./images/ROC curve for the female dataset.png
+INPUT images/ROC curve for the female dataset.png
+INPUT ./images/ROC curve for the female dataset.png
+INPUT ./images/ROC curve for the female dataset.png
+INPUT ./images/Accuracy silero.png
+INPUT ./images/Accuracy silero.png
+INPUT images/Accuracy silero.png
+INPUT ./images/Accuracy silero.png
+INPUT ./images/Accuracy silero.png
+INPUT ./images/Accuracy webrtc-vad.png
+INPUT ./images/Accuracy webrtc-vad.png
+INPUT images/Accuracy webrtc-vad.png
+INPUT ./images/Accuracy webrtc-vad.png
+INPUT ./images/Accuracy webrtc-vad.png
+INPUT ./images/Accuracy between models.png
+INPUT ./images/Accuracy between models.png
+INPUT images/Accuracy between models.png
+INPUT ./images/Accuracy between models.png
+INPUT ./images/Accuracy between models.png
+INPUT ./sections/6.Conclusion_and_future_works.tex
+INPUT sections/6.Conclusion_and_future_works.tex
+INPUT ./sections/6.Conclusion_and_future_works.tex
+INPUT sections/6.Conclusion_and_future_works.tex
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmcsc10.tfm
 INPUT main.aux
 INPUT ./main.out

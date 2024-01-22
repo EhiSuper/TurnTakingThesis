@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.5)  5 JAN 2024 18:52
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.5)  18 JAN 2024 17:12
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -456,24 +456,24 @@ Package: import 2020/04/01  v 6.2
  (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
  (/usr/local/texlive/2023/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count426
@@ -507,20 +507,36 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'main.bbl' found.
  (./main.bbl)
-Package biblatex Info: Reference section=0 on input line 60.
-Package biblatex Info: Reference segment=0 on input line 60.
-Package hyperref Info: Link coloring OFF on input line 60.
+Package biblatex Info: Reference section=0 on input line 57.
+Package biblatex Info: Reference segment=0 on input line 57.
+Package hyperref Info: Link coloring OFF on input line 57.
  (./main.out) (./main.out)
 \@outlinefile=\write4
 \openout4 = `main.out'.
 
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <14.4> on input line 63.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 63.
+ (./sections/Frontespizio.tex
+Package epstopdf Info: Source file: <images/cherubinFrontespizio.eps>
+(epstopdf)                    date: 2024-01-17 13:06:58
+(epstopdf)                    size: 259277 bytes
+(epstopdf)             Output file: <images/cherubinFrontespizio-eps-converted-to.pdf>
+(epstopdf)                    date: 2024-01-17 13:08:26
+(epstopdf)                    size: 39926 bytes
+(epstopdf)             Command: <epstopdf --outfile=images/cherubinFrontespizio-eps-converted-to.pdf images/cherubinFrontespizio.eps>
+(epstopdf)             \includegraphics on input line 7.
+Package epstopdf Info: Output file is already uptodate.
+<images/cherubinFrontespizio-eps-converted-to.pdf, id=100, 288.07625pt x 294.09875pt>
+File: images/cherubinFrontespizio-eps-converted-to.pdf Graphic file (type pdf)
+<use images/cherubinFrontespizio-eps-converted-to.pdf>
+Package pdftex.def Info: images/cherubinFrontespizio-eps-converted-to.pdf  used on input line 7.
+(pdftex.def)             Requested size: 115.22844pt x 117.6374pt.
  [1
 
-{/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./main.toc
+{/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./images/cherubinFrontespizio-eps-converted-to.pdf>]) (./sections/Abstract.tex)
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.62 \newpage
+              [1] (./main.toc
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <12> on input line 3.
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -531,38 +547,38 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 \tf@toc=\write5
 \openout5 = `main.toc'.
 
- [2] (./sections/Abstract.tex) [3] (./sections/1.Introduction.tex [4] [5]
-<images/Abel.jpg, id=126, 948.1824pt x 632.1216pt>
+ [2] (./sections/1.Introduction.tex [3] [4]
+<images/Abel.jpg, id=154, 948.1824pt x 632.1216pt>
 File: images/Abel.jpg Graphic file (type jpg)
 <use images/Abel.jpg>
 Package pdftex.def Info: images/Abel.jpg  used on input line 27.
 (pdftex.def)             Requested size: 390.0pt x 260.00104pt.
- [6 <./images/Abel.jpg>] [7]) [8] (./sections/2.Literature_review.tex [9]
-<images/TPUs.png, id=149, 1907.125pt x 611.28375pt>
+ [5 <./images/Abel.jpg>] [6]) [7] (./sections/2.Literature_review.tex [8]
+<images/TPUs.png, id=180, 1907.125pt x 611.28375pt>
 File: images/TPUs.png Graphic file (type png)
 <use images/TPUs.png>
 Package pdftex.def Info: images/TPUs.png  used on input line 22.
 (pdftex.def)             Requested size: 390.0pt x 125.00616pt.
- [10{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc} <./images/TPUs.png>] [11]
-<images/Turn-taking_models.png, id=182, 917.4275pt x 612.2875pt>
+ [9 <./images/TPUs.png>] [10{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
+<images/Turn-taking_models.png, id=212, 917.4275pt x 612.2875pt>
 File: images/Turn-taking_models.png Graphic file (type png)
 <use images/Turn-taking_models.png>
 Package pdftex.def Info: images/Turn-taking_models.png  used on input line 50.
 (pdftex.def)             Requested size: 390.0pt x 260.28882pt.
- [12]
-<images/Silence-based model.png, id=193, 988.69376pt x 661.47125pt>
+ [11]
+<images/Silence-based model.png, id=223, 988.69376pt x 661.47125pt>
 File: images/Silence-based model.png Graphic file (type png)
 <use images/Silence-based model.png>
 Package pdftex.def Info: images/Silence-based model.png  used on input line 61.
 (pdftex.def)             Requested size: 390.0pt x 260.91997pt.
- [13 <./images/Turn-taking_models.png>] [14 <./images/Silence-based model.png>] [15] [16]) [17] (./sections/3.Methods_and_methodology.tex [18]
-<images/Transformer.png, id=230, 1324.95pt x 1866.975pt>
+ [12 <./images/Turn-taking_models.png>] [13 <./images/Silence-based model.png>] [14] [15]) [16] (./sections/3.Methods_and_methodology.tex [17]
+<images/Transformer.png, id=260, 1324.95pt x 1866.975pt>
 File: images/Transformer.png Graphic file (type png)
 <use images/Transformer.png>
 Package pdftex.def Info: images/Transformer.png  used on input line 39.
 (pdftex.def)             Requested size: 272.99881pt x 384.66953pt.
- [19] [20 <./images/Transformer.png>] [21] [22]
-<images/silero-comparison.png, id=266, 389.3116pt x 231.00589pt>
+ [18] [19 <./images/Transformer.png>] [20] [21]
+<images/silero-comparison.png, id=296, 389.3116pt x 231.00589pt>
 File: images/silero-comparison.png Graphic file (type png)
 <use images/silero-comparison.png>
 Package pdftex.def Info: images/silero-comparison.png  used on input line 78.
@@ -570,73 +586,136 @@ Package pdftex.def Info: images/silero-comparison.png  used on input line 78.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2023/02/27 1.9 listings language file
 )
-Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 86.
- [23 <./images/silero-comparison.png>] [24] [25]
-<images/WebRTC architecture.png, id=302, 742.775pt x 483.8075pt>
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 85.
+ [22 <./images/silero-comparison.png>] [23] [24]
+<images/WebRTC architecture.png, id=333, 742.775pt x 483.8075pt>
 File: images/WebRTC architecture.png Graphic file (type png)
 <use images/WebRTC architecture.png>
-Package pdftex.def Info: images/WebRTC architecture.png  used on input line 125.
+Package pdftex.def Info: images/WebRTC architecture.png  used on input line 124.
 (pdftex.def)             Requested size: 390.0pt x 254.03227pt.
- [26] [27 <./images/WebRTC architecture.png>]) [28] (./sections/4.Implementation.tex
-<images/Audio architecture 2.png, id=323, 2814.515pt x 1084.05pt>
+ [25] [26 <./images/WebRTC architecture.png>]) [27] (./sections/4.Implementation.tex
+<images/Audio architecture 2.png, id=353, 2814.515pt x 1084.05pt>
 File: images/Audio architecture 2.png Graphic file (type png)
 <use images/Audio architecture 2.png>
 Package pdftex.def Info: images/Audio architecture 2.png  used on input line 16.
 (pdftex.def)             Requested size: 390.0pt x 150.21109pt.
- [29] [30 <./images/Audio architecture 2.png>]
-<images/Software architecture.png, id=336, 3139.73pt x 3019.28pt>
+ [28] [29 <./images/Audio architecture 2.png>]
+<images/Software architecture.png, id=366, 3139.73pt x 3019.28pt>
 File: images/Software architecture.png Graphic file (type png)
 <use images/Software architecture.png>
 Package pdftex.def Info: images/Software architecture.png  used on input line 31.
 (pdftex.def)             Requested size: 370.49881pt x 356.26274pt.
-<images/Web interface.png, id=339, 942.52126pt x 630.355pt>
+<images/Web interface.png, id=369, 942.52126pt x 630.355pt>
 File: images/Web interface.png Graphic file (type png)
 <use images/Web interface.png>
-Package pdftex.def Info: images/Web interface.png  used on input line 43.
+Package pdftex.def Info: images/Web interface.png  used on input line 42.
 (pdftex.def)             Requested size: 390.0pt x 260.83258pt.
- [31] [32 <./images/Software architecture.png>] [33 <./images/Web interface.png>] [34] [35] [36]
-Overfull \hbox (14.81915pt too wide) in paragraph at lines 130--131
+ [30] [31 <./images/Software architecture.png>] [32 <./images/Web interface.png>] [33] [34]
+Overfull \hbox (14.81915pt too wide) in paragraph at lines 128--129
 \OT1/cmr/m/n/12 li-brary serv-ing a server was re-ally easy and we used the \OT1/cmr/m/it/12 aio-http.web.Application()
  []
 
 
-Overfull \hbox (12.75964pt too wide) in paragraph at lines 130--131
+Overfull \hbox (12.75964pt too wide) in paragraph at lines 128--129
 \OT1/cmr/m/n/12 der to han-dles the http re-quests and we served it us-ing the \OT1/cmr/m/it/12 aio-http.web.run[]app()
  []
 
-[37
-
-] [38] [39] [40] [41]
-<images/Audio preprocessing2.png, id=505, 3207.985pt x 1332.98pt>
+[35] [36] [37] [38] [39] [40]
+<images/Audio preprocessing2.png, id=535, 3207.985pt x 1332.98pt>
 File: images/Audio preprocessing2.png Graphic file (type png)
 <use images/Audio preprocessing2.png>
-Package pdftex.def Info: images/Audio preprocessing2.png  used on input line 222.
+Package pdftex.def Info: images/Audio preprocessing2.png  used on input line 221.
 (pdftex.def)             Requested size: 390.0pt x 162.04567pt.
- [42] [43 <./images/Audio preprocessing2.png>] [44] [45] [46] [47] [48]
-<images/new system.png, id=568, 3444.87pt x 2782.395pt>
+ [41 <./images/Audio preprocessing2.png>] [42] [43] [44] [45] [46]
+<images/new system.png, id=594, 3444.87pt x 2782.395pt>
 File: images/new system.png Graphic file (type png)
 <use images/new system.png>
-Package pdftex.def Info: images/new system.png  used on input line 287.
+Package pdftex.def Info: images/new system.png  used on input line 286.
 (pdftex.def)             Requested size: 390.0pt x 314.98013pt.
- [49 <./images/new system.png>]
-Overfull \hbox (3.9809pt too wide) in paragraph at lines 310--311
+ [47] [48 <./images/new system.png>]
+Overfull \hbox (3.9809pt too wide) in paragraph at lines 309--310
 \OT1/cmr/m/n/12 thresh-old val-ues pre-sented be-fore. The sys-tem starts is the state \OT1/cmr/bx/n/12 Not started\OT1/cmr/m/n/12 .
  []
 
 
-Overfull \hbox (6.69333pt too wide) in paragraph at lines 310--311
+Overfull \hbox (6.69333pt too wide) in paragraph at lines 309--310
 \OT1/cmr/m/n/12 If si-lence is de-tected for more than the \OT1/cmr/bx/n/12 con-ver-sa-tion[]not[]started[]threshold
  []
 
-[50]
-<images/State diagram.png, id=581, 2509.375pt x 1521.685pt>
+<images/State diagram.png, id=607, 2509.375pt x 1521.685pt>
 File: images/State diagram.png Graphic file (type png)
 <use images/State diagram.png>
-Package pdftex.def Info: images/State diagram.png  used on input line 314.
+Package pdftex.def Info: images/State diagram.png  used on input line 313.
 (pdftex.def)             Requested size: 390.0pt x 236.48566pt.
- [51 <./images/State diagram.png>] [52] [53] [54] [55
+[49] [50 <./images/State diagram.png>] [51] [52] [53]) [54] (./sections/5.Experiments_and_results.tex [55] [56] [57] [58] [59] [60] [61] [62] [63] [64]
+<images/session_clean.png, id=759, 2769.34625pt x 2719.15875pt>
+File: images/session_clean.png Graphic file (type png)
+<use images/session_clean.png>
+Package pdftex.def Info: images/session_clean.png  used on input line 198.
+(pdftex.def)             Requested size: 390.0pt x 382.92015pt.
+ [65 <./images/session_clean.png>] [66]
+<images/session_noisy.png, id=771, 2769.34625pt x 2719.15875pt>
+File: images/session_noisy.png Graphic file (type png)
+<use images/session_noisy.png>
+Package pdftex.def Info: images/session_noisy.png  used on input line 220.
+(pdftex.def)             Requested size: 390.0pt x 382.92015pt.
+ [67 <./images/session_noisy.png>]
+Overfull \hbox (6.19313pt too wide) in paragraph at lines 227--228
+[]\OT1/cmr/m/n/12 Regarding the im-ple-men-ta-tion of the con-struc-tion of the Libri-Demand dataset
+ []
 
-]) [56] (./sections/5.Experiments_and_results.tex [57] [58] [59] [60] [61]) [62]
+
+Overfull \hbox (6.5199pt too wide) in paragraph at lines 231--232
+[]\OT1/cmr/m/n/12 To cre-ate the noisy ses-sions we get the list of the noise files with the \OT1/cmr/m/it/12 get[]noises()
+ []
+
+[68]
+Overfull \hbox (13.09062pt too wide) in paragraph at lines 254--255
+\OT1/cmr/m/n/12 them. We can find the im-ple-men-ta-tion of this pro-ce-dure in the cre-ate[]dataset.py
+ []
+
+[69] [70] [71] [72] [73] [74] [75]
+<images/test-result.png, id=873, 2170.1075pt x 1309.89375pt>
+File: images/test-result.png Graphic file (type png)
+<use images/test-result.png>
+Package pdftex.def Info: images/test-result.png  used on input line 331.
+(pdftex.def)             Requested size: 390.0pt x 235.39095pt.
+ [76 <./images/test-result.png>]
+<images/Metrics summary.png, id=881, 1445.4pt x 722.7pt>
+File: images/Metrics summary.png Graphic file (type png)
+<use images/Metrics summary.png>
+Package pdftex.def Info: images/Metrics summary.png  used on input line 345.
+(pdftex.def)             Requested size: 390.0pt x 194.99927pt.
+ [77 <./images/Metrics summary.png>]
+<images/ROC curve for the male dataset.png, id=890, 462.528pt x 346.896pt>
+File: images/ROC curve for the male dataset.png Graphic file (type png)
+<use images/ROC curve for the male dataset.png>
+Package pdftex.def Info: images/ROC curve for the male dataset.png  used on input line 356.
+(pdftex.def)             Requested size: 312.00119pt x 234.01236pt.
+<images/ROC curve for the female dataset.png, id=891, 462.528pt x 346.896pt>
+File: images/ROC curve for the female dataset.png Graphic file (type png)
+<use images/ROC curve for the female dataset.png>
+Package pdftex.def Info: images/ROC curve for the female dataset.png  used on input line 363.
+(pdftex.def)             Requested size: 312.00119pt x 234.01236pt.
+ [78 <./images/ROC curve for the male dataset.png>]
+<images/Accuracy silero.png, id=902, 462.528pt x 346.896pt>
+File: images/Accuracy silero.png Graphic file (type png)
+<use images/Accuracy silero.png>
+Package pdftex.def Info: images/Accuracy silero.png  used on input line 374.
+(pdftex.def)             Requested size: 312.00119pt x 234.01236pt.
+<images/Accuracy webrtc-vad.png, id=903, 462.528pt x 346.896pt>
+File: images/Accuracy webrtc-vad.png Graphic file (type png)
+<use images/Accuracy webrtc-vad.png>
+Package pdftex.def Info: images/Accuracy webrtc-vad.png  used on input line 381.
+(pdftex.def)             Requested size: 312.00119pt x 234.01236pt.
+<images/Accuracy between models.png, id=905, 462.528pt x 346.896pt>
+File: images/Accuracy between models.png Graphic file (type png)
+<use images/Accuracy between models.png>
+Package pdftex.def Info: images/Accuracy between models.png  used on input line 390.
+(pdftex.def)             Requested size: 312.00119pt x 234.01236pt.
+ [79 <./images/ROC curve for the female dataset.png>]) [80 <./images/Accuracy silero.png>] [81 <./images/Accuracy webrtc-vad.png> <./images/Accuracy between models.png>] (./sections/6.Conclusion_and_future_works.tex [82
+
+]) [83]
 Overfull \hbox (10.94359pt too wide) in paragraph at lines 78--78
 []\OT1/cmr/m/n/12 Collimator. \OT1/cmr/m/it/12 What is a Short-Time Fourier Trans-form? \OT1/cmr/m/n/12 2023. \OT1/cmr/m/sc/12 url\OT1/cmr/m/n/12 : []$\OT1/cmtt/m/n/12 https :
  []
@@ -646,31 +725,31 @@ Overfull \hbox (12.29596pt too wide) in paragraph at lines 78--78
 \OT1/cmr/m/n/12 oriented di-a-logue''. In: \OT1/cmr/m/it/12 Com-puter Speech & Lan-guage \OT1/cmr/m/n/12 25.3 (2011), pp. 601{
  []
 
-[63]
+[84]
 Overfull \hbox (4.46269pt too wide) in paragraph at lines 78--78
 \OT1/cmr/m/n/12 robot in-ter-ac-tion: a re-view''. In: \OT1/cmr/m/it/12 Com-puter Speech & Lan-guage \OT1/cmr/m/n/12 67 (2021),
  []
 
-[64] [65] (./main.aux)
+[85] [86] (./main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 8628458A9E17A10F3E0EC27B559D01C2;2844.
+(rerunfilecheck)             Checksum: B43E929196367F622025164F669A7928;3628.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 19030 strings out of 476025
- 331160 string characters out of 5790018
- 2069388 words of memory out of 5000000
- 38898 multiletter control sequences out of 15000+600000
- 519385 words of font info for 56 fonts, out of 8000000 for 9000
+ 19271 strings out of 476025
+ 336156 string characters out of 5790018
+ 2033388 words of memory out of 5000000
+ 39031 multiletter control sequences out of 15000+600000
+ 518770 words of font info for 54 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 63i,8n,69p,2441b,2167s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 63i,8n,69p,2436b,2182s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on main.pdf (65 pages, 9399309 bytes).
+Output written on main.pdf (87 pages, 15812380 bytes).
 PDF statistics:
- 893 PDF objects out of 1000 (max. 8388607)
- 759 compressed objects within 8 object streams
- 340 named destinations out of 1000 (max. 500000)
- 218 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1128 PDF objects out of 1200 (max. 8388607)
+ 950 compressed objects within 10 object streams
+ 429 named destinations out of 1000 (max. 500000)
+ 308 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,13 +1,13 @@
 # Fdb version 4
-["biber sections/3.Methods_and_methodology"] 1704473287 "sections/3.Methods_and_methodology.bcf" "sections/3.Methods_and_methodology.bbl" "sections/3.Methods_and_methodology" 1704475587 0
+["biber sections/3.Methods_and_methodology"] 1704473287 "sections/3.Methods_and_methodology.bcf" "sections/3.Methods_and_methodology.bbl" "sections/3.Methods_and_methodology" 1705578327 0
   "./bibliography.bib" 1704448888 6396 5750744458bf3957192dd31a44b101c9 ""
-  "sections/3.Methods_and_methodology.bcf" 1704475586 108082 1287f81c86919ef585f092462a9441e6 "pdflatex"
+  "sections/3.Methods_and_methodology.bcf" 1705578327 108082 1287f81c86919ef585f092462a9441e6 "pdflatex"
   (generated)
   "sections/3.Methods_and_methodology.bbl"
   "sections/3.Methods_and_methodology.blg"
   (rewritten before read)
-["pdflatex"] 1704475585 "/Users/antonio/PycharmProjects/TurnTakingThesis/Documentation/Turn-Taking Thesis/sections/3.Methods_and_methodology.tex" "sections/3.Methods_and_methodology.pdf" "3.Methods_and_methodology" 1704475587 0
-  "/Users/antonio/PycharmProjects/TurnTakingThesis/Documentation/Turn-Taking Thesis/sections/3.Methods_and_methodology.tex" 1704475575 17665 0c80c484456995b74a44a7e02eb8397b ""
+["pdflatex"] 1705578326 "/Users/antonio/PycharmProjects/TurnTakingThesis/Documentation/Turn-Taking Thesis/sections/3.Methods_and_methodology.tex" "sections/3.Methods_and_methodology.pdf" "3.Methods_and_methodology" 1705578327 0
+  "/Users/antonio/PycharmProjects/TurnTakingThesis/Documentation/Turn-Taking Thesis/sections/3.Methods_and_methodology.tex" 1705578326 17653 982bc52ef6227c63012428a9060d2218 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/jknappen/ec/tcrm1200.tfm" 1136768653 1536 74b7293ec3713bb7fdca8dd1bd1f469c ""
@@ -114,12 +114,12 @@
   "images/Transformer.png" 1704448888 284296 4fcbf99b94f68ce318c0a179cccb4406 ""
   "images/WebRTC architecture.png" 1704448888 47388 57e738ed8019aa6a79b4345aeed5c3bb ""
   "images/silero-comparison.png" 1704448888 63719 48f44385c91b34c1b973df1a8acee4ec ""
-  "sections/../main.tex" 1704475571 1707 862a1eb53fcdfd7edbdbb3e9f74f6d1d ""
-  "sections/3.Methods_and_methodology.aux" 1704475586 3414 3517a212a09542c6c99328b7f3fae656 "pdflatex"
+  "sections/../main.tex" 1705492608 2094 d3543ee3e72dd2c358b627e29dde3dc8 ""
+  "sections/3.Methods_and_methodology.aux" 1705578327 3414 3517a212a09542c6c99328b7f3fae656 "pdflatex"
   "sections/3.Methods_and_methodology.bbl" 1704473289 9632 753835b36624745f23390a160a488eae "biber sections/3.Methods_and_methodology"
-  "sections/3.Methods_and_methodology.out" 1704475586 448 f77a716945934145a0a2dcf550a724bd "pdflatex"
-  "sections/3.Methods_and_methodology.run.xml" 1704475586 2454 086b404a1144b893df7fcac52e72731a "pdflatex"
-  "sections/3.Methods_and_methodology.tex" 1704475575 17665 0c80c484456995b74a44a7e02eb8397b ""
+  "sections/3.Methods_and_methodology.out" 1705578327 448 f77a716945934145a0a2dcf550a724bd "pdflatex"
+  "sections/3.Methods_and_methodology.run.xml" 1705578327 2454 086b404a1144b893df7fcac52e72731a "pdflatex"
+  "sections/3.Methods_and_methodology.tex" 1705578326 17653 982bc52ef6227c63012428a9060d2218 ""
   (generated)
   "sections/3.Methods_and_methodology.aux"
   "sections/3.Methods_and_methodology.bcf"

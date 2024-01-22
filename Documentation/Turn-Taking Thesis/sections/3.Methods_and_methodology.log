@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.5)  5 JAN 2024 18:26
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.5)  18 JAN 2024 12:45
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -548,12 +548,12 @@ LaTeX Warning: Reference `implementation' on page 6 undefined on input line 83.
 (/usr/local/texlive/2023/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2023/02/27 1.9 listings language file
 )
-Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 86.
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 85.
  [6 <./images/silero-comparison.png>] [7] [8]
 <images/WebRTC architecture.png, id=101, 742.775pt x 483.8075pt>
 File: images/WebRTC architecture.png Graphic file (type png)
 <use images/WebRTC architecture.png>
-Package pdftex.def Info: images/WebRTC architecture.png  used on input line 125.
+Package pdftex.def Info: images/WebRTC architecture.png  used on input line 124.
 (pdftex.def)             Requested size: 390.0pt x 254.03227pt.
  [9] [10 <./images/WebRTC architecture.png>] [11] (sections/3.Methods_and_methodology.aux)
 
@@ -566,10 +566,10 @@ Package logreq Info: Writing requests to '3.Methods_and_methodology.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 18363 strings out of 476025
- 319703 string characters out of 5790018
+ 18365 strings out of 476025
+ 319729 string characters out of 5790018
  1902388 words of memory out of 5000000
- 38581 multiletter control sequences out of 15000+600000
+ 38583 multiletter control sequences out of 15000+600000
  517215 words of font info for 49 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  83i,8n,92p,1685b,1352s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -598,7 +598,7 @@ pdfTeX warning (dest): name{cite.0@stft} has been referenced but does not exist,
 pdfTeX warning (dest): name{cite.0@veysov20202onevoice} has been referenced but does not exist, replaced by a fixed one
 
 </usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on sections/3.Methods_and_methodology.pdf (11 pages, 364809 bytes).
+Output written on sections/3.Methods_and_methodology.pdf (11 pages, 364814 bytes).
 PDF statistics:
  181 PDF objects out of 1000 (max. 8388607)
  138 compressed objects within 2 object streams

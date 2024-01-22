@@ -40,7 +40,8 @@
   showspaces=false,                
   showstringspaces=false,
   showtabs=false,                  
-  tabsize=2
+  tabsize=2,
+  literate={\ \ }{{\ }}1
 }
 
 %"mystyle" code listing set
@@ -53,18 +54,13 @@
 
 \usepackage{subfiles} % Best loaded last in the preamble
 
-\title{Turn-Taking Thesis}
-\author{Antonio Patimo}
-\date{October 2023}
-
 \begin{document}
-
-\maketitle
+\subfile{sections/Frontespizio}
 \thispagestyle{empty}
 \newpage
-\tableofcontents
-\newpage
 \subfile{sections/Abstract}
+\newpage
+\tableofcontents
 \newpage
 \subfile{sections/1.Introduction}
 \newpage
@@ -75,6 +71,10 @@
 \subfile{sections/4.Implementation}
 \newpage
 \subfile{sections/5.Experiments_and_results}
+\newpage
+\clearpage
+\subfile{sections/6.Conclusion_and_future_works}
+\newpage
 \printbibliography[heading=bibintoc]
 
 \end{document}
