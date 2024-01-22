@@ -335,7 +335,7 @@ Once the test was completed, needing a little more than 12 hours, for every data
 
 From this list, in order to obtain the desired performance metrics, we need to compare it with the information contained in the metadata file. This is done checking for every millisecond of every session if it is present in the result session and in the metadata. This way we obtain the confusion matrix that we will use to obtain the metrics. Regarding the male noisy and female noisy dataset the confusion matrix and the relative performances are shown for every category of background noise always with the SNR fixed to zero. We also obtain a composite result that merges all the partial results of each category. Instead, for the noisy sessions dataset the metrics are shown for every dataset and for every SNR level.
 
-Let's see the results of the testing and let's discuss them. A table with all the results can be found in the appendix A:Results.
+Let's see the results of the testing and let's discuss them. A table with all the results can be found in the appendix \ref{appendix_A}.
 Just to remember, the male and female noisy datasets uses a background noise with an SNR of 0db. Since we obtained all the metrics for every confidence threshold used, we decided only to show the results using the threshold that gives the best accuracy in the 'Total' category. This is the category that sums up the values of the confusion matrix of the 6 macro categories of noise used in our datasets: Nature, Domestic, Office, Public, Street and Transportation. 
 
 Starting from the evaluation of the male noisy and female noisy datasets, in figure \ref{fig:metrics summary} we find a bar graph showing the performance metrics for both datasets using both models.   

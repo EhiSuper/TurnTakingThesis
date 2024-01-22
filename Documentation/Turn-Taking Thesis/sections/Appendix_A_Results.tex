@@ -1,0 +1,353 @@
+\documentclass[../main.tex]{subfiles}
+\graphicspath{{\subfix{../images/}}}
+\begin{document}
+\section{Results tables}
+\label{appendix_A}
+\subsection{Performance metrics of the male and female noisy datasets in different noisy environments}
+
+\begin{table}[H]
+    \centering
+    \small
+    \begin{tabular}{ |c|c|c|c|c|c|c|c|c| }
+    \hline
+     &\multicolumn{2}{|c|}{Accuracy}&\multicolumn{2}{|c|}{Precision}&\multicolumn{2}{|c|}{Recall}&\multicolumn{2}{|c|}{F1-score} \\ 
+    \hline
+    Noise category & M & F & M & F & M & F & M & F \\ 
+    \hline
+    Nature & 0.81 & 0.84 & 0.84 & 0.86 & 0.92 & 0.94 & 0.88 & 0.89 \\ 
+    Domestic & 0.84 & 0.85 & 0.87 & 0.87 & 0.92 & 0.94 & 0.9 & 0.9 \\ 
+    Street & 0.85 & 0.85 & 0.87 & 0.87 & 0.93 & 0.94 & 0.9 & 0.9 \\ 
+    Public & 0.76 & 0.74 & 0.77 & 0.74 & 0.98 & 0.99 & 0.86 & 0.84 \\ 
+    Transportation & 0.84 & 0.83 & 0.86 & 0.84 & 0.94 & 0.94 & 0.9 & 0.89 \\ 
+    Office & 0.86 & 0.86 & 0.89 & 0.89 & 0.91 & 0.93 & 0.9 & 0.91 \\ 
+    Total & 0.82 & 0.83 & 0.85 & 0.84 & 0.93 & 0.95 & 0.89 & 0.89 \\ 
+    \hline
+    \end{tabular}
+    \caption{Model: silero, confidence threshold: 0.1}
+    \end{table}
+    
+    \begin{table}[H]
+    \centering
+    \small
+    \begin{tabular}{ |c|c|c|c|c|c|c|c|c| }
+    \hline
+     &\multicolumn{2}{|c|}{Accuracy}&\multicolumn{2}{|c|}{Precision}&\multicolumn{2}{|c|}{Recall}&\multicolumn{2}{|c|}{F1-score} \\ 
+    \hline
+    Noise category & M & F & M & F & M & F & M & F \\ 
+    \hline
+    Nature & 0.85 & 0.87 & 0.9 & 0.9 & 0.89 & 0.92 & 0.9 & 0.91 \\ 
+    Domestic & 0.84 & 0.86 & 0.88 & 0.88 & 0.91 & 0.94 & 0.9 & 0.9 \\ 
+    Street & 0.88 & 0.88 & 0.94 & 0.91 & 0.91 & 0.92 & 0.92 & 0.92 \\ 
+    Public & 0.79 & 0.77 & 0.8 & 0.77 & 0.96 & 0.97 & 0.87 & 0.86 \\ 
+    Transportation & 0.87 & 0.88 & 0.92 & 0.92 & 0.9 & 0.92 & 0.91 & 0.92 \\ 
+    Office & 0.86 & 0.87 & 0.9 & 0.89 & 0.92 & 0.93 & 0.91 & 0.91 \\ 
+    Total & 0.85 & 0.85 & 0.88 & 0.87 & 0.92 & 0.93 & 0.9 & 0.9 \\ 
+    \hline
+    \end{tabular}
+    \caption{Model: silero, confidence threshold: 0.2}
+    \end{table}
+    
+    \begin{table}[H]
+    \centering
+    \small
+    \begin{tabular}{ |c|c|c|c|c|c|c|c|c| }
+    \hline
+     &\multicolumn{2}{|c|}{Accuracy}&\multicolumn{2}{|c|}{Precision}&\multicolumn{2}{|c|}{Recall}&\multicolumn{2}{|c|}{F1-score} \\ 
+    \hline
+    Noise category & M & F & M & F & M & F & M & F \\ 
+    \hline
+    Nature & 0.86 & 0.89 & 0.93 & 0.93 & 0.88 & 0.91 & 0.9 & 0.92 \\ 
+    Domestic & 0.87 & 0.88 & 0.92 & 0.91 & 0.9 & 0.92 & 0.91 & 0.92 \\ 
+    Street & 0.89 & 0.91 & 0.96 & 0.96 & 0.88 & 0.91 & 0.92 & 0.93 \\ 
+    Public & 0.81 & 0.81 & 0.84 & 0.81 & 0.93 & 0.96 & 0.88 & 0.88 \\ 
+    Transportation & 0.89 & 0.9 & 0.96 & 0.95 & 0.89 & 0.91 & 0.92 & 0.93 \\ 
+    Office & 0.85 & 0.87 & 0.9 & 0.9 & 0.91 & 0.93 & 0.9 & 0.91 \\ 
+    Total & 0.86 & 0.87 & 0.91 & 0.9 & 0.9 & 0.92 & 0.91 & 0.91 \\ 
+    \hline
+    \end{tabular}
+    \caption{Model: silero, confidence threshold: 0.3}
+    \end{table}
+    
+    \begin{table}[H]
+    \centering
+    \small
+    \begin{tabular}{ |c|c|c|c|c|c|c|c|c| }
+    \hline
+     &\multicolumn{2}{|c|}{Accuracy}&\multicolumn{2}{|c|}{Precision}&\multicolumn{2}{|c|}{Recall}&\multicolumn{2}{|c|}{F1-score} \\ 
+    \hline
+    Noise category & M & F & M & F & M & F & M & F \\ 
+    \hline
+    Nature & 0.88 & 0.9 & 0.95 & 0.95 & 0.87 & 0.9 & 0.91 & 0.93 \\ 
+    Domestic & 0.87 & 0.89 & 0.95 & 0.93 & 0.88 & 0.92 & 0.91 & 0.92 \\ 
+    Street & 0.89 & 0.91 & 0.97 & 0.97 & 0.88 & 0.91 & 0.92 & 0.94 \\ 
+    Public & 0.84 & 0.83 & 0.86 & 0.84 & 0.93 & 0.95 & 0.9 & 0.89 \\ 
+    Transportation & 0.88 & 0.91 & 0.96 & 0.96 & 0.88 & 0.91 & 0.92 & 0.94 \\ 
+    Office & 0.86 & 0.87 & 0.91 & 0.9 & 0.9 & 0.92 & 0.9 & 0.91 \\ 
+    Total & 0.87 & 0.88 & 0.93 & 0.92 & 0.89 & 0.92 & 0.91 & 0.92 \\ 
+    \hline
+    \end{tabular}
+    \caption{Model: silero, confidence threshold: 0.4}
+    \end{table}
+    
+    \begin{table}[H]
+    \centering
+    \small
+    \begin{tabular}{ |c|c|c|c|c|c|c|c|c| }
+    \hline
+     &\multicolumn{2}{|c|}{Accuracy}&\multicolumn{2}{|c|}{Precision}&\multicolumn{2}{|c|}{Recall}&\multicolumn{2}{|c|}{F1-score} \\ 
+    \hline
+    Noise category & M & F & M & F & M & F & M & F \\ 
+    \hline
+    Nature & 0.88 & 0.91 & 0.97 & 0.96 & 0.87 & 0.9 & 0.92 & 0.93 \\ 
+    Domestic & 0.89 & 0.9 & 0.96 & 0.95 & 0.89 & 0.91 & 0.92 & 0.93 \\ 
+    Street & 0.88 & 0.91 & 0.98 & 0.98 & 0.86 & 0.9 & 0.92 & 0.94 \\ 
+    Public & 0.85 & 0.84 & 0.89 & 0.86 & 0.91 & 0.94 & 0.9 & 0.9 \\ 
+    Transportation & 0.89 & 0.92 & 0.98 & 0.98 & 0.87 & 0.91 & 0.92 & 0.94 \\ 
+    Office & 0.86 & 0.88 & 0.91 & 0.91 & 0.9 & 0.92 & 0.9 & 0.92 \\ 
+    Total & 0.87 & 0.89 & 0.94 & 0.93 & 0.88 & 0.91 & 0.91 & 0.92 \\ 
+    \hline
+    \end{tabular}
+    \caption{Model: silero, confidence threshold: 0.5}
+    \end{table}
+    
+    \begin{table}[H]
+    \centering
+    \small
+    \begin{tabular}{ |c|c|c|c|c|c|c|c|c| }
+    \hline
+     &\multicolumn{2}{|c|}{Accuracy}&\multicolumn{2}{|c|}{Precision}&\multicolumn{2}{|c|}{Recall}&\multicolumn{2}{|c|}{F1-score} \\ 
+    \hline
+    Noise category & M & F & M & F & M & F & M & F \\ 
+    \hline
+    Nature & 0.88 & 0.91 & 0.98 & 0.97 & 0.85 & 0.9 & 0.91 & 0.94 \\ 
+    Domestic & 0.89 & 0.91 & 0.97 & 0.97 & 0.88 & 0.9 & 0.92 & 0.94 \\ 
+    Street & 0.89 & 0.91 & 0.99 & 0.98 & 0.86 & 0.9 & 0.92 & 0.94 \\ 
+    Public & 0.85 & 0.86 & 0.91 & 0.89 & 0.89 & 0.92 & 0.9 & 0.9 \\ 
+    Transportation & 0.89 & 0.92 & 0.98 & 0.98 & 0.87 & 0.9 & 0.92 & 0.94 \\ 
+    Office & 0.85 & 0.88 & 0.91 & 0.92 & 0.88 & 0.92 & 0.9 & 0.92 \\ 
+    Total & 0.87 & 0.9 & 0.95 & 0.95 & 0.87 & 0.91 & 0.91 & 0.93 \\ 
+    \hline
+    \end{tabular}
+    \caption{Model: silero, confidence threshold: 0.6}
+    \end{table}
+    
+    \begin{table}[H]
+    \centering
+    \small
+    \begin{tabular}{ |c|c|c|c|c|c|c|c|c| }
+    \hline
+     &\multicolumn{2}{|c|}{Accuracy}&\multicolumn{2}{|c|}{Precision}&\multicolumn{2}{|c|}{Recall}&\multicolumn{2}{|c|}{F1-score} \\ 
+    \hline
+    Noise category & M & F & M & F & M & F & M & F \\ 
+    \hline
+    Nature & 0.87 & 0.91 & 0.99 & 0.99 & 0.84 & 0.9 & 0.91 & 0.94 \\ 
+    Domestic & 0.88 & 0.91 & 0.98 & 0.98 & 0.85 & 0.9 & 0.91 & 0.94 \\ 
+    Street & 0.88 & 0.91 & 0.99 & 0.99 & 0.84 & 0.89 & 0.91 & 0.94 \\ 
+    Public & 0.85 & 0.86 & 0.94 & 0.91 & 0.86 & 0.9 & 0.9 & 0.91 \\ 
+    Transportation & 0.88 & 0.92 & 0.99 & 0.99 & 0.85 & 0.9 & 0.91 & 0.94 \\ 
+    Office & 0.86 & 0.88 & 0.93 & 0.92 & 0.88 & 0.91 & 0.9 & 0.92 \\ 
+    Total & 0.87 & 0.9 & 0.97 & 0.96 & 0.85 & 0.9 & 0.91 & 0.93 \\ 
+    \hline
+    \end{tabular}
+    \caption{Model: silero, confidence threshold: 0.7}
+    \end{table}
+    
+    \begin{table}[H]
+    \centering
+    \small
+    \begin{tabular}{ |c|c|c|c|c|c|c|c|c| }
+    \hline
+     &\multicolumn{2}{|c|}{Accuracy}&\multicolumn{2}{|c|}{Precision}&\multicolumn{2}{|c|}{Recall}&\multicolumn{2}{|c|}{F1-score} \\ 
+    \hline
+    Noise category & M & F & M & F & M & F & M & F \\ 
+    \hline
+    Nature & 0.88 & 0.91 & 0.99 & 0.99 & 0.84 & 0.89 & 0.91 & 0.94 \\ 
+    Domestic & 0.87 & 0.91 & 0.99 & 0.99 & 0.83 & 0.89 & 0.9 & 0.94 \\ 
+    Street & 0.87 & 0.91 & 0.99 & 1.0 & 0.83 & 0.88 & 0.91 & 0.93 \\ 
+    Public & 0.84 & 0.86 & 0.96 & 0.93 & 0.82 & 0.87 & 0.89 & 0.9 \\ 
+    Transportation & 0.88 & 0.91 & 0.99 & 0.99 & 0.84 & 0.89 & 0.91 & 0.94 \\ 
+    Office & 0.85 & 0.88 & 0.93 & 0.93 & 0.86 & 0.91 & 0.89 & 0.92 \\ 
+    Total & 0.86 & 0.9 & 0.97 & 0.97 & 0.84 & 0.89 & 0.9 & 0.93 \\ 
+    \hline
+    \end{tabular}
+    \caption{Model: silero, confidence threshold: 0.8}
+    \end{table}
+    
+    \begin{table}[H]
+    \centering
+    \small
+    \begin{tabular}{ |c|c|c|c|c|c|c|c|c| }
+    \hline
+     &\multicolumn{2}{|c|}{Accuracy}&\multicolumn{2}{|c|}{Precision}&\multicolumn{2}{|c|}{Recall}&\multicolumn{2}{|c|}{F1-score} \\ 
+    \hline
+    Noise category & M & F & M & F & M & F & M & F \\ 
+    \hline
+    Nature & 0.86 & 0.9 & 0.99 & 1.0 & 0.82 & 0.87 & 0.9 & 0.93 \\ 
+    Domestic & 0.86 & 0.91 & 1.0 & 1.0 & 0.81 & 0.87 & 0.9 & 0.93 \\ 
+    Street & 0.87 & 0.9 & 1.0 & 1.0 & 0.83 & 0.86 & 0.9 & 0.92 \\ 
+    Public & 0.8 & 0.83 & 0.97 & 0.96 & 0.75 & 0.8 & 0.85 & 0.88 \\ 
+    Transportation & 0.87 & 0.91 & 0.99 & 1.0 & 0.83 & 0.88 & 0.91 & 0.93 \\ 
+    Office & 0.85 & 0.88 & 0.94 & 0.94 & 0.86 & 0.9 & 0.9 & 0.92 \\ 
+    Total & 0.85 & 0.89 & 0.98 & 0.98 & 0.82 & 0.86 & 0.89 & 0.92 \\ 
+    \hline
+    \end{tabular}
+    \caption{Model: silero, confidence threshold: 0.9}
+    \end{table}
+    
+    \begin{table}[H]
+    \centering
+    \small
+    \begin{tabular}{ |c|c|c|c|c|c|c|c|c| }
+    \hline
+     &\multicolumn{2}{|c|}{Accuracy}&\multicolumn{2}{|c|}{Precision}&\multicolumn{2}{|c|}{Recall}&\multicolumn{2}{|c|}{F1-score} \\ 
+    \hline
+    Noise category & M & F & M & F & M & F & M & F \\ 
+    \hline
+    Nature & 0.82 & 0.82 & 0.82 & 0.82 & 0.97 & 0.96 & 0.89 & 0.89 \\ 
+    Domestic & 0.84 & 0.82 & 0.84 & 0.82 & 0.97 & 0.97 & 0.9 & 0.89 \\ 
+    Street & 0.78 & 0.77 & 0.77 & 0.77 & 0.99 & 0.98 & 0.87 & 0.86 \\ 
+    Public & 0.74 & 0.73 & 0.74 & 0.73 & 1.0 & 1.0 & 0.85 & 0.84 \\ 
+    Transportation & 0.82 & 0.82 & 0.81 & 0.82 & 0.98 & 0.98 & 0.89 & 0.89 \\ 
+    Office & 0.83 & 0.82 & 0.83 & 0.82 & 0.97 & 0.97 & 0.9 & 0.89 \\ 
+    Total & 0.8 & 0.8 & 0.8 & 0.79 & 0.98 & 0.98 & 0.88 & 0.88 \\ 
+    \hline
+    \end{tabular}
+    \caption{Model: webrtc-vad, confidence threshold: 0}
+    \end{table}
+    
+    \begin{table}[H]
+    \centering
+    \small
+    \begin{tabular}{ |c|c|c|c|c|c|c|c|c| }
+    \hline
+     &\multicolumn{2}{|c|}{Accuracy}&\multicolumn{2}{|c|}{Precision}&\multicolumn{2}{|c|}{Recall}&\multicolumn{2}{|c|}{F1-score} \\ 
+    \hline
+    Noise category & M & F & M & F & M & F & M & F \\ 
+    \hline
+    Nature & 0.83 & 0.84 & 0.83 & 0.85 & 0.96 & 0.96 & 0.89 & 0.9 \\ 
+    Domestic & 0.84 & 0.83 & 0.84 & 0.83 & 0.97 & 0.97 & 0.9 & 0.89 \\ 
+    Street & 0.8 & 0.8 & 0.8 & 0.79 & 0.98 & 0.98 & 0.88 & 0.87 \\ 
+    Public & 0.74 & 0.73 & 0.74 & 0.73 & 1.0 & 1.0 & 0.85 & 0.84 \\ 
+    Transportation & 0.83 & 0.84 & 0.83 & 0.83 & 0.96 & 0.97 & 0.89 & 0.9 \\ 
+    Office & 0.84 & 0.83 & 0.84 & 0.83 & 0.96 & 0.96 & 0.9 & 0.89 \\ 
+    Total & 0.81 & 0.81 & 0.81 & 0.81 & 0.97 & 0.97 & 0.89 & 0.88 \\ 
+    \hline
+    \end{tabular}
+    \caption{Model: webrtc-vad, confidence threshold: 1}
+    \end{table}
+    
+    \begin{table}[H]
+    \centering
+    \small
+    \begin{tabular}{ |c|c|c|c|c|c|c|c|c| }
+    \hline
+     &\multicolumn{2}{|c|}{Accuracy}&\multicolumn{2}{|c|}{Precision}&\multicolumn{2}{|c|}{Recall}&\multicolumn{2}{|c|}{F1-score} \\ 
+    \hline
+    Noise category & M & F & M & F & M & F & M & F \\ 
+    \hline
+    Nature & 0.83 & 0.86 & 0.84 & 0.87 & 0.94 & 0.94 & 0.89 & 0.91 \\ 
+    Domestic & 0.84 & 0.84 & 0.85 & 0.85 & 0.94 & 0.96 & 0.9 & 0.9 \\ 
+    Street & 0.8 & 0.81 & 0.8 & 0.81 & 0.98 & 0.97 & 0.88 & 0.88 \\ 
+    Public & 0.74 & 0.73 & 0.74 & 0.73 & 1.0 & 1.0 & 0.85 & 0.84 \\ 
+    Transportation & 0.85 & 0.86 & 0.86 & 0.87 & 0.95 & 0.96 & 0.9 & 0.91 \\ 
+    Office & 0.84 & 0.84 & 0.86 & 0.84 & 0.94 & 0.95 & 0.9 & 0.89 \\ 
+    Total & 0.82 & 0.82 & 0.82 & 0.82 & 0.96 & 0.96 & 0.89 & 0.89 \\ 
+    \hline
+    \end{tabular}
+    \caption{Model: webrtc-vad, confidence threshold: 2}
+    \end{table}
+    
+    \begin{table}[H]
+    \centering
+    \small
+    \begin{tabular}{ |c|c|c|c|c|c|c|c|c| }
+    \hline
+     &\multicolumn{2}{|c|}{Accuracy}&\multicolumn{2}{|c|}{Precision}&\multicolumn{2}{|c|}{Recall}&\multicolumn{2}{|c|}{F1-score} \\ 
+    \hline
+    Noise category & M & F & M & F & M & F & M & F \\ 
+    \hline
+    Nature & 0.79 & 0.68 & 0.96 & 0.99 & 0.76 & 0.57 & 0.84 & 0.72 \\ 
+    Domestic & 0.82 & 0.74 & 0.97 & 0.99 & 0.79 & 0.65 & 0.87 & 0.79 \\ 
+    Street & 0.75 & 0.46 & 0.95 & 0.97 & 0.7 & 0.26 & 0.81 & 0.41 \\ 
+    Public & 0.7 & 0.36 & 0.92 & 0.98 & 0.65 & 0.12 & 0.77 & 0.21 \\ 
+    Transportation & 0.84 & 0.8 & 0.97 & 1.0 & 0.8 & 0.73 & 0.88 & 0.84 \\ 
+    Office & 0.81 & 0.79 & 0.94 & 0.97 & 0.79 & 0.73 & 0.86 & 0.84 \\ 
+    Total & 0.79 & 0.65 & 0.95 & 0.98 & 0.75 & 0.53 & 0.84 & 0.69 \\ 
+    \hline
+    \end{tabular}
+    \caption{Model: webrtc-vad, confidence threshold: 3}
+    \end{table}
+
+\subsection{Performance metrics of the "Total" category of noise for different SNR levels}
+
+\begin{table}[H]
+\centering
+\small
+\begin{tabular}{ |c|c|c|c|c|c|c|c|c|c|c| }
+\hline
+    & \multicolumn{5}{|c|}{Accuracy} & \multicolumn{5}{|c|}{Precision} \\ 
+\hline
+Threshold & 20 & 10 & 0 & -10 & -20 & 20 & 10 & 0 & -10 & -20 \\ 
+\hline
+0.1& 0.9& 0.9& 0.85& 0.79& 0.7& 0.97& 0.96& 0.88& 0.81& 0.79 \\ 
+0.2& 0.91& 0.9& 0.87& 0.81& 0.68& 0.99& 0.97& 0.91& 0.85& 0.83 \\ 
+0.3& 0.91& 0.9& 0.88& 0.82& 0.65& 0.99& 0.98& 0.93& 0.87& 0.85 \\ 
+0.4& 0.91& 0.9& 0.88& 0.82& 0.62& 1.0& 0.99& 0.94& 0.89& 0.86 \\ 
+0.5& 0.91& 0.9& 0.88& 0.82& 0.61& 1.0& 0.99& 0.95& 0.9& 0.87 \\ 
+0.6& 0.91& 0.9& 0.89& 0.81& 0.58& 1.0& 0.99& 0.96& 0.91& 0.89 \\ 
+0.7& 0.9& 0.9& 0.89& 0.8& 0.55& 1.0& 0.99& 0.96& 0.92& 0.9 \\ 
+0.8& 0.9& 0.9& 0.89& 0.78& 0.52& 1.0& 0.99& 0.97& 0.93& 0.91 \\ 
+0.9& 0.9& 0.9& 0.88& 0.76& 0.47& 1.0& 1.0& 0.98& 0.95& 0.93 \\ 
+\hline
+\end{tabular}
+\begin{tabular}{ |c|c|c|c|c|c|c|c|c|c|c| }
+\hline
+    & \multicolumn{5}{|c|}{Recall} & \multicolumn{5}{|c|}{F1-Score} \\ 
+\hline
+Threshold & 20 & 10 & 0 & -10 & -20 & 20 & 10 & 0 & -10 & -20 \\ 
+\hline
+0.1& 0.89& 0.9& 0.93& 0.95& 0.82& 0.93& 0.93& 0.9& 0.87& 0.8 \\ 
+0.2& 0.89& 0.89& 0.91& 0.92& 0.72& 0.93& 0.93& 0.91& 0.88& 0.77 \\ 
+0.3& 0.88& 0.89& 0.91& 0.9& 0.66& 0.94& 0.93& 0.92& 0.88& 0.74 \\ 
+0.4& 0.88& 0.89& 0.91& 0.88& 0.6& 0.93& 0.93& 0.92& 0.88& 0.71 \\ 
+0.5& 0.88& 0.88& 0.9& 0.85& 0.56& 0.93& 0.93& 0.92& 0.87& 0.68 \\ 
+0.6& 0.88& 0.88& 0.89& 0.83& 0.5& 0.93& 0.93& 0.92& 0.87& 0.64 \\ 
+0.7& 0.87& 0.88& 0.88& 0.8& 0.45& 0.93& 0.93& 0.92& 0.86& 0.6 \\ 
+0.8& 0.87& 0.87& 0.87& 0.77& 0.4& 0.93& 0.93& 0.92& 0.84& 0.55 \\ 
+0.9& 0.87& 0.87& 0.86& 0.72& 0.32& 0.93& 0.93& 0.91& 0.82& 0.48 \\ 
+\hline
+\end{tabular}
+\caption{Performance metrics of the "Total" category for the model: silero} 
+\end{table}
+
+\begin{table}[H]
+\centering
+\small
+\begin{tabular}{ |c|c|c|c|c|c|c|c|c|c|c| }
+\hline
+    & \multicolumn{5}{|c|}{Accuracy} & \multicolumn{5}{|c|}{Precision} \\ 
+\hline
+Threshold & 20 & 10 & 0 & -10 & -20 & 20 & 10 & 0 & -10 & -20 \\ 
+\hline
+0& 0.88& 0.85& 0.81& 0.79& 0.75& 0.89& 0.86& 0.81& 0.79& 0.78 \\ 
+1& 0.89& 0.87& 0.82& 0.79& 0.74& 0.91& 0.89& 0.83& 0.8& 0.79 \\ 
+2& 0.9& 0.88& 0.83& 0.8& 0.72& 0.93& 0.91& 0.84& 0.81& 0.79 \\ 
+3& 0.89& 0.72& 0.52& 0.37& 0.28& 1.0& 1.0& 1.0& 0.99& 0.96 \\ 
+\hline
+\end{tabular}
+\begin{tabular}{ |c|c|c|c|c|c|c|c|c|c|c| }
+\hline
+    & \multicolumn{5}{|c|}{Recall} & \multicolumn{5}{|c|}{F1-Score} \\ 
+\hline
+Threshold & 20 & 10 & 0 & -10 & -20 & 20 & 10 & 0 & -10 & -20 \\ 
+\hline
+0& 0.96& 0.96& 0.97& 0.97& 0.93& 0.92& 0.91& 0.88& 0.87& 0.85 \\ 
+1& 0.95& 0.95& 0.96& 0.96& 0.9& 0.93& 0.92& 0.89& 0.88& 0.84 \\ 
+2& 0.94& 0.93& 0.95& 0.95& 0.86& 0.93& 0.92& 0.89& 0.88& 0.82 \\ 
+3& 0.86& 0.63& 0.37& 0.16& 0.05& 0.92& 0.78& 0.54& 0.28& 0.09 \\ 
+\hline
+\end{tabular}
+\caption{Performance metrics of the "Total" category for the model: webrtc-vad} 
+\end{table}
+
+\end{document}

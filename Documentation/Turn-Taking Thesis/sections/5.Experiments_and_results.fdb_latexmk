@@ -1,13 +1,13 @@
 # Fdb version 4
-["biber sections/5.Experiments_and_results"] 0 "sections/5.Experiments_and_results.bcf" "sections/5.Experiments_and_results.bbl" "sections/5.Experiments_and_results" 1705594152 -1
+["biber sections/5.Experiments_and_results"] 0 "sections/5.Experiments_and_results.bcf" "sections/5.Experiments_and_results.bbl" "sections/5.Experiments_and_results" 1705941623 -1
   "./bibliography.bib" 1704448888 6396 5750744458bf3957192dd31a44b101c9 ""
-  "sections/5.Experiments_and_results.bcf" 1705594152 107353 5126ec284b7cb1b18cd2d41da2972233 "pdflatex"
+  "sections/5.Experiments_and_results.bcf" 1705941623 107353 5126ec284b7cb1b18cd2d41da2972233 "pdflatex"
   (generated)
   "sections/5.Experiments_and_results.bbl"
   "sections/5.Experiments_and_results.blg"
   (rewritten before read)
-["pdflatex"] 1705594131 "/Users/antonio/PycharmProjects/TurnTakingThesis/Documentation/Turn-Taking Thesis/sections/5.Experiments_and_results.tex" "sections/5.Experiments_and_results.pdf" "5.Experiments_and_results" 1705594152 0
-  "/Users/antonio/PycharmProjects/TurnTakingThesis/Documentation/Turn-Taking Thesis/sections/5.Experiments_and_results.tex" 1705594095 43084 fed3e20abbb1f46238c4f65f95098762 ""
+["pdflatex"] 1705941602 "/Users/antonio/PycharmProjects/TurnTakingThesis/Documentation/Turn-Taking Thesis/sections/5.Experiments_and_results.tex" "sections/5.Experiments_and_results.pdf" "5.Experiments_and_results" 1705941623 0
+  "/Users/antonio/PycharmProjects/TurnTakingThesis/Documentation/Turn-Taking Thesis/sections/5.Experiments_and_results.tex" 1705941601 43091 f21d2b3ee509ea627216d755b02eccfc ""
   "/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/jknappen/ec/tcrm1200.tfm" 1136768653 1536 74b7293ec3713bb7fdca8dd1bd1f469c ""
@@ -70,6 +70,7 @@
   "/usr/local/texlive/2023/texmf-dist/tex/latex/blindtext/blindtext.sty" 1325892463 47295 de48b7f8ebf4b54709a2f6b2c7106dd5 ""
   "/usr/local/texlive/2023/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty" 1579991033 13886 d1306dcf79a944f6988e688c1785f9ce ""
   "/usr/local/texlive/2023/texmf-dist/tex/latex/etoolbox/etoolbox.sty" 1601931149 46845 3b58f70c6e861a13d927bff09d35ecbc ""
+  "/usr/local/texlive/2023/texmf-dist/tex/latex/float/float.sty" 1137110151 6749 16d2656a1984957e674b149555f1ea1d ""
   "/usr/local/texlive/2023/texmf-dist/tex/latex/graphics-cfg/color.cfg" 1459978653 1213 620bba36b25224fa9b7e1ccb4ecb76fd ""
   "/usr/local/texlive/2023/texmf-dist/tex/latex/graphics-cfg/graphics.cfg" 1465944070 1224 978390e9c2234eab29404bc21b268d1e ""
   "/usr/local/texlive/2023/texmf-dist/tex/latex/graphics-def/pdftex.def" 1663965824 19448 1e988b341dda20961a6b931bcde55519 ""
@@ -121,12 +122,12 @@
   "images/session_clean.png" 1704808493 564127 4faa9babd9f170d57e4cc7ed85700747 ""
   "images/session_noisy.png" 1704810964 579749 4f2ff8acfd5da59bc2377bf57de55b45 ""
   "images/test-result.png" 1705055761 327073 4ed30345acd04e0e181ac0ad439c9805 ""
-  "sections/../main.tex" 1705492608 2094 d3543ee3e72dd2c358b627e29dde3dc8 ""
-  "sections/5.Experiments_and_results.aux" 1705594152 5923 9f7e705fc21ab316a6f5f201768bcee1 "pdflatex"
+  "sections/../main.tex" 1705941349 2170 351d089269ac5ec51693a5cc9da2a998 ""
+  "sections/5.Experiments_and_results.aux" 1705941623 5923 9f7e705fc21ab316a6f5f201768bcee1 "pdflatex"
   "sections/5.Experiments_and_results.bbl" 1704795112 466 ee04f40f768daeed26442158e95aba61 "biber sections/5.Experiments_and_results"
-  "sections/5.Experiments_and_results.out" 1705594152 1303 271acbb20910ed17b007bbdfaacd33ef "pdflatex"
-  "sections/5.Experiments_and_results.run.xml" 1705594152 2454 9ef26c0a9d5c62558c2b35a40b80485c "pdflatex"
-  "sections/5.Experiments_and_results.tex" 1705594095 43084 fed3e20abbb1f46238c4f65f95098762 ""
+  "sections/5.Experiments_and_results.out" 1705941623 1303 271acbb20910ed17b007bbdfaacd33ef "pdflatex"
+  "sections/5.Experiments_and_results.run.xml" 1705941623 2454 9ef26c0a9d5c62558c2b35a40b80485c "pdflatex"
+  "sections/5.Experiments_and_results.tex" 1705941601 43091 f21d2b3ee509ea627216d755b02eccfc ""
   (generated)
   "sections/5.Experiments_and_results.aux"
   "sections/5.Experiments_and_results.bcf"
