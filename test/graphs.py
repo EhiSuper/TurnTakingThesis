@@ -1,44 +1,51 @@
 import json
 import matplotlib.pyplot as plt
 import numpy as np
-from regex import F
+
 
 processed_path = "test/results/processed.json"
 with open(processed_path, "r") as input:
     results_json = json.load(input)
 
-
-results = {
+models = ['silero', 'webrtc-vad']
+datasets = ['male_noisy_results.json', 'female_noisy_results.json']
+confidence_thresholds = {
+    'silero': ['0.1', '0.2', '0.3', '0.4', '0.5', '0.6', '0.7', '0.8', '0.9'],
+    'webrtc-vad': ['0', '1', '2', '3']
 }
+metrics = ['total_milliseconds', 'true_positives', 'true_negatives', 'false_positives', 'false_negatives']
+categories = ['N', 'D', 'O', 'P', 'S', 'T']
+results = {}
 
-for model, thresholds in results_json.items():
+for model in models:
     results[model] = {}
-    for threshold, datasets in thresholds.items():
+    for threshold in confidence_thresholds[model]:
         results[model][threshold] = {}
-        for dataset, categories in datasets.items():
-            if dataset == "noisy_sessions_results.json":
-                break
+        for dataset in datasets:
             results[model][threshold][dataset] = {}
-            results[model][threshold][dataset]['Total'] = {}
-            results[model][threshold][dataset]['Total']['total_milliseconds'] = 0.0
-            results[model][threshold][dataset]['Total']['true_positives'] = 0.0
-            results[model][threshold][dataset]['Total']['true_negatives'] = 0.0
-            results[model][threshold][dataset]['Total']['false_positives'] = 0.0
-            results[model][threshold][dataset]['Total']['false_negatives'] = 0.0
-            results[model][threshold][dataset]['Total']['accuracy'] = 0.0
-            results[model][threshold][dataset]['Total']['precision'] = 0.0
-            results[model][threshold][dataset]['Total']['recall'] = 0.0
-            results[model][threshold][dataset]['Total']['f1_score'] = 0.0
-
-            for category, subcategories in categories.items():
+            for category in categories:
                 results[model][threshold][dataset][category] = {}
-                for subcategory, values in subcategories.items():
-                    for key in values.keys():
-                        results[model][threshold][dataset][category][key] = 0.0
-                    for key, value in values.items():
-                        results[model][threshold][dataset][category][key] += value
-                        results[model][threshold][dataset]['Total'][key] += value
+                for metric in metrics:
+                    results[model][threshold][dataset][category][metric] = 0
                 
+                for subcategory in results_json[model][threshold][dataset][category].keys():
+                    for metric in metrics:
+                        results[model][threshold][dataset][category][metric] += results_json[model][threshold][dataset][category][subcategory][metric]
+
+for model in models:
+    for threshold in confidence_thresholds[model]:
+        for dataset in datasets:
+            results[model][threshold][dataset]['Total'] = {}
+            for metric in metrics:
+                results[model][threshold][dataset]['Total'][metric] = 0
+            for category in categories:   
+                for metric in metrics:     
+                    results[model][threshold][dataset]['Total'][metric] += results[model][threshold][dataset][category][metric]
+
+for model in models:
+    for threshold in confidence_thresholds[model]:
+        for dataset in datasets:
+            for category in results[model][threshold][dataset].keys():
                 true_positives = results[model][threshold][dataset][category]['true_positives']
                 true_negatives = results[model][threshold][dataset][category]['true_negatives']
                 false_positives = results[model][threshold][dataset][category]['false_positives']
@@ -49,55 +56,29 @@ for model, thresholds in results_json.items():
                 recall = true_positives / (true_positives + false_negatives)
                 results[model][threshold][dataset][category]['recall'] = recall
                 results[model][threshold][dataset][category]['f1_score'] = (2 * precision * recall) / (precision + recall)
+                
 
-            true_positives = results[model][threshold][dataset]['Total']['true_positives']
-            true_negatives = results[model][threshold][dataset]['Total']['true_negatives']
-            false_positives = results[model][threshold][dataset]['Total']['false_positives']
-            false_negatives = results[model][threshold][dataset]['Total']['false_negatives']
-            results[model][threshold][dataset]['Total']['accuracy'] = (true_positives + true_negatives) / (false_negatives + false_positives + true_negatives + true_positives)
-            precision = true_positives / (true_positives + false_positives)
-            results[model][threshold][dataset]['Total']['precision'] = precision
-            recall = true_positives / (true_positives + false_negatives)
-            results[model][threshold][dataset]['Total']['recall'] = recall
-            results[model][threshold][dataset]['Total']['f1_score'] = (2 * precision * recall) / (precision + recall)
+chosen_metric = 'f1_score'
+max_metric = 0
+chosen_threshold = {}
 
+for model in models:
+    chosen_threshold[model] = {}
+    for dataset in datasets:
+        max_metric = 0
+        for threshold in confidence_thresholds[model]:
+            metric = results[model][threshold][dataset]['Total'][chosen_metric]
+            if metric > max_metric:
+                max_metric = results[model][threshold][dataset]['Total'][chosen_metric]
+                chosen_threshold[model][dataset] = threshold
+            
 
-
-choosen_metric = 'accuracy'
-max_metric_male = 0.0
-max_metric_female = 0.0
-chosen_threshold = {
-    'silero' : {
-        'female_noisy_results.json' : 0,
-        'male_noisy_results.json' : 0
-    },
-    'webrtc-vad' : {
-        'female_noisy_results.json' : 0,
-        'male_noisy_results.json' : 0
-    }
-}
-for model, thresholds in results.items():
-    max_metric_male = 0.0
-    max_metric_female = 0.0
-    for threshold, datasets in thresholds.items():
-        for dataset, categories in datasets.items():
-            if dataset == "male_noisy_results.json":
-                if results[model][threshold][dataset]['Total'][choosen_metric] > max_metric_male:
-                    max_metric_male = results[model][threshold][dataset]['Total'][choosen_metric]
-                    chosen_threshold[model][dataset] = threshold
-
-            else:
-                if results[model][threshold][dataset]['Total'][choosen_metric] > max_metric_female:
-                    max_metric_female = results[model][threshold][dataset]['Total'][choosen_metric]
-                    chosen_threshold[model][dataset] = threshold
-
-
-models = ['silero', 'webrtc-vad']
-datasets = ['male_noisy_results.json', 'female_noisy_results.json']
+metrics = ['accuracy', 'precision', 'recall', 'f1_score']
+metrics_labels = ['Accuracy','Precision','Recall','F1-Score']
 #metrics graph
 for model in models:
     for dataset in datasets:
-        metrics = ['accuracy', 'precision', 'recall', 'f1_score']
+        
         threshold = chosen_threshold[model][dataset]
         values = {
             'Nature': [],
@@ -117,11 +98,11 @@ for model in models:
                     values[value].append(round(results[model][threshold][dataset][value[0]][metric], 2))
 
 
-        x = np.arange(len(metrics))  # the label locations
-        width = 0.10  # the width of the bars
+        x = np.arange(0, 4*len(metrics), 4)  # the label locations
+        width = 0.50  # the width of the bars
         multiplier = 0
 
-        fig, ax = plt.subplots(layout='constrained')
+        fig, ax = plt.subplots(figsize=(20, 10), layout='constrained')
 
         for category, measurement in values.items():
             offset = width * multiplier
@@ -131,10 +112,11 @@ for model in models:
 
         # Add some text for labels, title and custom x-axis tick labels, etc.
         ax.set_ylabel('Values')
-        ax.set_title(f'{model} {dataset} {threshold}')
-        ax.set_xticks(x + width, metrics)
+        ax.set_title(f'Performance metrics of model: {model} on: {dataset} with threshold:{threshold}', pad=20)
+        ax.set_xticks(x + 3*width, metrics_labels)
         ax.legend(loc='upper left', ncols=4)
-        ax.set_ylim(0, 1.5)
+        ax.set_ylim(0, 1.3)
+        plt.savefig(f'test/graphs_images/Performance metrics of model: {model} on: {dataset} with threshold:{threshold}.png', format='png', dpi=1200)
 
 #metrics graph recap
 groups = ['Silero-male', 'Silero-female', 'Webrtc-male', 'Webrtc-female']
@@ -154,11 +136,11 @@ for model in models:
         values['F1-score'].append(round(results[model][threshold][dataset]['Total']['f1_score'], 2))
 
 
-x = np.arange(len(groups))  # the label locations
-width = 0.10  # the width of the bars
+x = np.arange(0, 2.5*len(groups), 2.5)  # the label locations
+width = 0.50  # the width of the bars
 multiplier = 0
 
-fig, ax = plt.subplots(layout='constrained')
+fig, ax = plt.subplots(figsize=(20, 10), layout='constrained')
 
 for metric, measurement in values.items():
     offset = width * multiplier
@@ -168,12 +150,13 @@ for metric, measurement in values.items():
 
 # Add some text for labels, title and custom x-axis tick labels, etc.
 ax.set_ylabel('Values')
-ax.set_title(f'Metrics recap')
-ax.set_xticks(x + width, groups)
+ax.set_title(f'Metrics summary', pad=20)
+ax.set_xticks(x + 1.5*width, groups)
 ax.legend(loc='upper left', ncols=4)
-ax.set_ylim(0, 1.5)
+ax.set_ylim(0, 1.3)
+plt.savefig('test/graphs_images/Metrics summary.png', format='png', dpi=1200)
 
-#Roc-Auc score
+#Roc curve
 true_postive_rates = {
     'silero' : {
         'female_noisy_results.json' : [1],
@@ -195,18 +178,14 @@ false_positive_rates = {
     }
 }
 
-thresholds = {
-    'silero': [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9],
-    'webrtc-vad' : [0, 1, 2, 3]
-}
 
 for model in models:
     for dataset in datasets:
-        for threshold in thresholds[model]:
-            recall = results[model][str(threshold)][dataset]['Total']['recall']
+        for threshold in confidence_thresholds[model]:
+            recall = results[model][threshold][dataset]['Total']['recall']
             true_postive_rates[model][dataset].append(recall)
-            true_negatives = results[model][str(threshold)][dataset]['Total']['true_negatives']
-            false_positives = results[model][str(threshold)][dataset]['Total']['false_positives']
+            true_negatives = results[model][threshold][dataset]['Total']['true_negatives']
+            false_positives = results[model][threshold][dataset]['Total']['false_positives']
             false_positive_rate = false_positives / (false_positives + true_negatives)
             false_positive_rates[model][dataset].append(false_positive_rate)
         
@@ -221,15 +200,17 @@ for dataset in datasets:
     ax.plot([0,1], [0,1], linestyle='dashed')
     ax.set_xlim(0, 1)
     ax.set_ylim(0, 1)
-    ax.set(xlabel='False postive rate', ylabel='True positive rate', title=f'ROC curve {dataset}')
+    dataset = dataset.split('_')[0]
+    ax.set(xlabel='False positive rate', ylabel='True positive rate', title=f'ROC curve for the {dataset} dataset')
     ax.legend()
     ax.grid()
+    plt.savefig(f'test/graphs_images/ROC curve for the {dataset} dataset.png', format='png', dpi=1200)
 
 
 #noisy_sessions with different snr levels
-results_snr = {}
+results = {}
 models = ['silero', 'webrtc-vad']
-dataset = 'noisy_sessions_results.json'
+datasets = ['noisy_sessions_results.json']
 snr_levels = [20, 10, 0, -10, -20]
 labels = {
             'N': 'Nature',
@@ -240,87 +221,96 @@ labels = {
             'T': 'Transportation',
             'Total': 'Total'
         }
-chosen_threshold_snr = {
-    'silero': '0.6',
-    'webrtc-vad': '2'
-}
-category_accuracy = {}
+
+metrics = ['total_milliseconds', 'true_positives', 'true_negatives', 'false_positives', 'false_negatives']
+
 for model in models:
-    category_accuracy[model] = {}
-    threshold = chosen_threshold_snr[model]
-    category_accuracy[model]['Total'] = {}
-    category_total_true_positives = {}
-    category_total_true_negatives = {}
-    category_total_false_positives = {}
-    category_total_false_negatives = {}
-    for snr_level in snr_levels:
-        category_accuracy[model]['Total'][snr_level] = 0
-        category_total_true_positives[snr_level] = 0
-        category_total_true_negatives[snr_level] = 0
-        category_total_false_positives[snr_level] = 0
-        category_total_false_negatives[snr_level] = 0
+    results[model] = {}
+    for threshold in confidence_thresholds[model]:
+        results[model][threshold] = {}
+        for dataset in datasets:
+            results[model][threshold][dataset] = {}
+            for category in categories:
+                results[model][threshold][dataset][category] = {}
+                for snr_level in snr_levels:
+                    results[model][threshold][dataset][category][snr_level] = {}
+                    for metric in metrics:
+                        results[model][threshold][dataset][category][snr_level][metric] = 0
+                
+                for subcategory in results_json[model][threshold][dataset][category].keys():
+                    level = int(subcategory.split(' ')[2])
+                    for metric in metrics:
+                        results[model][threshold][dataset][category][level][metric] += results_json[model][threshold][dataset][category][subcategory][metric]
 
-    for category, subcategories in results_json[model][threshold][dataset].items():
-        category_accuracy[model][category] = {}
-        category_true_positives = {}
-        category_true_negatives = {}
-        category_false_positives = {}
-        category_false_negatives = {}
-        for snr_level in snr_levels:
-            category_accuracy[model][category][snr_level] = 0
-            category_true_positives[snr_level] = 0
-            category_true_negatives[snr_level] = 0
-            category_false_positives[snr_level] = 0
-            category_false_negatives[snr_level] = 0
-        
-        for subcategory, metrics in subcategories.items():
-            subcategory_snr_level = int(subcategory.split(" ")[2])
-
+for model in models:
+    for threshold in confidence_thresholds[model]:
+        for dataset in datasets:
+            results[model][threshold][dataset]['Total'] = {}
             for snr_level in snr_levels:
-                if snr_level == subcategory_snr_level:
-                    category_true_positives[snr_level] += metrics['true_positives']
-                    category_true_negatives[snr_level] += metrics['true_negatives']
-                    category_false_positives[snr_level] += metrics['false_positives']
-                    category_false_negatives[snr_level] += metrics['false_negatives']
-        
-        for snr_level in snr_levels:
-            true_positives = category_true_positives[snr_level]
-            true_negatives = category_true_negatives[snr_level]
-            false_positives = category_false_positives[snr_level]
-            false_negatives = category_false_negatives[snr_level]
-            category_accuracy[model][category][snr_level] = (true_positives + true_negatives) / (false_negatives + false_positives + true_negatives + true_positives)
-        
-        for snr_level in snr_levels:
-            category_total_true_positives[snr_level] += category_true_positives[snr_level]
-            category_total_true_negatives[snr_level] += category_true_negatives[snr_level]
-            category_total_false_positives[snr_level] += category_false_positives[snr_level]
-            category_total_false_negatives[snr_level] += category_false_negatives[snr_level]
+                    results[model][threshold][dataset]['Total'][snr_level] = {}
+                    for metric in metrics:
+                        results[model][threshold][dataset]['Total'][snr_level][metric] = 0
+            for category in categories: 
+                for snr_level in snr_levels:  
+                    for metric in metrics:     
+                        results[model][threshold][dataset]['Total'][snr_level][metric] += results[model][threshold][dataset][category][snr_level][metric]
 
-    for snr_level in snr_levels:
-        true_positives = category_total_true_positives[snr_level]
-        true_negatives = category_total_true_negatives[snr_level]
-        false_positives = category_total_false_positives[snr_level]
-        false_negatives = category_total_false_negatives[snr_level]
-        category_accuracy[model]['Total'][snr_level] = (true_positives + true_negatives) / (false_negatives + false_positives + true_negatives + true_positives)
+for model in models:
+    for threshold in confidence_thresholds[model]:
+        for dataset in datasets:
+            for category in results[model][threshold][dataset].keys():
+                for snr_level in snr_levels:
+                    true_positives = results[model][threshold][dataset][category][snr_level]['true_positives']
+                    true_negatives = results[model][threshold][dataset][category][snr_level]['true_negatives']
+                    false_positives = results[model][threshold][dataset][category][snr_level]['false_positives']
+                    false_negatives = results[model][threshold][dataset][category][snr_level]['false_negatives']
+                    results[model][threshold][dataset][category][snr_level]['accuracy'] = (true_positives + true_negatives) / (false_negatives + false_positives + true_negatives + true_positives)
+                    recall = true_positives / (true_positives + false_negatives)
+                    results[model][threshold][dataset][category][snr_level]['recall'] = recall
+                    if (true_positives + false_positives) != 0:
+                        precision = true_positives / (true_positives + false_positives)
+                        results[model][threshold][dataset][category][snr_level]['precision'] = precision
+                        results[model][threshold][dataset][category][snr_level]['f1_score'] = (2 * precision * recall) / (precision + recall)
 
+accuracies = {}
+
+for model in models:
+    accuracies[model] = {}
+    threshold = chosen_threshold[model]['male_noisy_results.json']
+    accuracies[model][threshold] = {}
+    for dataset in datasets:
+        accuracies[model][threshold][dataset] = {}
+        for category in results[model][threshold][dataset].keys():
+            accuracies[model][threshold][dataset][category] = []
+            for snr_level in snr_levels:
+                accuracy = results[model][threshold][dataset][category][snr_level]['accuracy']
+                accuracies[model][threshold][dataset][category].append(accuracy)
+        
+#graph of accuracies for category with different SNR levels
 for model in models:
     fig, ax = plt.subplots()
-    for category, levels in category_accuracy[model].items():
-        y = levels.values()
-        ax.plot(snr_levels, y, label=labels[category])
+    threshold = chosen_threshold[model]['male_noisy_results.json']
+    
+    for category, accuracy_list in accuracies[model][threshold][datasets[0]].items():
+        ax.plot(snr_levels, accuracy_list, label=labels[category])
+            
 
     ax.set(xlabel='SNR levels', ylabel='Accuracy', title=f'Accuracy {model}')
     ax.legend()
     ax.grid()
+    plt.savefig(f'test/graphs_images/Accuracy {model}.png', format='png', dpi=1200)
 
+#graph of accuracies of category 'Total' from the models
 fig, ax = plt.subplots()
 for model in models:
-    y = category_accuracy[model]['Total'].values()
+    threshold = chosen_threshold[model]['male_noisy_results.json']
+    y = accuracies[model][threshold][datasets[0]]['Total']
     ax.plot(snr_levels, y, label=model)
 
 ax.set(xlabel='SNR levels', ylabel='Accuracy', title=f'Accuracy between models')
 ax.legend()
 ax.grid()
+plt.savefig('test/graphs_images/Accuracy between models.png', format='png', dpi=1200)
 
-plt.show()
+
 
