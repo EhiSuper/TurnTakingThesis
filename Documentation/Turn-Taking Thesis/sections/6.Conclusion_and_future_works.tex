@@ -1,9 +1,9 @@
 \documentclass[../main.tex]{subfiles}
 \graphicspath{{\subfix{../images/}}}
 \begin{document}
-\section{Conclusion and future works}
+\section{Conclusions and future works}
 
-In this thesis we presented the design and implementation of a remote real time noise robust end of turn detection system. This system was developed to be used as part of software architecture of the Abel android, a hyperrealistic humanoid robot, used as a research platform in various AI application in the E. Piaggio research lab of the University of Pisa. Before this system Abel used a silence-based turn-taking module that behaved only based on silence and not on the absence of speech, having bad performances in noisy scenarios. The idea was to develop a turn-taking module robust to noisy scenarios and that could be deployed remotely to be integrated with the rest of the software architecture of the android.
+In this thesis we presented the design and implementation of a remote real time noise robust turn-taking management system. This system was developed to be used as part of software architecture of the Abel android, a hyperrealistic humanoid robot, used as a research platform in various AI application in the E. Piaggio research lab of the University of Pisa, but can be used in any conersational agent. Before this system Abel used a silence-based turn-taking module that behaved only based on silence and not on the absence of speech, having bad performances in noisy scenarios. The idea was to develop a turn-taking module robust to noisy scenarios and that could be deployed remotely to be integrated with the rest of the software architecture of the android.
 
 First we presented the current literature review on the main methods and models used in the end of turn detection tasks and their pros and cons. Then we presented the implementation of our silence-based solution. Lastly, we validated our solution with the creation of a novel dataset that could meet our test requirements, and we compared the performances of the system using another vad module, the one integrated with WebRTC.
 

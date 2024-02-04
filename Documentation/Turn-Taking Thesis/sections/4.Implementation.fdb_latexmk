@@ -1,13 +1,13 @@
 # Fdb version 4
-["biber sections/4.Implementation"] 0 "sections/4.Implementation.bcf" "sections/4.Implementation.bbl" "sections/4.Implementation" 1705590624 -1
+["biber sections/4.Implementation"] 0 "sections/4.Implementation.bcf" "sections/4.Implementation.bbl" "sections/4.Implementation" 1706688221 -1
   "./bibliography.bib" 1704448888 6396 5750744458bf3957192dd31a44b101c9 ""
-  "sections/4.Implementation.bcf" 1705590624 107418 8388210dfded84336417429c6c0c00d5 "pdflatex"
+  "sections/4.Implementation.bcf" 1706688221 107418 8388210dfded84336417429c6c0c00d5 "pdflatex"
   (generated)
   "sections/4.Implementation.bbl"
   "sections/4.Implementation.blg"
   (rewritten before read)
-["pdflatex"] 1705590620 "/Users/antonio/PycharmProjects/TurnTakingThesis/Documentation/Turn-Taking Thesis/sections/4.Implementation.tex" "sections/4.Implementation.pdf" "4.Implementation" 1705590624 0
-  "/Users/antonio/PycharmProjects/TurnTakingThesis/Documentation/Turn-Taking Thesis/sections/4.Implementation.tex" 1705590620 44767 91a0670ea300c00f29d5ef9c2ba329e0 ""
+["pdflatex"] 1706688217 "/Users/antonio/PycharmProjects/TurnTakingThesis/Documentation/Turn-Taking Thesis/sections/4.Implementation.tex" "sections/4.Implementation.pdf" "4.Implementation" 1706688221 0
+  "/Users/antonio/PycharmProjects/TurnTakingThesis/Documentation/Turn-Taking Thesis/sections/4.Implementation.tex" 1706688217 44808 081b4470935946e046db4cc0148005c8 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/jknappen/ec/tcrm1200.tfm" 1136768653 1536 74b7293ec3713bb7fdca8dd1bd1f469c ""
@@ -58,6 +58,7 @@
   "/usr/local/texlive/2023/texmf-dist/tex/latex/blindtext/blindtext.sty" 1325892463 47295 de48b7f8ebf4b54709a2f6b2c7106dd5 ""
   "/usr/local/texlive/2023/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty" 1579991033 13886 d1306dcf79a944f6988e688c1785f9ce ""
   "/usr/local/texlive/2023/texmf-dist/tex/latex/etoolbox/etoolbox.sty" 1601931149 46845 3b58f70c6e861a13d927bff09d35ecbc ""
+  "/usr/local/texlive/2023/texmf-dist/tex/latex/float/float.sty" 1137110151 6749 16d2656a1984957e674b149555f1ea1d ""
   "/usr/local/texlive/2023/texmf-dist/tex/latex/graphics-cfg/color.cfg" 1459978653 1213 620bba36b25224fa9b7e1ccb4ecb76fd ""
   "/usr/local/texlive/2023/texmf-dist/tex/latex/graphics-cfg/graphics.cfg" 1465944070 1224 978390e9c2234eab29404bc21b268d1e ""
   "/usr/local/texlive/2023/texmf-dist/tex/latex/graphics-def/pdftex.def" 1663965824 19448 1e988b341dda20961a6b931bcde55519 ""
@@ -106,12 +107,12 @@
   "images/State diagram.png" 1704448890 196511 d013e71e720d3e94bf0d32a8531dfa46 ""
   "images/Web interface.png" 1704448888 761444 5322173dff53b309f865ea4a18d14a81 ""
   "images/new system.png" 1704448890 5684515 2c2319ebcf62cb71429dbbcf2de82b9d ""
-  "sections/../main.tex" 1705492608 2094 d3543ee3e72dd2c358b627e29dde3dc8 ""
-  "sections/4.Implementation.aux" 1705590624 4419 1ea2ae99776025661fc064c143069364 "pdflatex"
+  "sections/../main.tex" 1705941349 2170 351d089269ac5ec51693a5cc9da2a998 ""
+  "sections/4.Implementation.aux" 1706688221 4419 1ea2ae99776025661fc064c143069364 "pdflatex"
   "sections/4.Implementation.bbl" 1704476048 1618 565958177778356a616cff9f54a9ac23 "biber sections/4.Implementation"
-  "sections/4.Implementation.out" 1705590624 866 8288294909359b2ab3f3748815fef3af "pdflatex"
-  "sections/4.Implementation.run.xml" 1705590624 2391 63b95b9a49a03995c721a9f9ede5498d "pdflatex"
-  "sections/4.Implementation.tex" 1705590620 44767 91a0670ea300c00f29d5ef9c2ba329e0 ""
+  "sections/4.Implementation.out" 1706688221 866 8288294909359b2ab3f3748815fef3af "pdflatex"
+  "sections/4.Implementation.run.xml" 1706688221 2391 63b95b9a49a03995c721a9f9ede5498d "pdflatex"
+  "sections/4.Implementation.tex" 1706688217 44808 081b4470935946e046db4cc0148005c8 ""
   (generated)
   "sections/4.Implementation.aux"
   "sections/4.Implementation.bcf"

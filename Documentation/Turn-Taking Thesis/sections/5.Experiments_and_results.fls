@@ -761,6 +761,21 @@ INPUT ./images/Accuracy between models.png
 INPUT images/Accuracy between models.png
 INPUT ./images/Accuracy between models.png
 INPUT ./images/Accuracy between models.png
+INPUT ./images/F1-Score silero.png
+INPUT ./images/F1-Score silero.png
+INPUT images/F1-Score silero.png
+INPUT ./images/F1-Score silero.png
+INPUT ./images/F1-Score silero.png
+INPUT ./images/F1-Score webrtc-vad.png
+INPUT ./images/F1-Score webrtc-vad.png
+INPUT images/F1-Score webrtc-vad.png
+INPUT ./images/F1-Score webrtc-vad.png
+INPUT ./images/F1-Score webrtc-vad.png
+INPUT ./images/F1-Score between models.png
+INPUT ./images/F1-Score between models.png
+INPUT images/F1-Score between models.png
+INPUT ./images/F1-Score between models.png
+INPUT ./images/F1-Score between models.png
 INPUT sections/5.Experiments_and_results.aux
 INPUT sections/5.Experiments_and_results.out
 INPUT sections/5.Experiments_and_results.out

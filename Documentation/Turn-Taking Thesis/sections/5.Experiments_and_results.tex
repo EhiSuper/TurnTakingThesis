@@ -222,7 +222,7 @@ In Figure \ref*{fig:session_noisy} is shown an example of metadata for the male 
     \label{fig:session_noisy}
 \end{figure}
 
-For our testing purposes we wanted also to compute the performance metrics on noisy audio with different SNR. For this reason we created the noisy sessions part that is made up of one single clean speech session to which is applied all the 17 categories of noise with 5 different SNR: 20db, 10db, 0db, -10db, -20db. The clean session used for the whole part is always the same and it is generated with both male and female random voices for a duration of 5 minutes. In this part there are 85 different sessions and the total duration of this part is 5 minutes for session for 17 categories for 5 different SNR levels for a total of 425 minutes or 7 hours of noisy speech. The noisy sessions metadata is the same for the male noisy metadata with the SNR field that varies for the different levels.
+For our testing purposes we wanted also to compute the performance metrics on noisy audio with different SNR. For this reason we created the noisy sessions part that is made up of one single clean speech session to which is applied all the 17 categories of noise with 5 different SNR: 20db, 10db, 0db, -10db, -20db. The clean session used for the whole part is always the same and it is generated with both male and female random voices for a duration of 5 minutes. In this part there are 85 different sessions and the total duration of this part is 5 minutes for session for 17 categories for 5 different SNR levels for a total of 425 minutes or 7 hours of noisy speech. The noisy sessions metadata is the same for the male noisy metadata with the SNR field that varies for the different levels. In total the Libri-Demand dataset contains more than 12 hours of noisy speech.
 
 Regarding the implementation of the construction of the Libri-Demand dataset it has been done in 2 parts: the creation of the metadata and the creation of the dataset from the metadata. 
 
@@ -383,7 +383,7 @@ Analyzing the results of the noisy sessions dataset instead we see the differenc
     \label{fig:accuracy webrtc}
 \end{figure}
 
-In the end we show a direct comparison on the 'Total' categories for both models in figure \ref{fig:accuracy both models}. From the graph we can see that with higher SNR levels the models performs similarly while diminishing the SNR the silero model performs better than the webrtc model.
+In the end we show a direct comparison on the 'Total' categories for both models in figure \ref{fig:accuracy both models}. From the graph we can see that with higher SNR levels the models performs similarly while diminishing the SNR the silero model performs better than the webrtc model until we reach the SNR level of -10 db. Instead for the -20 db SNR the WebRTC vad performs better. The same considerations can be done for the f1-score metric. The relative graphs are shown in Figure \ref{fig:f1-score silero}, Figure\ref{fig:f1-score webrtc} and Figure \ref{fig:f1-score both models}
 
 \begin{figure}[ht]
     \centering
@@ -391,6 +391,29 @@ In the end we show a direct comparison on the 'Total' categories for both models
     \caption{Accuracy comparison of both models on the 'Total' category}
     \label{fig:accuracy both models}
 \end{figure}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.8\textwidth]{images/F1-Score silero.png}
+    \caption{F1-Score for the silero model with different SNR levels}
+    \label{fig:f1-score silero}
+\end{figure}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.8\textwidth]{images/F1-Score webrtc-vad.png}
+    \caption{F1-Score for the webrtc model with different SNR levels}
+    \label{fig:f1-score webrtc}
+\end{figure}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.8\textwidth]{images/F1-Score between models.png}
+    \caption{F1-Score comparison of both models on the 'Total' category}
+    \label{fig:f1-score both models}
+\end{figure}
+
+\clearpage
 
 Finally, to comment the overall performances of the system, we can say that using the silero vad the system performs better than using the webrtc vad, especially in really noisy scenarios where the SNR is under the 0db value. The system shows good performances overall considering the really noisy scenarios, and the variability of the environment presented in the datasets, obtaining an accuracy of around 90\% that increase further when the voice is cleaner, as in the normal use case of the system.
 

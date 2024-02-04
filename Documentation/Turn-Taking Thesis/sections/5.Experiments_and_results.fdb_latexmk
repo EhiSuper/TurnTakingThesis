@@ -1,13 +1,13 @@
 # Fdb version 4
-["biber sections/5.Experiments_and_results"] 0 "sections/5.Experiments_and_results.bcf" "sections/5.Experiments_and_results.bbl" "sections/5.Experiments_and_results" 1705941623 -1
+["biber sections/5.Experiments_and_results"] 0 "sections/5.Experiments_and_results.bcf" "sections/5.Experiments_and_results.bbl" "sections/5.Experiments_and_results" 1707079552 -1
   "./bibliography.bib" 1704448888 6396 5750744458bf3957192dd31a44b101c9 ""
-  "sections/5.Experiments_and_results.bcf" 1705941623 107353 5126ec284b7cb1b18cd2d41da2972233 "pdflatex"
+  "sections/5.Experiments_and_results.bcf" 1707079552 107353 5126ec284b7cb1b18cd2d41da2972233 "pdflatex"
   (generated)
   "sections/5.Experiments_and_results.bbl"
   "sections/5.Experiments_and_results.blg"
   (rewritten before read)
-["pdflatex"] 1705941602 "/Users/antonio/PycharmProjects/TurnTakingThesis/Documentation/Turn-Taking Thesis/sections/5.Experiments_and_results.tex" "sections/5.Experiments_and_results.pdf" "5.Experiments_and_results" 1705941623 0
-  "/Users/antonio/PycharmProjects/TurnTakingThesis/Documentation/Turn-Taking Thesis/sections/5.Experiments_and_results.tex" 1705941601 43091 f21d2b3ee509ea627216d755b02eccfc ""
+["pdflatex"] 1707079525 "/Users/antonio/PycharmProjects/TurnTakingThesis/Documentation/Turn-Taking Thesis/sections/5.Experiments_and_results.tex" "sections/5.Experiments_and_results.pdf" "5.Experiments_and_results" 1707079552 0
+  "/Users/antonio/PycharmProjects/TurnTakingThesis/Documentation/Turn-Taking Thesis/sections/5.Experiments_and_results.tex" 1707079496 44162 74814a37e44144b64dedb6cf623bafc9 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/jknappen/ec/tcrm1200.tfm" 1136768653 1536 74b7293ec3713bb7fdca8dd1bd1f469c ""
@@ -116,6 +116,9 @@
   "images/Accuracy between models.png" 1705414350 607570 8612dc63bccb06cfbd54d1c617911e9b ""
   "images/Accuracy silero.png" 1705414344 900661 6b2e3b204ae0eb88c6ae9ec0d129a63c ""
   "images/Accuracy webrtc-vad.png" 1705414347 946002 29de740205be9ab18968d06e47dabcf7 ""
+  "images/F1-Score between models.png" 1707079093 539563 b6e3adfea4ea7306eb0a63cbc4d28811 ""
+  "images/F1-Score silero.png" 1707079093 845489 a06ee6a8c51398073f1e5ce3f9ab784f ""
+  "images/F1-Score webrtc-vad.png" 1707079093 939982 08f02219afc63bf8c717dbd0b10c3354 ""
   "images/Metrics summary.png" 1705414336 1556512 c2e51354e7bb7a37b6649eed6a6ad40d ""
   "images/ROC curve for the female dataset.png" 1705414342 709626 b5b5e01fb4eb3c526af0c2ea5a7f4396 ""
   "images/ROC curve for the male dataset.png" 1705414339 714297 52b23bbe6be1bbc99467b1eaa25af4ba ""
@@ -123,11 +126,11 @@
   "images/session_noisy.png" 1704810964 579749 4f2ff8acfd5da59bc2377bf57de55b45 ""
   "images/test-result.png" 1705055761 327073 4ed30345acd04e0e181ac0ad439c9805 ""
   "sections/../main.tex" 1705941349 2170 351d089269ac5ec51693a5cc9da2a998 ""
-  "sections/5.Experiments_and_results.aux" 1705941623 5923 9f7e705fc21ab316a6f5f201768bcee1 "pdflatex"
+  "sections/5.Experiments_and_results.aux" 1707079552 6774 827e0b4894c28205ca6469ed9ebc3a24 "pdflatex"
   "sections/5.Experiments_and_results.bbl" 1704795112 466 ee04f40f768daeed26442158e95aba61 "biber sections/5.Experiments_and_results"
-  "sections/5.Experiments_and_results.out" 1705941623 1303 271acbb20910ed17b007bbdfaacd33ef "pdflatex"
-  "sections/5.Experiments_and_results.run.xml" 1705941623 2454 9ef26c0a9d5c62558c2b35a40b80485c "pdflatex"
-  "sections/5.Experiments_and_results.tex" 1705941601 43091 f21d2b3ee509ea627216d755b02eccfc ""
+  "sections/5.Experiments_and_results.out" 1707079552 1303 271acbb20910ed17b007bbdfaacd33ef "pdflatex"
+  "sections/5.Experiments_and_results.run.xml" 1707079552 2454 9ef26c0a9d5c62558c2b35a40b80485c "pdflatex"
+  "sections/5.Experiments_and_results.tex" 1707079496 44162 74814a37e44144b64dedb6cf623bafc9 ""
   (generated)
   "sections/5.Experiments_and_results.aux"
   "sections/5.Experiments_and_results.bcf"

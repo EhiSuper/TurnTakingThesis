@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.5)  22 JAN 2024 17:40
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.5)  4 FEB 2024 21:45
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -607,12 +607,29 @@ File: images/Accuracy webrtc-vad.png Graphic file (type png)
 <use images/Accuracy webrtc-vad.png>
 Package pdftex.def Info: images/Accuracy webrtc-vad.png  used on input line 381.
 (pdftex.def)             Requested size: 312.00119pt x 234.01236pt.
-<images/Accuracy between models.png, id=278, 462.528pt x 346.896pt>
+<images/Accuracy between models.png, id=281, 462.528pt x 346.896pt>
 File: images/Accuracy between models.png Graphic file (type png)
 <use images/Accuracy between models.png>
 Package pdftex.def Info: images/Accuracy between models.png  used on input line 390.
 (pdftex.def)             Requested size: 312.00119pt x 234.01236pt.
- [25 <./images/ROC curve for the female dataset.png>] [26 <./images/Accuracy silero.png>] [27 <./images/Accuracy webrtc-vad.png> <./images/Accuracy between models.png>] (sections/5.Experiments_and_results.aux)
+<images/F1-Score silero.png, id=282, 462.528pt x 346.896pt>
+File: images/F1-Score silero.png Graphic file (type png)
+<use images/F1-Score silero.png>
+Package pdftex.def Info: images/F1-Score silero.png  used on input line 397.
+(pdftex.def)             Requested size: 312.00119pt x 234.01236pt.
+<images/F1-Score webrtc-vad.png, id=283, 462.528pt x 346.896pt>
+File: images/F1-Score webrtc-vad.png Graphic file (type png)
+<use images/F1-Score webrtc-vad.png>
+Package pdftex.def Info: images/F1-Score webrtc-vad.png  used on input line 404.
+(pdftex.def)             Requested size: 312.00119pt x 234.01236pt.
+<images/F1-Score between models.png, id=284, 462.528pt x 346.896pt>
+File: images/F1-Score between models.png Graphic file (type png)
+<use images/F1-Score between models.png>
+Package pdftex.def Info: images/F1-Score between models.png  used on input line 411.
+(pdftex.def)             Requested size: 312.00119pt x 234.01236pt.
+ [25 <./images/ROC curve for the female dataset.png>] [26 <./images/Accuracy silero.png> <./images/Accuracy webrtc-vad.png>] [27 <./images/Accuracy between models.png> <./images/F1-Score silero.png>] [28 <./images/F1-Score webrtc-vad.png> <./images/F1-Score between models.png>] [29
+
+] (sections/5.Experiments_and_results.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -623,18 +640,18 @@ Package logreq Info: Writing requests to '5.Experiments_and_results.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 18482 strings out of 476025
- 320677 string characters out of 5790018
- 1964388 words of memory out of 5000000
- 38588 multiletter control sequences out of 15000+600000
+ 18511 strings out of 476025
+ 321494 string characters out of 5790018
+ 1965388 words of memory out of 5000000
+ 38609 multiletter control sequences out of 15000+600000
  517562 words of font info for 50 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  83i,8n,92p,2037b,2022s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on sections/5.Experiments_and_results.pdf (27 pages, 6507886 bytes).
+Output written on sections/5.Experiments_and_results.pdf (29 pages, 8789391 bytes).
 PDF statistics:
- 378 PDF objects out of 1000 (max. 8388607)
- 305 compressed objects within 4 object streams
- 138 named destinations out of 1000 (max. 500000)
- 110 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 399 PDF objects out of 1000 (max. 8388607)
+ 318 compressed objects within 4 object streams
+ 143 named destinations out of 1000 (max. 500000)
+ 125 words of extra memory for PDF output out of 10000 (max. 10000000)
 

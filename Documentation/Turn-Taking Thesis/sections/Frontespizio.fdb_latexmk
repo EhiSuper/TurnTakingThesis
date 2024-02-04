@@ -1,13 +1,13 @@
 # Fdb version 4
-["biber sections/Frontespizio"] 1705492658 "sections/Frontespizio.bcf" "sections/Frontespizio.bbl" "sections/Frontespizio" 1705591112 0
+["biber sections/Frontespizio"] 1705492658 "sections/Frontespizio.bcf" "sections/Frontespizio.bbl" "sections/Frontespizio" 1706021765 0
   "./bibliography.bib" 1704448888 6396 5750744458bf3957192dd31a44b101c9 ""
-  "sections/Frontespizio.bcf" 1705591112 107353 5126ec284b7cb1b18cd2d41da2972233 "pdflatex"
+  "sections/Frontespizio.bcf" 1706021765 107353 5126ec284b7cb1b18cd2d41da2972233 "pdflatex"
   (generated)
   "sections/Frontespizio.bbl"
   "sections/Frontespizio.blg"
   (rewritten before read)
-["pdflatex"] 1705591112 "/Users/antonio/PycharmProjects/TurnTakingThesis/Documentation/Turn-Taking Thesis/sections/Frontespizio.tex" "sections/Frontespizio.pdf" "Frontespizio" 1705591112 0
-  "/Users/antonio/PycharmProjects/TurnTakingThesis/Documentation/Turn-Taking Thesis/sections/Frontespizio.tex" 1705591111 1276 8b92699009b2a34e9bb357df4c70819f ""
+["pdflatex"] 1706021765 "/Users/antonio/PycharmProjects/TurnTakingThesis/Documentation/Turn-Taking Thesis/sections/Frontespizio.tex" "sections/Frontespizio.pdf" "Frontespizio" 1706021765 0
+  "/Users/antonio/PycharmProjects/TurnTakingThesis/Documentation/Turn-Taking Thesis/sections/Frontespizio.tex" 1706021764 1270 b8c8951d9e90716e8e6211a98cc0d588 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm" 1136768653 1324 c910af8c371558dc20f2d7822f66fe64 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmr12.tfm" 1136768653 1288 655e228510b4c2a1abe905c368440826 ""
@@ -49,6 +49,7 @@
   "/usr/local/texlive/2023/texmf-dist/tex/latex/blindtext/blindtext.sty" 1325892463 47295 de48b7f8ebf4b54709a2f6b2c7106dd5 ""
   "/usr/local/texlive/2023/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty" 1579991033 13886 d1306dcf79a944f6988e688c1785f9ce ""
   "/usr/local/texlive/2023/texmf-dist/tex/latex/etoolbox/etoolbox.sty" 1601931149 46845 3b58f70c6e861a13d927bff09d35ecbc ""
+  "/usr/local/texlive/2023/texmf-dist/tex/latex/float/float.sty" 1137110151 6749 16d2656a1984957e674b149555f1ea1d ""
   "/usr/local/texlive/2023/texmf-dist/tex/latex/graphics-cfg/color.cfg" 1459978653 1213 620bba36b25224fa9b7e1ccb4ecb76fd ""
   "/usr/local/texlive/2023/texmf-dist/tex/latex/graphics-cfg/graphics.cfg" 1465944070 1224 978390e9c2234eab29404bc21b268d1e ""
   "/usr/local/texlive/2023/texmf-dist/tex/latex/graphics-def/pdftex.def" 1663965824 19448 1e988b341dda20961a6b931bcde55519 ""
@@ -91,12 +92,12 @@
   "/usr/local/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt" 1704451753 7883457 65216bdce0a3bc8c0c3759796b9445c7 ""
   "/usr/local/texlive/2023/texmf.cnf" 1678822455 577 1b2b1af17af2508fb20dd85783af4050 ""
   "images/cherubinFrontespizio.eps" 1705493218 259277 326b2c72a6633bf6164fa5ee0d9c2ea6 ""
-  "sections/../main.tex" 1705492608 2094 d3543ee3e72dd2c358b627e29dde3dc8 ""
-  "sections/Frontespizio.aux" 1705591112 663 1ddb6fed3b3defa92a97e4740712030f "pdflatex"
+  "sections/../main.tex" 1705941349 2170 351d089269ac5ec51693a5cc9da2a998 ""
+  "sections/Frontespizio.aux" 1706021765 663 1ddb6fed3b3defa92a97e4740712030f "pdflatex"
   "sections/Frontespizio.bbl" 1705492660 466 ee04f40f768daeed26442158e95aba61 "biber sections/Frontespizio"
-  "sections/Frontespizio.out" 1705591112 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "sections/Frontespizio.run.xml" 1705591112 2363 94317f9a58971571237fc6cd0ebc6891 "pdflatex"
-  "sections/Frontespizio.tex" 1705591111 1276 8b92699009b2a34e9bb357df4c70819f ""
+  "sections/Frontespizio.out" 1706021765 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "sections/Frontespizio.run.xml" 1706021765 2363 94317f9a58971571237fc6cd0ebc6891 "pdflatex"
+  "sections/Frontespizio.tex" 1706021764 1270 b8c8951d9e90716e8e6211a98cc0d588 ""
   (generated)
   "sections/Frontespizio.aux"
   "sections/Frontespizio.bcf"

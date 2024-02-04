@@ -1,13 +1,13 @@
 # Fdb version 4
-["biber sections/1.Introduction"] 1704473204 "sections/1.Introduction.bcf" "sections/1.Introduction.bbl" "sections/1.Introduction" 1705573903 0
+["biber sections/1.Introduction"] 1704473204 "sections/1.Introduction.bcf" "sections/1.Introduction.bbl" "sections/1.Introduction" 1706190584 0
   "./bibliography.bib" 1704448888 6396 5750744458bf3957192dd31a44b101c9 ""
-  "sections/1.Introduction.bcf" 1705573903 107353 5126ec284b7cb1b18cd2d41da2972233 "pdflatex"
+  "sections/1.Introduction.bcf" 1706190584 107353 5126ec284b7cb1b18cd2d41da2972233 "pdflatex"
   (generated)
   "sections/1.Introduction.bbl"
   "sections/1.Introduction.blg"
   (rewritten before read)
-["pdflatex"] 1705573902 "/Users/antonio/PycharmProjects/TurnTakingThesis/Documentation/Turn-Taking Thesis/sections/1.Introduction.tex" "sections/1.Introduction.pdf" "1.Introduction" 1705573903 0
-  "/Users/antonio/PycharmProjects/TurnTakingThesis/Documentation/Turn-Taking Thesis/sections/1.Introduction.tex" 1705573901 8877 07f3f3c43e60a8a7db79aec17db522fc ""
+["pdflatex"] 1706190583 "/Users/antonio/PycharmProjects/TurnTakingThesis/Documentation/Turn-Taking Thesis/sections/1.Introduction.tex" "sections/1.Introduction.pdf" "1.Introduction" 1706190584 0
+  "/Users/antonio/PycharmProjects/TurnTakingThesis/Documentation/Turn-Taking Thesis/sections/1.Introduction.tex" 1706190583 8877 52ab163b4e65dd3f1cc517da3ba55c28 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm" 1136768653 1324 c910af8c371558dc20f2d7822f66fe64 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm" 1136768653 1524 4414a8315f39513458b80dfc63bff03a ""
@@ -58,6 +58,7 @@
   "/usr/local/texlive/2023/texmf-dist/tex/latex/blindtext/blindtext.sty" 1325892463 47295 de48b7f8ebf4b54709a2f6b2c7106dd5 ""
   "/usr/local/texlive/2023/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty" 1579991033 13886 d1306dcf79a944f6988e688c1785f9ce ""
   "/usr/local/texlive/2023/texmf-dist/tex/latex/etoolbox/etoolbox.sty" 1601931149 46845 3b58f70c6e861a13d927bff09d35ecbc ""
+  "/usr/local/texlive/2023/texmf-dist/tex/latex/float/float.sty" 1137110151 6749 16d2656a1984957e674b149555f1ea1d ""
   "/usr/local/texlive/2023/texmf-dist/tex/latex/graphics-cfg/color.cfg" 1459978653 1213 620bba36b25224fa9b7e1ccb4ecb76fd ""
   "/usr/local/texlive/2023/texmf-dist/tex/latex/graphics-cfg/graphics.cfg" 1465944070 1224 978390e9c2234eab29404bc21b268d1e ""
   "/usr/local/texlive/2023/texmf-dist/tex/latex/graphics-def/pdftex.def" 1663965824 19448 1e988b341dda20961a6b931bcde55519 ""
@@ -100,12 +101,12 @@
   "/usr/local/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt" 1704451753 7883457 65216bdce0a3bc8c0c3759796b9445c7 ""
   "/usr/local/texlive/2023/texmf.cnf" 1678822455 577 1b2b1af17af2508fb20dd85783af4050 ""
   "images/Abel.jpg" 1704448888 6342625 0a20a37de15879e77b11f64ecb5d2da2 ""
-  "sections/../main.tex" 1705492608 2094 d3543ee3e72dd2c358b627e29dde3dc8 ""
-  "sections/1.Introduction.aux" 1705573903 933 f2d839c2ed62d5311724b6bd40aa6336 "pdflatex"
+  "sections/../main.tex" 1705941349 2170 351d089269ac5ec51693a5cc9da2a998 ""
+  "sections/1.Introduction.aux" 1706190584 933 f2d839c2ed62d5311724b6bd40aa6336 "pdflatex"
   "sections/1.Introduction.bbl" 1704473206 466 ee04f40f768daeed26442158e95aba61 "biber sections/1.Introduction"
-  "sections/1.Introduction.out" 1705573903 103 9814c2d956916adb9290eca4e25c967a "pdflatex"
-  "sections/1.Introduction.run.xml" 1705573903 2377 17ab55e36c8f8f6f5ba6f1e0b01fd433 "pdflatex"
-  "sections/1.Introduction.tex" 1705573901 8877 07f3f3c43e60a8a7db79aec17db522fc ""
+  "sections/1.Introduction.out" 1706190584 103 9814c2d956916adb9290eca4e25c967a "pdflatex"
+  "sections/1.Introduction.run.xml" 1706190584 2377 17ab55e36c8f8f6f5ba6f1e0b01fd433 "pdflatex"
+  "sections/1.Introduction.tex" 1706190583 8877 52ab163b4e65dd3f1cc517da3ba55c28 ""
   (generated)
   "sections/1.Introduction.aux"
   "sections/1.Introduction.bcf"

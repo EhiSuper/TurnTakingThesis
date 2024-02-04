@@ -286,9 +286,9 @@ for model in models:
         for category in results[model][threshold][dataset].keys():
             accuracies[model][threshold][dataset][category] = []
             for snr_level in snr_levels:
-                if 'f1_score' in results[model][threshold][dataset][category][snr_level]:
-                    f1_score = results[model][threshold][dataset][category][snr_level]['f1_score']
-                    accuracies[model][threshold][dataset][category].append(f1_score)
+                if 'accuracy' in results[model][threshold][dataset][category][snr_level]:
+                    accuracy = results[model][threshold][dataset][category][snr_level]['accuracy']
+                    accuracies[model][threshold][dataset][category].append(accuracy)
         
 #graph of accuracies for category with different SNR levels
 for model in models:
@@ -302,7 +302,7 @@ for model in models:
     ax.set(xlabel='SNR levels', ylabel='Accuracy', title=f'Accuracy {model}')
     ax.legend()
     ax.grid()
-    plt.savefig(f'test/graphs_images/F1Score {model}.png', format='png', dpi=1200)
+    plt.savefig(f'test/graphs_images/Accuracy {model}.png', format='png', dpi=1200)
 
 #graph of accuracies of category 'Total' from the models
 fig, ax = plt.subplots()
@@ -312,6 +312,48 @@ for model in models:
     ax.plot(snr_levels, y, label=model)
 
 ax.set(xlabel='SNR levels', ylabel='Accuracy', title=f'Accuracy between models')
+ax.legend()
+ax.grid()
+plt.savefig('test/graphs_images/Accuracy between models.png', format='png', dpi=1200)
+
+
+f1_scores = {}
+
+for model in models:
+    f1_scores[model] = {}
+    threshold = chosen_threshold[model]['male_noisy_results.json']
+    f1_scores[model][threshold] = {}
+    for dataset in datasets:
+        f1_scores[model][threshold][dataset] = {}
+        for category in results[model][threshold][dataset].keys():
+            f1_scores[model][threshold][dataset][category] = []
+            for snr_level in snr_levels:
+                if 'f1_score' in results[model][threshold][dataset][category][snr_level]:
+                    f1_score = results[model][threshold][dataset][category][snr_level]['f1_score']
+                    f1_scores[model][threshold][dataset][category].append(f1_score)
+        
+#graph of f1-score for category with different SNR levels
+for model in models:
+    fig, ax = plt.subplots()
+    threshold = chosen_threshold[model]['male_noisy_results.json']
+    
+    for category, accuracy_list in f1_scores[model][threshold][datasets[0]].items():
+        ax.plot(snr_levels, accuracy_list, label=labels[category])
+            
+
+    ax.set(xlabel='SNR levels', ylabel='F1-Score', title=f'F1-Score {model}')
+    ax.legend()
+    ax.grid()
+    plt.savefig(f'test/graphs_images/F1-Score {model}.png', format='png', dpi=1200)
+
+#graph of f1-score of category 'Total' from the models
+fig, ax = plt.subplots()
+for model in models:
+    threshold = chosen_threshold[model]['male_noisy_results.json']
+    y = f1_scores[model][threshold][datasets[0]]['Total']
+    ax.plot(snr_levels, y, label=model)
+
+ax.set(xlabel='SNR levels', ylabel='F1-Score', title=f'F1-Score between models')
 ax.legend()
 ax.grid()
 plt.savefig('test/graphs_images/F1-Score between models.png', format='png', dpi=1200)
