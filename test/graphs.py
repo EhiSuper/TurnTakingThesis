@@ -116,7 +116,7 @@ for model in models:
         ax.set_xticks(x + 3*width, metrics_labels)
         ax.legend(loc='upper left', ncols=4)
         ax.set_ylim(0, 1.3)
-        plt.savefig(f'test/graphs_images/Performance metrics of model: {model} on: {dataset} with threshold:{threshold}.png', format='png', dpi=1200)
+        #plt.savefig(f'test/graphs_images/Performance metrics of model: {model} on: {dataset} with threshold:{threshold}.png', format='png', dpi=1200)
 
 #metrics graph recap
 groups = ['Silero-male', 'Silero-female', 'Webrtc-male', 'Webrtc-female']
@@ -154,7 +154,7 @@ ax.set_title(f'Metrics summary', pad=20)
 ax.set_xticks(x + 1.5*width, groups)
 ax.legend(loc='upper left', ncols=4)
 ax.set_ylim(0, 1.3)
-plt.savefig('test/graphs_images/Metrics summary.png', format='png', dpi=1200)
+#plt.savefig('test/graphs_images/Metrics summary.png', format='png', dpi=1200)
 
 #Roc curve
 true_postive_rates = {
@@ -204,7 +204,7 @@ for dataset in datasets:
     ax.set(xlabel='False positive rate', ylabel='True positive rate', title=f'ROC curve for the {dataset} dataset')
     ax.legend()
     ax.grid()
-    plt.savefig(f'test/graphs_images/ROC curve for the {dataset} dataset.png', format='png', dpi=1200)
+    #plt.savefig(f'test/graphs_images/ROC curve for the {dataset} dataset.png', format='png', dpi=1200)
 
 
 #noisy_sessions with different snr levels
@@ -268,9 +268,12 @@ for model in models:
                     recall = true_positives / (true_positives + false_negatives)
                     results[model][threshold][dataset][category][snr_level]['recall'] = recall
                     if (true_positives + false_positives) != 0:
+                        
                         precision = true_positives / (true_positives + false_positives)
                         results[model][threshold][dataset][category][snr_level]['precision'] = precision
                         results[model][threshold][dataset][category][snr_level]['f1_score'] = (2 * precision * recall) / (precision + recall)
+                    else:
+                        print(model, threshold, category, snr_level)
 
 accuracies = {}
 
@@ -283,8 +286,9 @@ for model in models:
         for category in results[model][threshold][dataset].keys():
             accuracies[model][threshold][dataset][category] = []
             for snr_level in snr_levels:
-                accuracy = results[model][threshold][dataset][category][snr_level]['accuracy']
-                accuracies[model][threshold][dataset][category].append(accuracy)
+                if 'f1_score' in results[model][threshold][dataset][category][snr_level]:
+                    f1_score = results[model][threshold][dataset][category][snr_level]['f1_score']
+                    accuracies[model][threshold][dataset][category].append(f1_score)
         
 #graph of accuracies for category with different SNR levels
 for model in models:
@@ -298,7 +302,7 @@ for model in models:
     ax.set(xlabel='SNR levels', ylabel='Accuracy', title=f'Accuracy {model}')
     ax.legend()
     ax.grid()
-    plt.savefig(f'test/graphs_images/Accuracy {model}.png', format='png', dpi=1200)
+    plt.savefig(f'test/graphs_images/F1Score {model}.png', format='png', dpi=1200)
 
 #graph of accuracies of category 'Total' from the models
 fig, ax = plt.subplots()
@@ -310,7 +314,8 @@ for model in models:
 ax.set(xlabel='SNR levels', ylabel='Accuracy', title=f'Accuracy between models')
 ax.legend()
 ax.grid()
-plt.savefig('test/graphs_images/Accuracy between models.png', format='png', dpi=1200)
+plt.savefig('test/graphs_images/F1-Score between models.png', format='png', dpi=1200)
+plt.show()
 
 
 
