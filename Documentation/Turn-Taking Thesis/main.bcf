@@ -2365,4 +2365,68 @@
     <bcf:citekey order="2" intorder="1">sacks1978simplest</bcf:citekey>
     <bcf:citekey order="3" intorder="1">anderson1991hcrc</bcf:citekey>
     <bcf:citekey order="4" intorder="1">ward2019prosodic</bcf:citekey>
-    <bcf
+    <bcf:citekey order="5" intorder="1">gravano2011turn</bcf:citekey>
+    <bcf:citekey order="6" intorder="1">koiso1998analysis</bcf:citekey>
+    <bcf:citekey order="7" intorder="1">edlund2005exploring</bcf:citekey>
+    <bcf:citekey order="8" intorder="1">ishii2014analysis</bcf:citekey>
+    <bcf:citekey order="9" intorder="1">kendon1967some</bcf:citekey>
+    <bcf:citekey order="10" intorder="1">auer2018gaze</bcf:citekey>
+    <bcf:citekey order="11" intorder="1">duncan1972some</bcf:citekey>
+    <bcf:citekey order="12" intorder="1">holler2018processing</bcf:citekey>
+    <bcf:citekey order="13" intorder="1">skantze2021turn</bcf:citekey>
+    <bcf:citekey order="14" intorder="1">skantze2021turn</bcf:citekey>
+    <bcf:citekey order="15" intorder="1">graf2015features</bcf:citekey>
+    <bcf:citekey order="16" intorder="1">googleRNN</bcf:citekey>
+    <bcf:citekey order="17" intorder="1">veysov20202onevoice</bcf:citekey>
+    <bcf:citekey order="18" intorder="1">stft</bcf:citekey>
+    <bcf:citekey order="19" intorder="1">SileroVAD</bcf:citekey>
+    <bcf:citekey order="20" intorder="1">SileroVAD</bcf:citekey>
+    <bcf:citekey order="21" intorder="1">SileroVAD</bcf:citekey>
+    <bcf:citekey order="22" intorder="1">SileroVAD</bcf:citekey>
+    <bcf:citekey order="23" intorder="1">WebRTC</bcf:citekey>
+    <bcf:citekey order="24" intorder="1">Get_started_with_WebRTC</bcf:citekey>
+    <bcf:citekey order="25" intorder="1">STUN_TURN</bcf:citekey>
+    <bcf:citekey order="26" intorder="1">WebRTC_architecture</bcf:citekey>
+    <bcf:citekey order="27" intorder="1">aiortc</bcf:citekey>
+    <bcf:citekey order="28" intorder="1">statistics</bcf:citekey>
+  </bcf:section>
+  <!-- SORTING TEMPLATES -->
+  <bcf:sortingtemplate name="nty">
+    <bcf:sort order="1">
+      <bcf:sortitem order="1">presort</bcf:sortitem>
+    </bcf:sort>
+    <bcf:sort order="2" final="1">
+      <bcf:sortitem order="1">sortkey</bcf:sortitem>
+    </bcf:sort>
+    <bcf:sort order="3">
+      <bcf:sortitem order="1">sortname</bcf:sortitem>
+      <bcf:sortitem order="2">author</bcf:sortitem>
+      <bcf:sortitem order="3">editor</bcf:sortitem>
+      <bcf:sortitem order="4">translator</bcf:sortitem>
+      <bcf:sortitem order="5">sorttitle</bcf:sortitem>
+      <bcf:sortitem order="6">title</bcf:sortitem>
+    </bcf:sort>
+    <bcf:sort order="4">
+      <bcf:sortitem order="1">sorttitle</bcf:sortitem>
+      <bcf:sortitem order="2">title</bcf:sortitem>
+    </bcf:sort>
+    <bcf:sort order="5">
+      <bcf:sortitem order="1">sortyear</bcf:sortitem>
+      <bcf:sortitem order="2">year</bcf:sortitem>
+    </bcf:sort>
+    <bcf:sort order="6">
+      <bcf:sortitem order="1">volume</bcf:sortitem>
+      <bcf:sortitem literal="1" order="2">0</bcf:sortitem>
+    </bcf:sort>
+  </bcf:sortingtemplate>
+  <!-- DATALISTS -->
+  <bcf:datalist section="0"
+                name="nty/global//global/global"
+                type="entry"
+                sortingtemplatename="nty"
+                sortingnamekeytemplatename="global"
+                labelprefix=""
+                uniquenametemplatename="global"
+                labelalphanametemplatename="global">
+  </bcf:datalist>
+</bcf:controlfile>
