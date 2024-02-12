@@ -1,13 +1,13 @@
 # Fdb version 4
-["biber sections/Abstract"] 1705490815 "sections/Abstract.bcf" "sections/Abstract.bbl" "sections/Abstract" 1705594328 0
+["biber sections/Abstract"] 1705490815 "sections/Abstract.bcf" "sections/Abstract.bbl" "sections/Abstract" 1707758741 0
   "./bibliography.bib" 1704448888 6396 5750744458bf3957192dd31a44b101c9 ""
-  "sections/Abstract.bcf" 1705594328 107353 5126ec284b7cb1b18cd2d41da2972233 "pdflatex"
+  "sections/Abstract.bcf" 1707758741 107353 5126ec284b7cb1b18cd2d41da2972233 "pdflatex"
   (generated)
   "sections/Abstract.bbl"
   "sections/Abstract.blg"
   (rewritten before read)
-["pdflatex"] 1705594327 "/Users/antonio/PycharmProjects/TurnTakingThesis/Documentation/Turn-Taking Thesis/sections/Abstract.tex" "sections/Abstract.pdf" "Abstract" 1705594328 0
-  "/Users/antonio/PycharmProjects/TurnTakingThesis/Documentation/Turn-Taking Thesis/sections/Abstract.tex" 1705594327 1402 1c1c716e5be110146b8454511deae30a ""
+["pdflatex"] 1707758740 "/Users/antonio/PycharmProjects/TurnTakingThesis/Documentation/Turn-Taking Thesis/sections/Abstract.tex" "sections/Abstract.pdf" "Abstract" 1707758741 0
+  "/Users/antonio/PycharmProjects/TurnTakingThesis/Documentation/Turn-Taking Thesis/sections/Abstract.tex" 1707758739 1402 f386c5084239d63af7c450e2b5e96b6e ""
   "/usr/local/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm" 1136768653 1328 c834bbb027764024c09d3d2bf908b5f0 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmr10.tfm" 1136768653 1296 45809c5a464d5f32c8f98ba97c1bb47f ""
@@ -49,6 +49,7 @@
   "/usr/local/texlive/2023/texmf-dist/tex/latex/blindtext/blindtext.sty" 1325892463 47295 de48b7f8ebf4b54709a2f6b2c7106dd5 ""
   "/usr/local/texlive/2023/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty" 1579991033 13886 d1306dcf79a944f6988e688c1785f9ce ""
   "/usr/local/texlive/2023/texmf-dist/tex/latex/etoolbox/etoolbox.sty" 1601931149 46845 3b58f70c6e861a13d927bff09d35ecbc ""
+  "/usr/local/texlive/2023/texmf-dist/tex/latex/float/float.sty" 1137110151 6749 16d2656a1984957e674b149555f1ea1d ""
   "/usr/local/texlive/2023/texmf-dist/tex/latex/graphics-cfg/color.cfg" 1459978653 1213 620bba36b25224fa9b7e1ccb4ecb76fd ""
   "/usr/local/texlive/2023/texmf-dist/tex/latex/graphics-cfg/graphics.cfg" 1465944070 1224 978390e9c2234eab29404bc21b268d1e ""
   "/usr/local/texlive/2023/texmf-dist/tex/latex/graphics-def/pdftex.def" 1663965824 19448 1e988b341dda20961a6b931bcde55519 ""
@@ -90,12 +91,12 @@
   "/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1704451845 4623355 b8cad38412faebe1ce5b780a45db67bd ""
   "/usr/local/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt" 1704451753 7883457 65216bdce0a3bc8c0c3759796b9445c7 ""
   "/usr/local/texlive/2023/texmf.cnf" 1678822455 577 1b2b1af17af2508fb20dd85783af4050 ""
-  "sections/../main.tex" 1705492608 2094 d3543ee3e72dd2c358b627e29dde3dc8 ""
-  "sections/Abstract.aux" 1705594328 663 1ddb6fed3b3defa92a97e4740712030f "pdflatex"
+  "sections/../main.tex" 1705941349 2170 351d089269ac5ec51693a5cc9da2a998 ""
+  "sections/Abstract.aux" 1707758741 663 1ddb6fed3b3defa92a97e4740712030f "pdflatex"
   "sections/Abstract.bbl" 1705490838 466 ee04f40f768daeed26442158e95aba61 "biber sections/Abstract"
-  "sections/Abstract.out" 1705594327 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "sections/Abstract.run.xml" 1705594328 2335 6c43cbea0e28b59f5a23f7b387c18d3e "pdflatex"
-  "sections/Abstract.tex" 1705594327 1402 1c1c716e5be110146b8454511deae30a ""
+  "sections/Abstract.out" 1707758741 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "sections/Abstract.run.xml" 1707758741 2335 6c43cbea0e28b59f5a23f7b387c18d3e "pdflatex"
+  "sections/Abstract.tex" 1707758739 1402 f386c5084239d63af7c450e2b5e96b6e ""
   (generated)
   "sections/Abstract.aux"
   "sections/Abstract.bcf"
